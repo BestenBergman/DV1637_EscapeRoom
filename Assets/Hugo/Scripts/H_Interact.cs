@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem.HID;
@@ -23,7 +24,7 @@ public class H_Interact : MonoBehaviour
         Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f,0.5f));
         if (Physics.Raycast(ray, out hit, 3f))
         {
-            if (hit.transform.tag == "Item")
+            if (ps.itemTags.Contains(hit.transform.tag))
             {
                 PickUpItem(hit.transform.gameObject);
             }
