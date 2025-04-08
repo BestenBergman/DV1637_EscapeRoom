@@ -18,6 +18,9 @@ TagManager:
   - R1_Greenplate
   - R1_Redplate
   - R1_Blueplate
+  - R1_Chest
+  - R1_Door
+  - R1_Teleporter
   layers:
   - Default
   - TransparentFX
