@@ -24,4 +24,16 @@ public class ButtonKontroler : MonoBehaviour
         }
         pressed.GetComponent<ButtonSwitchState>().SwitchState();
     }
+
+    public bool RightCombination()
+    {
+        for (int i = 0; i < buttons.Count; i++)
+        {
+            if (buttons[i].GetComponent<ButtonSwitchState>().isPressed != buttons[i].GetComponent<ButtonSwitchState>().isRight)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
 }
