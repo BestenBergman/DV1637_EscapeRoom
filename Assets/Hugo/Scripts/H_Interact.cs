@@ -24,7 +24,7 @@ public class H_Interact : MonoBehaviour
         Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f,0.5f));
         if (Physics.Raycast(ray, out hit, 3f))
         {
-            if (ps.itemTags.Contains(hit.transform.tag))
+            if (ps.ItemTags.Contains(hit.transform.tag))
             {
                 PickUpItem(hit.transform.gameObject);
             }
@@ -32,17 +32,18 @@ public class H_Interact : MonoBehaviour
             {
                 hit.transform.gameObject.GetComponent<SlutPussel>().SwitchState();
             }
-            else
+            else if (hit.transform.tag == "Respawn")
+            {
+                InteractWithButtons(hit.transform.gameObject);
+            }
+            else if (ps.hasItem)
             {
                 DropItem();
             }
         }
-        else
+        else if (ps.hasItem)
         {
-            if (ps.hasItem)
-            {
-                DropItem();
-            }
+            DropItem();
         }
     }
 
@@ -66,5 +67,10 @@ public class H_Interact : MonoBehaviour
         gameObject.transform.GetChild(0).transform.GetChild(1).GetComponent<Rigidbody>().isKinematic = false;
         gameObject.transform.GetChild(0).transform.GetChild(1).parent = gameObject.transform.parent;
         ps.hasItem = false;
+    }
+
+    public void InteractWithButtons(GameObject button)
+    {
+        button.transform.parent.GetComponent<ButtonKontroler>().UpdateButtons(button);
     }
 }
