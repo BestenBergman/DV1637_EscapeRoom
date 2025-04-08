@@ -699,6 +699,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5095998230963255785, guid: ea7a5e9370eb1744f9ce819c1ae24d54, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6167837715051316598, guid: ea7a5e9370eb1744f9ce819c1ae24d54, type: 3}
       propertyPath: m_LocalPosition.x
       value: -28.159819
@@ -742,7 +746,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 439317122826152500, guid: ea7a5e9370eb1744f9ce819c1ae24d54, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1098909261}
+    - targetCorrespondingSourceObject: {fileID: 439317122826152500, guid: ea7a5e9370eb1744f9ce819c1ae24d54, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1098909260}
+    - targetCorrespondingSourceObject: {fileID: 439317122826152500, guid: ea7a5e9370eb1744f9ce819c1ae24d54, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1098909259}
   m_SourcePrefab: {fileID: 100100000, guid: ea7a5e9370eb1744f9ce819c1ae24d54, type: 3}
 --- !u!1 &1064310291
 GameObject:
@@ -758,7 +771,7 @@ GameObject:
   - component: {fileID: 1064310292}
   m_Layer: 0
   m_Name: GreenPressureplate
-  m_TagString: Untagged
+  m_TagString: R1_Green
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -852,6 +865,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1098909258 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 439317122826152500, guid: ea7a5e9370eb1744f9ce819c1ae24d54, type: 3}
+  m_PrefabInstance: {fileID: 854485744}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1098909259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098909258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96d03d980b81cb547b8670d165612ad6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasItem: 0
+  HoldPos: {x: 1, y: 0, z: 2}
+--- !u!114 &1098909260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098909258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5748f551ebad65e4eaaafe80d0d68689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ps: {fileID: 0}
+--- !u!114 &1098909261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098909258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e2645e9233d71b40970cb3911af4ee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  O_cbm: {fileID: 0}
+  H_Int: {fileID: 0}
 --- !u!1 &1167639669
 GameObject:
   m_ObjectHideFlags: 0
@@ -2114,7 +2173,7 @@ GameObject:
   - component: {fileID: 2061997498}
   m_Layer: 0
   m_Name: GreenCube
-  m_TagString: Untagged
+  m_TagString: R1_Green
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
