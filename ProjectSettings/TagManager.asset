@@ -4,12 +4,12 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - BlueShard
-  - RedShard
-  - GreenShard
-  - BlueBox
-  - RedBox
-  - GreenBox
+  - R4_BlueShard
+  - R4_RedShard
+  - R4_GreenShard
+  - R4_BlueBox
+  - R4_RedBox
+  - R4_GreenBox
   - Lever
   - Item
   - R1_Green

@@ -555,7 +555,7 @@ GameObject:
   - component: {fileID: 207875632}
   m_Layer: 0
   m_Name: redBox
-  m_TagString: RedBox
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -890,7 +890,7 @@ GameObject:
   - component: {fileID: 548205071}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: GreenShard
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1465,7 +1465,7 @@ GameObject:
   - component: {fileID: 760955292}
   m_Layer: 0
   m_Name: Cube (2)
-  m_TagString: Item
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1709,7 +1709,7 @@ GameObject:
   - component: {fileID: 913138394}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Item
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1841,7 +1841,7 @@ GameObject:
   - component: {fileID: 968345892}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: BlueShard
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2200,7 +2200,7 @@ GameObject:
   - component: {fileID: 1171580558}
   m_Layer: 0
   m_Name: greenBox
-  m_TagString: GreenBox
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2539,7 +2539,7 @@ GameObject:
   - component: {fileID: 1248849338}
   m_Layer: 0
   m_Name: Trigger
-  m_TagString: Lever
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3381,7 +3381,7 @@ GameObject:
   - component: {fileID: 1635317987}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: RedShard
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3524,7 +3524,7 @@ GameObject:
   - component: {fileID: 1742167273}
   m_Layer: 0
   m_Name: blueBox
-  m_TagString: BlueBox
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
