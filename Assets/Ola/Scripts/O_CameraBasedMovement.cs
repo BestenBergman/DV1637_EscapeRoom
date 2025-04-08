@@ -38,7 +38,8 @@ public class O_CameraBasedMovement : MonoBehaviour
         xRot = Mathf.Clamp(xRot, -90, 90);
         yRot += xLook;
 
-        transform.localRotation = Quaternion.Euler(xRot, yRot, 0f);
+        transform.GetChild(0).localRotation = Quaternion.Euler(xRot, 0f, 0f);
+        transform.localRotation = Quaternion.Euler(0f, yRot, 0f);
     }
     
     public void PlayerMovement()
