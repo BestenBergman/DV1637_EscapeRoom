@@ -15,6 +15,9 @@ TagManager:
   - R1_Green
   - R1_Red
   - R1_Blue
+  - R1_Greenplate
+  - R1_Redplate
+  - R1_Blueplate
   layers:
   - Default
   - TransparentFX

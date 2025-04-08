@@ -20,7 +20,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == gameObject.tag)
+        if (collision.gameObject.tag == gameObject.tag + "plate")
         {
             Destroy(cube);
         }
