@@ -12,6 +12,9 @@ TagManager:
   - GreenBox
   - Lever
   - Item
+  - R1_Green
+  - R1_Red
+  - R1_Blue
   layers:
   - Default
   - TransparentFX
