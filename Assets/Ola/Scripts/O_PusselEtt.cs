@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class O_PusselEtt : MonoBehaviour
 {
     public GameObject cube;
-    public GameObject pressurePlate;
-
+    public bool placedCorrectly = false;
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,7 +22,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     {
         if (collision.gameObject.tag == gameObject.tag + "plate")
         {
-            Destroy(cube);
+            placedCorrectly = true;
         }
     }
 }
