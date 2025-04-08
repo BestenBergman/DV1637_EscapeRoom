@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 56386571}
   m_Layer: 0
   m_Name: RedCube
-  m_TagString: Untagged
+  m_TagString: R1_Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 375256059}
   m_Layer: 0
   m_Name: RedPressureplate
-  m_TagString: Untagged
+  m_TagString: R1_Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -687,63 +687,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1513116718}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &854485744
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 439317122826152500, guid: ea7a5e9370eb1744f9ce819c1ae24d54, type: 3}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 6167837715051316598, guid: ea7a5e9370eb1744f9ce819c1ae24d54, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -28.159819
-      objectReference: {fileID: 0}
-    - target: {fileID: 6167837715051316598, guid: ea7a5e9370eb1744f9ce819c1ae24d54, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.76
-      objectReference: {fileID: 0}
-    - target: {fileID: 6167837715051316598, guid: ea7a5e9370eb1744f9ce819c1ae24d54, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -3.7677846
-      objectReference: {fileID: 0}
-    - target: {fileID: 6167837715051316598, guid: ea7a5e9370eb1744f9ce819c1ae24d54, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.6964991
-      objectReference: {fileID: 0}
-    - target: {fileID: 6167837715051316598, guid: ea7a5e9370eb1744f9ce819c1ae24d54, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6167837715051316598, guid: ea7a5e9370eb1744f9ce819c1ae24d54, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.71755767
-      objectReference: {fileID: 0}
-    - target: {fileID: 6167837715051316598, guid: ea7a5e9370eb1744f9ce819c1ae24d54, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6167837715051316598, guid: ea7a5e9370eb1744f9ce819c1ae24d54, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6167837715051316598, guid: ea7a5e9370eb1744f9ce819c1ae24d54, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 91.706
-      objectReference: {fileID: 0}
-    - target: {fileID: 6167837715051316598, guid: ea7a5e9370eb1744f9ce819c1ae24d54, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ea7a5e9370eb1744f9ce819c1ae24d54, type: 3}
 --- !u!1 &1064310291
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,7 +701,7 @@ GameObject:
   - component: {fileID: 1064310292}
   m_Layer: 0
   m_Name: GreenPressureplate
-  m_TagString: Untagged
+  m_TagString: R1_Greenplate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -960,6 +903,67 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
+--- !u!1001 &1383034327
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1012633574441835847, guid: eaa342bf170667640990deb1d1c1e51a, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6996781175495572695, guid: eaa342bf170667640990deb1d1c1e51a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.535678
+      objectReference: {fileID: 0}
+    - target: {fileID: 6996781175495572695, guid: eaa342bf170667640990deb1d1c1e51a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 6996781175495572695, guid: eaa342bf170667640990deb1d1c1e51a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.128908
+      objectReference: {fileID: 0}
+    - target: {fileID: 6996781175495572695, guid: eaa342bf170667640990deb1d1c1e51a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6996781175495572695, guid: eaa342bf170667640990deb1d1c1e51a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6996781175495572695, guid: eaa342bf170667640990deb1d1c1e51a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6996781175495572695, guid: eaa342bf170667640990deb1d1c1e51a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6996781175495572695, guid: eaa342bf170667640990deb1d1c1e51a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6996781175495572695, guid: eaa342bf170667640990deb1d1c1e51a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6996781175495572695, guid: eaa342bf170667640990deb1d1c1e51a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579038631401784648, guid: eaa342bf170667640990deb1d1c1e51a, type: 3}
+      propertyPath: HoldPos.x
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: eaa342bf170667640990deb1d1c1e51a, type: 3}
 --- !u!1 &1472794564
 GameObject:
   m_ObjectHideFlags: 0
@@ -975,7 +979,7 @@ GameObject:
   - component: {fileID: 1472794569}
   m_Layer: 0
   m_Name: BlueCube
-  m_TagString: Untagged
+  m_TagString: R1_Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1151,7 +1155,7 @@ GameObject:
   - component: {fileID: 1535244316}
   m_Layer: 0
   m_Name: BluePressureplate
-  m_TagString: Untagged
+  m_TagString: R1_Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2114,7 +2118,7 @@ GameObject:
   - component: {fileID: 2061997498}
   m_Layer: 0
   m_Name: GreenCube
-  m_TagString: Untagged
+  m_TagString: R1_Green
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2255,7 +2259,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 1750917578}
   - {fileID: 1513116718}
-  - {fileID: 854485744}
   - {fileID: 1167639673}
   - {fileID: 2061997496}
   - {fileID: 56386570}
@@ -2263,3 +2266,4 @@ SceneRoots:
   - {fileID: 1064310295}
   - {fileID: 375256062}
   - {fileID: 1535244319}
+  - {fileID: 1383034327}
