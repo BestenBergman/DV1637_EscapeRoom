@@ -555,7 +555,7 @@ GameObject:
   - component: {fileID: 207875632}
   m_Layer: 0
   m_Name: redBox
-  m_TagString: Untagged
+  m_TagString: R4_RedBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -662,7 +662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55e186a3e4972914791165a0682e8430, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wantedTag: RedShard
+  wantedTag: R4_RedShard
 --- !u!1 &219402955
 GameObject:
   m_ObjectHideFlags: 0
@@ -890,7 +890,7 @@ GameObject:
   - component: {fileID: 548205071}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: R4_GreenShard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1841,7 +1841,7 @@ GameObject:
   - component: {fileID: 968345892}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: R4_BlueShard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2200,7 +2200,7 @@ GameObject:
   - component: {fileID: 1171580558}
   m_Layer: 0
   m_Name: greenBox
-  m_TagString: Untagged
+  m_TagString: R4_GreenBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2307,7 +2307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55e186a3e4972914791165a0682e8430, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wantedTag: GreenShard
+  wantedTag: R4_GreenShard
 --- !u!1 &1178859115
 GameObject:
   m_ObjectHideFlags: 0
@@ -3381,7 +3381,7 @@ GameObject:
   - component: {fileID: 1635317987}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: R4_RedShard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3524,7 +3524,7 @@ GameObject:
   - component: {fileID: 1742167273}
   m_Layer: 0
   m_Name: blueBox
-  m_TagString: Untagged
+  m_TagString: R4_BlueBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3631,7 +3631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55e186a3e4972914791165a0682e8430, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wantedTag: BlueShard
+  wantedTag: R4_BlueShard
 --- !u!1 &1754210636
 GameObject:
   m_ObjectHideFlags: 0
