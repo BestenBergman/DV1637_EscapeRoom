@@ -22,6 +22,7 @@ TagManager:
   - R1_Door
   - R1_Teleporter
   - R4_Button
+  - R1_Switchable
   layers:
   - Default
   - TransparentFX
