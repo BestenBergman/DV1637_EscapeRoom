@@ -39,7 +39,10 @@ public class H_Interact : MonoBehaviour
         }
         else
         {
-            DropItem();
+            if (ps.hasItem)
+            {
+                DropItem();
+            }
         }
     }
 
