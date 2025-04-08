@@ -32,7 +32,7 @@ public class H_Interact : MonoBehaviour
             {
                 hit.transform.gameObject.GetComponent<SlutPussel>().SwitchState();
             }
-            else if (hit.transform.tag == "Respawn")
+            else if (hit.transform.tag == "R4_Button")
             {
                 InteractWithButtons(hit.transform.gameObject);
             }

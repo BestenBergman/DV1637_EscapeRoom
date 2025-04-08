@@ -21,6 +21,7 @@ TagManager:
   - R1_Chest
   - R1_Door
   - R1_Teleporter
+  - R4_Button
   layers:
   - Default
   - TransparentFX
