@@ -23,6 +23,7 @@ TagManager:
   - R1_Teleporter
   - R4_Button
   - R1_Switchable
+  - R1_Keypad
   layers:
   - Default
   - TransparentFX

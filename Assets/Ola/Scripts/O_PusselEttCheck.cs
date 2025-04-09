@@ -32,5 +32,7 @@ public class O_PusselEttCheck : MonoBehaviour
         {
             pusselEttComplete = true;
         }
+        
+
     }
 }

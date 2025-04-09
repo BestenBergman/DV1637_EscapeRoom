@@ -25,4 +25,11 @@ public class O_PusselEtt : MonoBehaviour
             placedCorrectly = true;
         }
     }
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag == gameObject.tag + "plate")
+        {
+            placedCorrectly = false;
+        }
+    }
 }
