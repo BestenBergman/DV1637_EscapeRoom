@@ -85,7 +85,7 @@ public class H_Interact : MonoBehaviour
         button.transform.parent.GetComponent<ButtonKontroler>().UpdateButtons(button);
         if (button.transform.parent.parent.GetComponent<KontrolerKontrol>().CheckersAreRight())
         {
-            Debug.Log("yay");
+            button.transform.parent.parent.GetComponent<KontrolerKontrol>().ActivateStairs();
         }
     }
 }
