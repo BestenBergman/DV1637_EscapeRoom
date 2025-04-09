@@ -3,12 +3,16 @@ using UnityEngine.UIElements;
 
 public class RightChild : MonoBehaviour
 {
-    public string wantedTag;
+    [Tooltip("Den tag som letas efter")]
+    public string wantedTag = "Player";
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    /// <summary>
+    /// Checks if its child has the right tag 
+    /// </summary>
+    /// <returns>true or false</returns>
     public bool HasRightChild()
     {
-        if (transform.childCount != 0)
+        if (transform.childCount > 0)
         {
             Transform child = transform.GetChild(0);
             if (child.tag == wantedTag)

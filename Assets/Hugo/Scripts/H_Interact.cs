@@ -3,6 +3,8 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem.HID;
 
+[RequireComponent(typeof(H_PlayerStats))]
+
 public class H_Interact : MonoBehaviour
 {
     [HideInInspector] public H_PlayerStats ps;
@@ -12,12 +14,10 @@ public class H_Interact : MonoBehaviour
         ps = GetComponent<H_PlayerStats>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    /// <summary>
+    /// Kollar ifall man kan interagera med något eller droppa 
+    /// det man har i handen
+    /// </summary>
     public void Interact()
     {
         RaycastHit hit;
@@ -47,6 +47,10 @@ public class H_Interact : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Plockar upp ett GameObject
+    /// </summary>
+    /// <param name="item">Det GameObject man vill plocka upp</param>
     public void PickUpItem(GameObject item)
     {
         if (ps.hasItem)
@@ -62,6 +66,9 @@ public class H_Interact : MonoBehaviour
         item.GetComponent<Rigidbody>().isKinematic = true;
     }
 
+    /// <summary>
+    /// Släppa det GameObject man håller i
+    /// </summary>
     public void DropItem()
     {
         gameObject.transform.GetChild(0).transform.GetChild(1).GetComponent<Rigidbody>().isKinematic = false;
@@ -69,6 +76,10 @@ public class H_Interact : MonoBehaviour
         ps.hasItem = false;
     }
 
+    /// <summary>
+    /// Uppdaterar knapparna och kollar ifall koden är löst
+    /// </summary>
+    /// <param name="button">GameObjectet för knappen man hartryckt på</param>
     public void InteractWithButtons(GameObject button)
     {
         button.transform.parent.GetComponent<ButtonKontroler>().UpdateButtons(button);

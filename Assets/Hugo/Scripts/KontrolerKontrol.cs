@@ -12,6 +12,11 @@ public class KontrolerKontrol : MonoBehaviour
             kontrolers.Add(transform.GetChild(i).gameObject);
         }
     }
+
+    /// <summary>
+    /// Kollar ifall alla knappsekvenser har rätt värde
+    /// </summary>
+    /// <returns>true eller false</returns>
     public bool CheckersAreRight()
     {
         Debug.Log(kontrolers);

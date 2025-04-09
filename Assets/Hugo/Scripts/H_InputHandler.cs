@@ -1,5 +1,8 @@
 using UnityEngine;
 
+[RequireComponent(typeof(O_CameraBasedMovement))]
+[RequireComponent(typeof(H_Interact))]
+
 public class H_InputHandler : MonoBehaviour
 {
     [HideInInspector] public O_CameraBasedMovement O_cbm;
@@ -10,12 +13,14 @@ public class H_InputHandler : MonoBehaviour
         H_Int = GetComponent<H_Interact>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         InputHandler();
     }
 
+    /// <summary>
+    /// Har hand om spelarens inputs
+    /// </summary>
     private void InputHandler()
     {
         if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
