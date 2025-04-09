@@ -33,12 +33,16 @@ public class SlutPussel : MonoBehaviour
     [Tooltip("Variabler för den vägg som ska byta textur när alla skärvor är på rätt plats och ljuset är aktiverat")]
     public HitWallVariables hWV;
 
+    [Tooltip("Vill ha GameObjectet till det ljus som ska sättas av och på")]
+    public GameObject ljus;
+
     [Tooltip("Visar om ljuset är på eller av")]
     [SerializeField] private bool active;
 
     private void Start()
     {
         active = false;
+        ljus.SetActive(false);
     }
     private void Update()
     {
@@ -57,10 +61,12 @@ public class SlutPussel : MonoBehaviour
         if (active)
         {
             active = false;
+            ljus.SetActive(false);
             hWV.hW.GetComponent<MeshRenderer>().material = hWV.m1;
         }
         else
         {
+            ljus.SetActive(true);
             active = true;
         }
     }
