@@ -47,5 +47,12 @@ public class O_PusselTwoCheck : MonoBehaviour
                 }
             }
         }
+        if (code1 != "" &&  code2 != "" && code3 != "" && !pusselTwoComplete)
+        {
+            input1.text = "";
+            input2.text = "";
+            input3.text = "";
+            Debug.Log("WROOOOOOOONG!");
+        }
     }
 }
