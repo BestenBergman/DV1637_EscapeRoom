@@ -2,6 +2,8 @@ using System.Linq;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem.HID;
+using static SlutPussel;
+using static UnityEditor.Progress;
 
 [RequireComponent(typeof(H_PlayerStats))]
 
@@ -35,6 +37,29 @@ public class H_Interact : MonoBehaviour
             else if (hit.transform.tag == "R4_Button")
             {
                 InteractWithButtons(hit.transform.gameObject);
+            }
+            else if (ps.ShardBoxes.Contains(hit.transform.tag))
+            {
+                if (ps.hasItem)
+                {
+                    if (ps.Shards.Contains(gameObject.transform.GetChild(0).transform.GetChild(1).tag))
+                    {
+                        if (hit.transform.childCount > 0)
+                        {
+                            PickUpShard(hit.transform.gameObject);
+                            PlaceShard(hit.transform.gameObject);
+                        }
+                        else
+                        {
+                            PlaceShard(hit.transform.gameObject);
+                            ps.hasItem = false;
+                        }
+                    }
+                }
+                else
+                {
+                    PickUpShard(hit.transform.gameObject);
+                }
             }
             else if (ps.hasItem)
             {
@@ -87,5 +112,19 @@ public class H_Interact : MonoBehaviour
         {
             button.transform.parent.parent.GetComponent<KontrolerKontrol>().ActivateStairs();
         }
+    }
+
+    public void PlaceShard(GameObject shardBox)
+    {
+        gameObject.transform.GetChild(0).transform.GetChild(1).parent = shardBox.transform;
+    }
+
+    public void PickUpShard(GameObject shardBox)
+    {
+        ps.hasItem = true;
+        GameObject shard = shardBox.transform.GetChild(0).gameObject;
+        shard.transform.parent = gameObject.transform.GetChild(0);
+        shard.transform.localRotation = Quaternion.identity;
+        shard.transform.localPosition = ps.HoldPos;
     }
 }
