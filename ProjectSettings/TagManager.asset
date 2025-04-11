@@ -24,8 +24,6 @@ TagManager:
   - R4_Button
   - R1_Switchable
   - R1_Keypad
-  - KeypadUI
-  - GameUI
   layers:
   - Default
   - TransparentFX
