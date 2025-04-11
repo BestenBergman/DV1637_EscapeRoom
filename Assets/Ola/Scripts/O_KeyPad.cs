@@ -22,7 +22,6 @@ public class O_KeyPad : MonoBehaviour
 
     public void KeyPadPress()
     {
-        Debug.Log(gameObject.name);
         if (input1.text == "")
         {
             input1.text = gameObject.name;
