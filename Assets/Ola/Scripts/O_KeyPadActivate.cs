@@ -7,6 +7,7 @@ public class O_KeyPadActivate : MonoBehaviour
     public float maxDist = 10.0f;
     public GameObject pusselTwo;
     public bool keyPadComplete = false;
+    public bool keyPadOn = false;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -34,29 +35,22 @@ public class O_KeyPadActivate : MonoBehaviour
             Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0.0f));
             RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit, maxDist))
+            if (keyPad.isActiveAndEnabled)
+            {
+                keyPad.enabled = false;
+                keyPadOn = false;
+                Cursor.lockState = CursorLockMode.Locked;
+                UI.enabled = true;
+            }
+            else if (Physics.Raycast(ray, out hit, maxDist))
             {
                 if (hit.collider.CompareTag("R1_Keypad"))
                 {
-                    if(UI.isActiveAndEnabled)
-                    {
-                        UI.enabled = false;
-                        if(!keyPad.isActiveAndEnabled)
-                        {
-                            Cursor.lockState = CursorLockMode.None;
-                            Cursor.visible = true;
-                            keyPad.enabled = true;
-                        }
-                    }
-                    else
-                    {
-                        keyPad.enabled = false;
-                        if(!UI.isActiveAndEnabled)
-                        {
-                            Cursor.lockState = CursorLockMode.Locked;
-                            UI.enabled = true;
-                        }
-                    }
+                    UI.enabled = false;
+                    Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true;
+                    keyPad.enabled = true;
+                    keyPadOn = true;
                 }
             }
         }
