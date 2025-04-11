@@ -1,13 +1,29 @@
+using System.Collections;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Windows;
 
 public class O_KeyPadActivate : MonoBehaviour
 {
     public Canvas UI;
     public Canvas keyPad;
-    public float maxDist = 10.0f;
     public GameObject pusselTwo;
+    
     public bool keyPadComplete = false;
+    public bool teleporterActive = false;
     public bool keyPadOn = false;
+    
+
+    public GameObject correct;
+    public GameObject wrong;
+
+    public string code1 = "";
+    public string code2 = "";
+    public string code3 = "";
+
+    public TextMeshProUGUI input1;
+    public TextMeshProUGUI input2;
+    public TextMeshProUGUI input3;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -15,44 +31,37 @@ public class O_KeyPadActivate : MonoBehaviour
     {
         UI.enabled = true;
         keyPad.enabled = false;
+        correct.SetActive(false);
+        wrong.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        keyPadComplete = pusselTwo.GetComponent<O_PusselTwoCheck>().pusselTwoComplete;
-        if (keyPadComplete)
+        CodeCheck();
+        if (keyPadComplete && !teleporterActive)
         {
-            KeyPadComplete();
+            StartCoroutine("Closing");
         }
-        KeyPadSwitch();   
+         
     }
 
     public void KeyPadSwitch()
     {
-        if (Input.GetKeyDown(KeyCode.H))
+        if (keyPad.isActiveAndEnabled)
         {
-            Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0.0f));
-            RaycastHit hit;
-
-            if (keyPad.isActiveAndEnabled)
-            {
-                keyPad.enabled = false;
-                keyPadOn = false;
-                Cursor.lockState = CursorLockMode.Locked;
-                UI.enabled = true;
-            }
-            else if (Physics.Raycast(ray, out hit, maxDist))
-            {
-                if (hit.collider.CompareTag("R1_Keypad"))
-                {
-                    UI.enabled = false;
-                    Cursor.lockState = CursorLockMode.None;
-                    Cursor.visible = true;
-                    keyPad.enabled = true;
-                    keyPadOn = true;
-                }
-            }
+            keyPad.enabled = false;
+            keyPadOn = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            UI.enabled = true;
+        }
+        else
+        {
+            UI.enabled = false;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            keyPad.enabled = true;
+            keyPadOn = true;
         }
     }
 
@@ -68,5 +77,54 @@ public class O_KeyPadActivate : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             UI.enabled = true;
         }
+    }
+    IEnumerator Closing()
+    {
+        teleporterActive = true;
+        yield return new WaitForSeconds(0.5f);
+        correct.SetActive(true);
+        input1.text = "";
+        input2.text = "";
+        input3.text = "";
+        yield return new WaitForSeconds(1.0f);
+        KeyPadComplete();
+        correct.SetActive(false);
+
+    }
+
+    public void CodeCheck()
+    {
+        code1 = input1.text;
+        code2 = input2.text;
+        code3 = input3.text;
+
+        if (code1 == "1")
+        {
+            if (code2 == "1")
+            {
+                if (code3 == "1")
+                {
+                    keyPadComplete = true;
+
+                }
+            }
+        }
+        if (code1 != "" && code2 != "" && code3 != "" && !keyPadComplete)
+        {
+            StartCoroutine("WrongCode");
+
+        }
+    }
+
+    IEnumerator WrongCode()
+    {
+        yield return new WaitForSeconds(0.5f);
+        wrong.SetActive(true);
+        input1.text = "";
+        input2.text = "";
+        input3.text = "";
+        yield return new WaitForSeconds(1.0f);
+        wrong.SetActive(false);
+
     }
 }

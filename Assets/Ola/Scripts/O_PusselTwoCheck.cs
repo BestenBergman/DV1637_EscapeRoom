@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -13,21 +14,23 @@ public class O_PusselTwoCheck : MonoBehaviour
     public string code1 = "";
     public string code2 = "";
     public string code3 = "";
+    public GameObject wrong;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        wrong.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        checkStarted = pusselTwo.GetComponent<O_PusselTwoStart>().started;
-        if (checkStarted && !pusselTwoComplete)
-        {
-            CodeCheck();
-        }
+        CodeCheck();
+        //checkStarted = pusselTwo.GetComponent<O_PusselTwoStart>().started;
+        //if (checkStarted && !pusselTwoComplete)
+        //{
+        //    CodeCheck();
+        //}
     }
 
     public void CodeCheck()
@@ -40,19 +43,30 @@ public class O_PusselTwoCheck : MonoBehaviour
         {
             if (code2 == "1")
             {
-                if(code3 == "1")
+                if (code3 == "1")
                 {
                     pusselTwoComplete = true;
-                    Debug.Log("Yahoooo");
+                    
                 }
             }
         }
-        if (code1 != "" &&  code2 != "" && code3 != "" && !pusselTwoComplete)
+        if (code1 != "" && code2 != "" && code3 != "" && !pusselTwoComplete)
         {
-            input1.text = "";
-            input2.text = "";
-            input3.text = "";
-            Debug.Log("WROOOOOOOONG!");
+            StartCoroutine("WrongCode");
+           
         }
     }
+
+    IEnumerator WrongCode()
+    {
+        yield return new WaitForSeconds(0.5f);
+        wrong.SetActive(true);
+        input1.text = "";
+        input2.text = "";
+        input3.text = "";
+        yield return new WaitForSeconds(1.0f);
+        wrong.SetActive(false);
+
+    }
+    
 }
