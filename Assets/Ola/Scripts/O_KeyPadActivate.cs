@@ -61,11 +61,12 @@ public class O_KeyPadActivate : MonoBehaviour
         if (keyPad.isActiveAndEnabled)
         {
             keyPad.enabled = false;
+            keyPadOn = false;
         }
-            if (!UI.isActiveAndEnabled)
-            {
+        if (!UI.isActiveAndEnabled)
+        {
             Cursor.lockState = CursorLockMode.Locked;
             UI.enabled = true;
-            }
+        }
     }
 }
