@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 119935966}
   m_Layer: 0
   m_Name: Stick
-  m_TagString: Untagged
+  m_TagString: R2_PuzzleLever
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -452,8 +452,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 748644379}
+  - component: {fileID: 748644380}
   m_Layer: 0
-  m_Name: Lever (1)
+  m_Name: Lever2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -475,6 +476,20 @@ Transform:
   - {fileID: 119935965}
   m_Father: {fileID: 1482161692}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 22.5}
+--- !u!114 &748644380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748644378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd5c13ac97fd8ac41b0d09a3aeb48e67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  on: 0
+  tmpAngle: 0
 --- !u!1 &825194928
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,7 +504,7 @@ GameObject:
   - component: {fileID: 825194930}
   m_Layer: 0
   m_Name: Stick
-  m_TagString: Untagged
+  m_TagString: R2_PuzzleLever
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -597,7 +612,7 @@ GameObject:
   - component: {fileID: 1138909016}
   m_Layer: 0
   m_Name: Stick
-  m_TagString: Untagged
+  m_TagString: R2_PuzzleLever
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -808,8 +823,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1251746268}
+  - component: {fileID: 1251746269}
   m_Layer: 0
-  m_Name: Lever (3)
+  m_Name: Lever4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -831,6 +847,20 @@ Transform:
   - {fileID: 1138909015}
   m_Father: {fileID: 1482161692}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 22.5}
+--- !u!114 &1251746269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251746267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd5c13ac97fd8ac41b0d09a3aeb48e67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  on: 0
+  tmpAngle: 0
 --- !u!1 &1315318529
 GameObject:
   m_ObjectHideFlags: 0
@@ -948,8 +978,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1325686289}
+  - component: {fileID: 1325686290}
   m_Layer: 0
-  m_Name: Lever
+  m_Name: Lever1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -971,6 +1002,20 @@ Transform:
   - {fileID: 1714906817}
   m_Father: {fileID: 1482161692}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 22.5}
+--- !u!114 &1325686290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325686288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd5c13ac97fd8ac41b0d09a3aeb48e67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  on: 0
+  tmpAngle: 0
 --- !u!1 &1361555926
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,8 +1133,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1450180265}
+  - component: {fileID: 1450180266}
   m_Layer: 0
-  m_Name: Lever (2)
+  m_Name: Lever3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1111,6 +1157,20 @@ Transform:
   - {fileID: 825194929}
   m_Father: {fileID: 1482161692}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 22.5}
+--- !u!114 &1450180266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450180264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd5c13ac97fd8ac41b0d09a3aeb48e67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  on: 0
+  tmpAngle: 0
 --- !u!1 &1482161691
 GameObject:
   m_ObjectHideFlags: 0
@@ -1120,6 +1180,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1482161692}
+  - component: {fileID: 1482161693}
   m_Layer: 0
   m_Name: R2P1
   m_TagString: Untagged
@@ -1147,6 +1208,27 @@ Transform:
   - {fileID: 1251746268}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1482161693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482161691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cc1fc2b35c1b4f44a3bfce093df7386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lever1: {fileID: 1325686288}
+  lever2: {fileID: 748644378}
+  lever3: {fileID: 1450180264}
+  lever4: {fileID: 1251746267}
+  lever1Check: 0
+  lever2Check: 0
+  lever3Check: 0
+  lever4Check: 0
+  r2p1Completed: 0
 --- !u!1001 &1485372896
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1218,7 +1300,7 @@ GameObject:
   - component: {fileID: 1714906818}
   m_Layer: 0
   m_Name: Stick
-  m_TagString: Untagged
+  m_TagString: R2_PuzzleLever
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
