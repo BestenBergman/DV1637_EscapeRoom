@@ -14,4 +14,6 @@ public class H_PlayerStats : MonoBehaviour
 
     [HideInInspector] public string[] ShardBoxes = { "R4_BlueBox", "R4_RedBox", "R4_GreenBox" };
     [HideInInspector] public string[] Shards = { "R4_BlueShard", "R4_RedShard", "R4_GreenShard" };
+
+    public bool hasTeleported = false;
 }

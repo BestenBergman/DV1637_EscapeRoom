@@ -5,8 +5,8 @@ public class O_Teleporter : MonoBehaviour
 
 {
     [HideInInspector] public GameObject player;
+    [HideInInspector] public H_PlayerStats ps;
     public Transform endPosition;
-    public bool hasTeleported = false;
     public bool isTeleporting = false;
     public bool coroutineStarted = false;
     public bool tpCooldown = false;
@@ -16,13 +16,14 @@ public class O_Teleporter : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        ps = player.GetComponent<H_PlayerStats>();
         tpPosition = endPosition.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-       if(hasTeleported)
+       if(ps.hasTeleported)
         {
             Debug.Log("bajs");
         }    
@@ -31,7 +32,7 @@ public class O_Teleporter : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         
-        if (other.gameObject == player && !hasTeleported)
+        if (other.gameObject == player && !ps.hasTeleported)
         {
             isTeleporting = true;
             StartCoroutine("Teleporting");
@@ -60,12 +61,12 @@ public class O_Teleporter : MonoBehaviour
         yield return new WaitForSeconds(2.0f);
         if (isTeleporting)
         {
-            hasTeleported = true;
+            ps.hasTeleported = true;
             player.transform.position = tpPosition;
             
             //Debug.Log("Good Heavens Marty!");
             yield return new WaitForSeconds(3.0f);
-            hasTeleported = false;
+            ps.hasTeleported = false;
         }
         
     }
