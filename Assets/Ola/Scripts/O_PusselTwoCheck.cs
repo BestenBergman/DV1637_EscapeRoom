@@ -9,6 +9,8 @@ public class O_PusselTwoCheck : MonoBehaviour
     public TextMeshProUGUI input2;
     public TextMeshProUGUI input3;
     public GameObject pusselTwo;
+    public GameObject tpStart;
+    public GameObject tpEnd;
     public bool pusselTwoComplete = false;
     public bool checkStarted = false;
     public string code1 = "";
@@ -20,17 +22,14 @@ public class O_PusselTwoCheck : MonoBehaviour
     void Start()
     {
         wrong.SetActive(false);
+        tpStart.SetActive(false);
+        tpEnd.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
         CodeCheck();
-        //checkStarted = pusselTwo.GetComponent<O_PusselTwoStart>().started;
-        //if (checkStarted && !pusselTwoComplete)
-        //{
-        //    CodeCheck();
-        //}
     }
 
     public void CodeCheck()
@@ -46,7 +45,8 @@ public class O_PusselTwoCheck : MonoBehaviour
                 if (code3 == "1")
                 {
                     pusselTwoComplete = true;
-                    
+                    tpStart.SetActive(true);
+                    tpEnd.SetActive(true);
                 }
             }
         }

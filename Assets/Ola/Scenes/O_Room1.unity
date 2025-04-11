@@ -735,6 +735,16 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 595597657052382298, guid: 0086e4bb92b92024d9f811d69622a031, type: 3}
   m_PrefabInstance: {fileID: 1016419883}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &423578343 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4285554829243061767, guid: cb9ad99d6dc84794e9845b4e26e9a6cc, type: 3}
+  m_PrefabInstance: {fileID: 5188511578991481566}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &591145927 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4285554829243061767, guid: cb9ad99d6dc84794e9845b4e26e9a6cc, type: 3}
+  m_PrefabInstance: {fileID: 945700795}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &644710653
 GameObject:
   m_ObjectHideFlags: 0
@@ -1360,11 +1370,13 @@ MonoBehaviour:
   UI: {fileID: 1980211227}
   keyPad: {fileID: 2005555905}
   pusselTwo: {fileID: 1529706487}
+  tpStart: {fileID: 423578343}
+  tpEnd: {fileID: 591145927}
+  correct: {fileID: 883451965}
+  wrong: {fileID: 1363195118}
   keyPadComplete: 0
   teleporterActive: 0
   keyPadOn: 0
-  correct: {fileID: 883451965}
-  wrong: {fileID: 1363195118}
   code1: 
   code2: 
   code3: 
@@ -4468,6 +4480,8 @@ MonoBehaviour:
   input2: {fileID: 970812311}
   input3: {fileID: 1127686909}
   pusselTwo: {fileID: 1529706487}
+  tpStart: {fileID: 0}
+  tpEnd: {fileID: 0}
   pusselTwoComplete: 0
   checkStarted: 0
   code1: 

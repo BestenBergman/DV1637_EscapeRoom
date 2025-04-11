@@ -1,22 +1,25 @@
 using System.Collections;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.Windows;
 
 public class O_KeyPadActivate : MonoBehaviour
 {
     public Canvas UI;
     public Canvas keyPad;
+
     public GameObject pusselTwo;
-    
+    public GameObject tpStart;
+    public GameObject tpEnd;
+    public GameObject correct;
+    public GameObject wrong;
+
     public bool keyPadComplete = false;
     public bool teleporterActive = false;
     public bool keyPadOn = false;
     
-
-    public GameObject correct;
-    public GameObject wrong;
-
     public string code1 = "";
     public string code2 = "";
     public string code3 = "";
@@ -33,6 +36,8 @@ public class O_KeyPadActivate : MonoBehaviour
         keyPad.enabled = false;
         correct.SetActive(false);
         wrong.SetActive(false);
+        tpStart.SetActive(false);
+        tpEnd.SetActive(false);
     }
 
     // Update is called once per frame
@@ -105,6 +110,8 @@ public class O_KeyPadActivate : MonoBehaviour
                 if (code3 == "1")
                 {
                     keyPadComplete = true;
+                    tpStart.SetActive(true);
+                    tpEnd.SetActive(true);
 
                 }
             }

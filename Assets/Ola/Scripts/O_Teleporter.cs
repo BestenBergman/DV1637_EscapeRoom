@@ -8,13 +8,13 @@ public class O_Teleporter : MonoBehaviour
     [HideInInspector] public H_PlayerStats ps;
     public Transform endPosition;
     public bool isTeleporting = false;
-    public bool coroutineStarted = false;
-    public bool tpCooldown = false;
+    public GameObject pussel;
     [HideInInspector] public Vector3 tpPosition = Vector3.zero;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+
         player = GameObject.FindGameObjectWithTag("Player");
         ps = player.GetComponent<H_PlayerStats>();
         tpPosition = endPosition.transform.position;
@@ -23,10 +23,7 @@ public class O_Teleporter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if(ps.hasTeleported)
-        {
-            Debug.Log("bajs");
-        }    
+         
     }
 
     private void OnTriggerStay(Collider other)
@@ -48,12 +45,7 @@ public class O_Teleporter : MonoBehaviour
         }
     }   
 
-    IEnumerator TeleportCooldown()
-    {
-        tpCooldown = true;
-        yield return new WaitForSeconds(3.0f);
-        tpCooldown = false;
-    }
+   
 
 
     IEnumerator Teleporting()
