@@ -25,10 +25,10 @@ public class O_KeyPadActivate : MonoBehaviour
         {
             KeyPadComplete();
         }
-        KeyPadActivate();   
+        KeyPadSwitch();   
     }
 
-    public void KeyPadActivate()
+    public void KeyPadSwitch()
     {
         if (Input.GetKeyDown(KeyCode.H))
         {

@@ -20,4 +20,9 @@ public class H_ShowKeyPad : MonoBehaviour
     {
 
     }
+
+    public void DeactivateKeypadUI()
+    {
+
+    }
 }
