@@ -30,6 +30,10 @@ public class H_Interact : MonoBehaviour
             {
                 hit.transform.gameObject.GetComponent<O_KeyPadActivate>().KeyPadSwitch();
             }
+            else if (hit.transform.tag == "R2_PuzzleLever")
+            {
+                hit.transform.gameObject.GetComponent<O_R2P1>().SwitchLever(hit.transform.gameObject);
+            }
             else if (ps.ItemTags.Contains(hit.transform.tag))
             {
                 PickUpItem(hit.transform.gameObject);
