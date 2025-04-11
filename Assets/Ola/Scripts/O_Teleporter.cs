@@ -22,15 +22,17 @@ public class O_Teleporter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+       if(hasTeleported)
+        {
+            Debug.Log("bajs");
+        }    
     }
 
     private void OnTriggerStay(Collider other)
     {
         
-        if (other.gameObject == player)
+        if (other.gameObject == player && !hasTeleported)
         {
-            Debug.Log("Aow)");
             isTeleporting = true;
             StartCoroutine("Teleporting");
         }
@@ -55,14 +57,16 @@ public class O_Teleporter : MonoBehaviour
 
     IEnumerator Teleporting()
     {
-        yield return new WaitForSeconds(0.5f);
-        if (isTeleporting && !hasTeleported)
+        yield return new WaitForSeconds(2.0f);
+        if (isTeleporting)
         {
-            player.transform.position = tpPosition;
             hasTeleported = true;
-            Debug.Log("Good Heavens Marty!");
+            player.transform.position = tpPosition;
+            
+            //Debug.Log("Good Heavens Marty!");
+            yield return new WaitForSeconds(3.0f);
+            hasTeleported = false;
         }
-        yield return new WaitForSeconds(3.0f);
-        hasTeleported = false;
+        
     }
 }
