@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 8579038631401784648}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasItem: 0
-  HoldPos: {x: 1, y: 0.5, z: 2}
+  HoldPos: {x: 1, y: 0.5, z: 1}
   ItemTags:
   - Item
   - R1_Green

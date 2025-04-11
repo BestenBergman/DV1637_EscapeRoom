@@ -60,7 +60,7 @@ public class H_Interact : MonoBehaviour
                         }
                     }
                 }
-                else
+                else if (hit.transform.childCount > 0)
                 {
                     PickUpShard(hit.transform.gameObject);
                 }
@@ -84,8 +84,8 @@ public class H_Interact : MonoBehaviour
     {
         if (ps.hasItem)
         {
-            gameObject.transform.GetChild(0).transform.GetChild(1).GetComponent<Rigidbody>().isKinematic = false;
-            gameObject.transform.GetChild(0).transform.GetChild(1).parent = gameObject.transform.parent;
+            gameObject.transform.GetChild(0).GetChild(1).GetComponent<Rigidbody>().isKinematic = false;
+            gameObject.transform.GetChild(0).GetChild(1).parent = gameObject.transform.parent;
         }
 
         ps.hasItem = true;
@@ -100,8 +100,8 @@ public class H_Interact : MonoBehaviour
     /// </summary>
     public void DropItem()
     {
-        gameObject.transform.GetChild(0).transform.GetChild(1).GetComponent<Rigidbody>().isKinematic = false;
-        gameObject.transform.GetChild(0).transform.GetChild(1).parent = gameObject.transform.parent;
+        gameObject.transform.GetChild(0).GetChild(1).GetComponent<Rigidbody>().isKinematic = false;
+        gameObject.transform.GetChild(0).GetChild(1).parent = gameObject.transform.parent;
         ps.hasItem = false;
     }
 
@@ -120,7 +120,10 @@ public class H_Interact : MonoBehaviour
 
     public void PlaceShard(GameObject shardBox)
     {
-        gameObject.transform.GetChild(0).transform.GetChild(1).parent = shardBox.transform;
+        GameObject shard = gameObject.transform.GetChild(0).GetChild(1).gameObject;
+        shard.transform.parent = shardBox.transform;
+        shard.transform.localRotation = Quaternion.identity;
+        shard.transform.localPosition = new Vector3(0,1,0);
     }
 
     public void PickUpShard(GameObject shardBox)
