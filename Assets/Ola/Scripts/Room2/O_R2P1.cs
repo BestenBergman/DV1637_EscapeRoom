@@ -3,7 +3,7 @@ using UnityEngine;
 public class O_R2P1 : MonoBehaviour
 {
     public bool on = false;
-    public int tmpAngle = 0;
+    
 
     public void SwitchLever(GameObject lever)
     {
