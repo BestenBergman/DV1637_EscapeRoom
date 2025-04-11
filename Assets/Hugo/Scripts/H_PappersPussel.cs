@@ -6,6 +6,9 @@ public class H_PappersPussel : MonoBehaviour
     public GameObject ljus;
     public GameObject x_ax;
     public GameObject y_ax;
+
+    public Material ingenKod;
+    public Material visaKod;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,6 +22,15 @@ public class H_PappersPussel : MonoBehaviour
         Vector3 Y = y_ax.transform.position - transform.position;
         Vector3 Z = ljus.transform.position - transform.position;
         float det = Determinant(X, Y, Z);
+
+        if (det > 0)
+        {
+            Debug.Log("Se kod");
+        }
+        else
+        {
+            Debug.Log("Inte");
+        }
     }
 
     private float Determinant(Vector3 u, Vector3 v, Vector3 w)
