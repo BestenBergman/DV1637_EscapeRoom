@@ -36,7 +36,7 @@ public class O_R2P1_Check : MonoBehaviour
         lever3Check = lever3.GetComponent<O_R2P1>().on;
         lever4Check = lever4.GetComponent<O_R2P1>().on;
 
-        if (lever1Check && lever2Check && lever3Check && lever4Check)
+        if (lever1Check && !lever2Check && !lever3Check && lever4Check)
         {
             r2p1Completed = true;
             Debug.Log("Wahoo");
