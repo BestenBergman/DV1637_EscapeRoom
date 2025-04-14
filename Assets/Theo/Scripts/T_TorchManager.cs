@@ -11,14 +11,14 @@ public class T_TorchManager : MonoBehaviour
             hasAllBeenLit = true;
         }
 
-        if (hasAllBeenLit)
+       /* if (hasAllBeenLit)
         {
             Debug.Log("Lit!");
         }
         else
         {
             Debug.Log("Not Lit...");
-        }
+        }*/
     }
 
 

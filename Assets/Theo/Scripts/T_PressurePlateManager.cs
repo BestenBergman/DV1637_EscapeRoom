@@ -21,11 +21,11 @@ public class T_PressurePlateManager : MonoBehaviour
 
         if (hasAllBeenPressed)
         {
-            //Debug.Log("Pressed!");
+            Debug.Log("Pressed!");
         }
         else
         {
-            //Debug.Log("Not Pressed...");
+            Debug.Log("Not Pressed...");
         }
 
 
