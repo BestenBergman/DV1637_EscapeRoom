@@ -25,6 +25,7 @@ TagManager:
   - R1_Switchable
   - R1_Keypad
   - R2_PuzzleLever
+  - R3_Box
   layers:
   - Default
   - TransparentFX

@@ -8,14 +8,14 @@ public class T_PressurePlate : MonoBehaviour
     {
         isPressed = true;
 
-        //if (other.tag == "Item")
-        //{
-        //    Debug.Log("Box");
-        //}
-        //if (other.tag == "Player")
-        //{
-        //    Debug.Log("Player");
-        //}
+        if (other.tag == "R3_Box")
+        {
+            Debug.Log("Box");
+        }
+        if (other.tag == "Player")
+        {
+            Debug.Log("Player");
+        }
     }
     private void OnTriggerExit(Collider other)
     {

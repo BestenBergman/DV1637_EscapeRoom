@@ -4,7 +4,7 @@ using static UnityEngine.GraphicsBuffer;
 
 public class T_TorchController : MonoBehaviour
 {
-    public GameObject torchLight;
+    public GameObject torchFire;
     public bool torchIsEnabled = false;
 
     public Transform playerPos; // Assign your player GameObject in the Inspector
@@ -29,9 +29,9 @@ public class T_TorchController : MonoBehaviour
 
     private void ToggleLight(bool active)
     {
-        if (torchLight != null)
+        if (torchFire != null)
         {
-            torchLight.SetActive(active);
+            torchFire.SetActive(active);
         }
     }
 }
