@@ -1282,6 +1282,9 @@ MonoBehaviour:
   code1: 
   code2: 
   code3: 
+  p1: 1
+  p2: 1
+  p3: 1
   input1: {fileID: 1664817263}
   input2: {fileID: 970812311}
   input3: {fileID: 1127686909}
