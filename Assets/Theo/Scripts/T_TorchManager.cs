@@ -1,44 +1,24 @@
 using UnityEngine;
 
-public class T_TorchManager : MonoBehaviour
+/// <summary>
+/// This script manages a group of torches and checks if all of them have been lit.
+/// </summary>
+public class T_TorchManager : T_ManagerBase<T_TorchController>
 {
-    bool hasAllBeenLit = false;
-
-    private void Update()
+    protected override bool IsConditionMet(T_TorchController torch)
     {
-        if (!hasAllBeenLit && allTorchesLit())
-        {
-            hasAllBeenLit = true;
-        }
+        return torch.torchIsEnabled;
+    }
 
-       /* if (hasAllBeenLit)
+    protected override void PrintOutResult(bool allLit)
+    {
+        if (allLit)
         {
-            Debug.Log("Lit!");
+            Debug.Log("Lit");
         }
         else
         {
-            Debug.Log("Not Lit...");
-        }*/
-    }
-
-
-    bool allTorchesLit()
-    {
-        bool allPressed = true;
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            Transform child = transform.GetChild(i);
-            T_TorchController torch = child.GetComponent<T_TorchController>();
-
-            if (torch != null)
-            {
-                if (!torch.torchIsEnabled)
-                {
-                    allPressed = false;
-                    break; // no need to check further if one is not pressed
-                }
-            }
+            Debug.Log("Not Lit");
         }
-        return allPressed;
     }
 }
