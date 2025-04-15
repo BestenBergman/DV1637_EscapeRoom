@@ -8,8 +8,6 @@ public class O_Startscript : MonoBehaviour
 
     public float timer = 0.0f;
     
-    [SerializeField] private float maxDist = 10f;
-    
 
     
     void Update()

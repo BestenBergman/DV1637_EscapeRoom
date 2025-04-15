@@ -328,7 +328,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0a621cba8ef2b045b205c0ea19982af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cube: {fileID: 0}
   placedCorrectly: 0
 --- !u!1 &95868266
 GameObject:
@@ -1282,6 +1281,9 @@ MonoBehaviour:
   code1: 
   code2: 
   code3: 
+  p1: 1
+  p2: 1
+  p3: 1
   input1: {fileID: 1664817263}
   input2: {fileID: 970812311}
   input3: {fileID: 1127686909}
@@ -2482,7 +2484,6 @@ MonoBehaviour:
   door: {fileID: 207587683}
   timerOn: 0
   timer: 0
-  maxDist: 10
 --- !u!1001 &1179184113
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3754,7 +3755,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0a621cba8ef2b045b205c0ea19982af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cube: {fileID: 0}
   placedCorrectly: 0
 --- !u!1 &1524498949
 GameObject:
@@ -6288,7 +6288,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0a621cba8ef2b045b205c0ea19982af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cube: {fileID: 0}
   placedCorrectly: 0
 --- !u!1 &2084731544
 GameObject:

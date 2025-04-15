@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class O_PusselEtt : MonoBehaviour
 {
-    public GameObject cube;
     public bool placedCorrectly = false;
     
 

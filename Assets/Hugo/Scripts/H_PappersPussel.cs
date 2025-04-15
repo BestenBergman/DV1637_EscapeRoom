@@ -10,6 +10,8 @@ public class H_PappersPussel : MonoBehaviour
     private MeshRenderer mr;
     public Material ingenKod;
     public Material visaKod;
+
+    [SerializeField] private float lightDist;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,7 +24,7 @@ public class H_PappersPussel : MonoBehaviour
         Vector3 backV = ljus.transform.position - back.transform.position;
         Vector3 frontV = ljus.transform.position - front.transform.position;
 
-        if (3f >= backV.magnitude && backV.magnitude > frontV.magnitude)
+        if (lightDist >= backV.magnitude && backV.magnitude > frontV.magnitude)
         {
             if (mr.material != visaKod)
             {

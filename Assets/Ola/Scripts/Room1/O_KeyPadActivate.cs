@@ -24,6 +24,10 @@ public class O_KeyPadActivate : MonoBehaviour
     public string code2 = "";
     public string code3 = "";
 
+    public string p1;
+    public string p2;
+    public string p3;
+
     public TextMeshProUGUI input1;
     public TextMeshProUGUI input2;
     public TextMeshProUGUI input3;
@@ -103,11 +107,11 @@ public class O_KeyPadActivate : MonoBehaviour
         code2 = input2.text;
         code3 = input3.text;
 
-        if (code1 == "1")
+        if (code1 == p1)
         {
-            if (code2 == "1")
+            if (code2 == p2)
             {
-                if (code3 == "1")
+                if (code3 == p3)
                 {
                     keyPadComplete = true;
                     tpStart.SetActive(true);

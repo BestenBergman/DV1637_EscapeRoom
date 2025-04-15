@@ -5,17 +5,17 @@ public class O_R2P1 : MonoBehaviour
     public bool on = false;
     
 
-    public void SwitchLever(GameObject lever)
+    public void SwitchLever()
     {
 
         if (!on)
         {
-            lever.transform.parent.eulerAngles = new Vector3(0, 0, -22.5f);
+            transform.parent.eulerAngles = new Vector3(0, 0, -22.5f);
             on = true;
         }
         else
         {
-            lever.transform.parent.eulerAngles = new Vector3(0, 0, 22.5f);
+            transform.parent.eulerAngles = new Vector3(0, 0, 22.5f);
             on = false;
         }
     }
