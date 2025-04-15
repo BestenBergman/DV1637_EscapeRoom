@@ -36,7 +36,7 @@ public class H_Interact : MonoBehaviour
             }
             else if (hit.transform.tag == "R2_PuzzleLever")
             {
-                hit.transform.gameObject.GetComponent<O_R2P1>().SwitchLever(hit.transform.gameObject);
+                hit.transform.gameObject.GetComponent<O_R2P1>().SwitchLever();
             }
             else if (ps.ItemTags.Contains(hit.transform.tag))
             {
