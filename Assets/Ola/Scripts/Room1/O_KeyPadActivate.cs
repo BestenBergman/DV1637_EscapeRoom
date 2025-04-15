@@ -10,6 +10,7 @@ public class O_KeyPadActivate : MonoBehaviour
     public Canvas UI;
     public Canvas keyPad;
 
+    public GameObject pusselTwo;
     public GameObject tpStart;
     public GameObject tpEnd;
     public GameObject correct;
@@ -23,9 +24,9 @@ public class O_KeyPadActivate : MonoBehaviour
     public string code2 = "";
     public string code3 = "";
 
-    [SerializeField] private string pw1;
-    [SerializeField] private string pw2;
-    [SerializeField] private string pw3;
+    public string p1;
+    public string p2;
+    public string p3;
 
     public TextMeshProUGUI input1;
     public TextMeshProUGUI input2;
@@ -46,16 +47,12 @@ public class O_KeyPadActivate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!keyPadComplete)
+        CodeCheck();
+        if (keyPadComplete && !teleporterActive)
         {
-            code1 = input1.text;
-            code2 = input2.text;
-            code3 = input3.text;
+            StartCoroutine("Closing");
         }
-        if (code1 != "" && code2 != "" && code3 != "")
-        {
-            CodeCheck();
-        }
+         
     }
 
     public void KeyPadSwitch()
@@ -94,10 +91,10 @@ public class O_KeyPadActivate : MonoBehaviour
     {
         teleporterActive = true;
         yield return new WaitForSeconds(0.5f);
+        correct.SetActive(true);
         input1.text = "";
         input2.text = "";
         input3.text = "";
-        correct.SetActive(true);
         yield return new WaitForSeconds(1.0f);
         KeyPadComplete();
         correct.SetActive(false);
@@ -106,22 +103,28 @@ public class O_KeyPadActivate : MonoBehaviour
 
     public void CodeCheck()
     {
+        code1 = input1.text;
+        code2 = input2.text;
+        code3 = input3.text;
 
-        if (code1 == pw1 && code2 == pw2 && code3 == pw3)
+        if (code1 == p1)
         {
-            keyPadComplete = true;
-            tpStart.SetActive(true);
-            tpEnd.SetActive(true);
-            StartCoroutine(Closing());
+            if (code2 == p2)
+            {
+                if (code3 == p3)
+                {
+                    keyPadComplete = true;
+                    tpStart.SetActive(true);
+                    tpEnd.SetActive(true);
+
+                }
+            }
         }
-        else
+        if (code1 != "" && code2 != "" && code3 != "" && !keyPadComplete)
         {
-            Debug.LogWarning("Garga");
-            //StartCoroutine("WrongCode");
+            StartCoroutine("WrongCode");
+
         }
-        code1 = "";
-        code2 = "";
-        code3 = "";
     }
 
     IEnumerator WrongCode()
