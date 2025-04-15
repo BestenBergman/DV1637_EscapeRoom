@@ -46,10 +46,6 @@ public class H_Interact : MonoBehaviour
             {
                 InteractWithButtons(hit.transform.gameObject);
             }
-            else if (hit.transform.tag == "R1_Chest")
-            {
-                hit.transform.gameObject.GetComponent<O_Startscript>().Starter();
-            }
             else if (ps.ShardBoxes.Contains(hit.transform.tag))
             {
                 if (ps.hasItem)
@@ -75,6 +71,10 @@ public class H_Interact : MonoBehaviour
             else if (ps.hasItem)
             {
                 DropItem();
+            }
+            else if (hit.transform.tag == "R1_Chest")
+            {
+                hit.transform.gameObject.GetComponent<O_Startscript>().Starter();
             }
         }
         else if (ps.hasItem)
