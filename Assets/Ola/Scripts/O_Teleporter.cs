@@ -8,7 +8,6 @@ public class O_Teleporter : MonoBehaviour
     [HideInInspector] public H_PlayerStats ps;
     public Transform endPosition;
     public bool isTeleporting = false;
-    public GameObject pussel;
     [HideInInspector] public Vector3 tpPosition = Vector3.zero;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

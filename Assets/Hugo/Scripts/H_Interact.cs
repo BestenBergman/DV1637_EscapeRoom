@@ -72,6 +72,10 @@ public class H_Interact : MonoBehaviour
             {
                 DropItem();
             }
+            else if (hit.transform.tag == "R1_Chest")
+            {
+                hit.transform.gameObject.GetComponent<O_Startscript>().Starter();
+            }
         }
         else if (ps.hasItem)
         {
