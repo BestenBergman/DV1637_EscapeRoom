@@ -1,10 +1,13 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class T_BtnManager : MonoBehaviour
+/// <summary>
+/// This script handles basic button interactions.
+/// </summary>
+public class T_BtnController : MonoBehaviour
 {
     /// <summary>
-    /// Loads scene by parameter value
+    /// Loads scene by parameter value(scene name)
     /// </summary>
     /// <param name="sceneName"></param>
     public void OpenScene(string sceneName)

@@ -2,24 +2,37 @@ using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
+/// <summary>
+/// Controls torch that can be toggled on and off by pressing E,
+/// when within a certain distance.
+/// </summary>
 public class T_TorchController : MonoBehaviour
 {
+    //Torch fire GameObject
     public GameObject torchFire;
+
+    //Determines whether the torch is enabled.
     public bool torchIsEnabled = false;
 
-    public Transform playerPos; // Assign your player GameObject in the Inspector
-    public float interactionDistance = 3f;  // How close the player has to be
+    // Assign your player GameObject in the Inspector to get player position
+    public Transform playerPos;
+
+    // Distance within which the player can interact with the torch.
+    public float interactionDistance = 3f;
 
 
     private void Start()
     {
+        // Set the torch's initial state
         ToggleLight(torchIsEnabled);
     }
 
     void Update()
     {
+        // Calculate the distance between the player and the torch
         float distance = Vector3.Distance(playerPos.position, gameObject.transform.position);
 
+        // If the player presses 'E' while within interaction range, toggle the torch
         if (Input.GetKeyDown(KeyCode.E) && distance <= interactionDistance)
         {
             torchIsEnabled = !torchIsEnabled;
@@ -27,6 +40,10 @@ public class T_TorchController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Enables or disables the torch fire.
+    /// </summary>
+    /// <param name="active"></param>
     private void ToggleLight(bool active)
     {
         if (torchFire != null)
