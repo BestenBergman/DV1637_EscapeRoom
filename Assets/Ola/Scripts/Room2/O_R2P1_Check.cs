@@ -11,8 +11,9 @@ public class O_R2P1_Check : MonoBehaviour
     [HideInInspector] public bool lever2Check;
     [HideInInspector] public bool lever3Check;
     [HideInInspector] public bool lever4Check;
-    [HideInInspector] public bool r2p1Completed = false; 
+    public bool r2p1Completed = false;
 
+    public GameObject gateDoor;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -39,6 +40,7 @@ public class O_R2P1_Check : MonoBehaviour
         if (lever1Check && !lever2Check && !lever3Check && lever4Check)
         {
             r2p1Completed = true;
+            gateDoor.SetActive(false);
             Debug.Log("Wahoo");
         }
     }
