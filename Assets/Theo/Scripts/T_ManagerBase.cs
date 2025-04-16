@@ -33,14 +33,14 @@ public abstract class T_ManagerBase<T> : MonoBehaviour where T : Component
     /// <param name="allCondition"></param>
     protected virtual void PrintOutResult(bool allCondition) 
     {
-        if (allCondition)
-        {
-            Debug.Log("True");
-        }
-        else
-        {
-            Debug.Log("False");
-        }
+        //if (allCondition)
+        //{
+        //    Debug.Log("True");
+        //}
+        //else
+        //{
+        //    Debug.Log("False");
+        //}
     }
 
     /// <summary>

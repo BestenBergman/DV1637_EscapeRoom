@@ -15,7 +15,7 @@ public class T_PushObject : MonoBehaviour
         Rigidbody rB = hit.collider.attachedRigidbody;
 
         // Checks if the object has a Rigidbody and is not kinematic
-        if (rB != null || !rB.isKinematic)
+        if (rB != null && !rB.isKinematic)
         {
             // Create a force direction vector based on the players movement, ignoring the Y axis (no vertical)
             Vector3 forceDirection = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
