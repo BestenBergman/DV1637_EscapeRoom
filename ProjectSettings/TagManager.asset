@@ -27,6 +27,8 @@ TagManager:
   - R2_PuzzleLever
   - R3_Box
   - R2_Keypad
+  - R3_Torch
+  - GameUI
   layers:
   - Default
   - TransparentFX

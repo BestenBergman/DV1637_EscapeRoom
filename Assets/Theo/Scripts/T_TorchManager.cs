@@ -10,15 +10,15 @@ public class T_TorchManager : T_ManagerBase<T_TorchController>
         return torch.torchIsEnabled;
     }
 
-    protected override void PrintOutResult(bool allLit)
-    {
-        if (allLit)
-        {
-            Debug.Log("Lit");
-        }
-        else
-        {
-            Debug.Log("Not Lit");
-        }
-    }
+    //protected override void PrintOutResult(bool allLit)
+    //{
+    //    if (allLit)
+    //    {
+    //        Debug.Log("Lit");
+    //    }
+    //    else
+    //    {
+    //        Debug.Log("Not Lit");
+    //    }
+    //}
 }

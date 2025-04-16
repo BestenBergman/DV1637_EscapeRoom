@@ -10,17 +10,17 @@ public class T_PressurePlateManager : T_ManagerBase<T_PressurePlate>
         return pressurePlate.isPressed;
     }
 
-    protected override void PrintOutResult(bool allPressed)
-    {
-        if (allPressed)
-        {
-            Debug.Log("Pressed!");
-        }
-        else
-        {
-            Debug.Log("Not Pressed...");
-        }
-    }
+    //protected override void PrintOutResult(bool allPressed)
+    //{
+    //    if (allPressed)
+    //    {
+    //        Debug.Log("Pressed!");
+    //    }
+    //    else
+    //    {
+    //        Debug.Log("Not Pressed...");
+    //    }
+    //}
 }
 
 

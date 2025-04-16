@@ -15,10 +15,10 @@ public class T_TorchController : MonoBehaviour
     public bool torchIsEnabled = false;
 
     // Assign your player GameObject in the Inspector to get player position
-    public Transform playerPos;
+    //public Transform playerPos;
 
     // Distance within which the player can interact with the torch.
-    public float interactionDistance = 3f;
+    //public float interactionDistance = 3f;
 
 
     private void Start()
@@ -30,21 +30,21 @@ public class T_TorchController : MonoBehaviour
     void Update()
     {
         // Calculate the distance between the player and the torch
-        float distance = Vector3.Distance(playerPos.position, gameObject.transform.position);
+        //float distance = Vector3.Distance(playerPos.position, gameObject.transform.position);
 
-        // If the player presses 'E' while within interaction range, toggle the torch
-        if (Input.GetKeyDown(KeyCode.E) && distance <= interactionDistance)
-        {
-            torchIsEnabled = !torchIsEnabled;
-            ToggleLight(torchIsEnabled);
-        }
+        //// If the player presses 'E' while within interaction range, toggle the torch
+        //if (Input.GetKeyDown(KeyCode.E) && distance <= interactionDistance)
+        //{
+        //    torchIsEnabled = !torchIsEnabled;
+        //    ToggleLight(torchIsEnabled);
+        //}
     }
 
     /// <summary>
     /// Enables or disables the torch fire.
     /// </summary>
     /// <param name="active"></param>
-    private void ToggleLight(bool active)
+    public void ToggleLight(bool active)
     {
         if (torchFire != null)
         {

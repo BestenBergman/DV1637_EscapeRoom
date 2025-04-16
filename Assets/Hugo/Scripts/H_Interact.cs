@@ -34,6 +34,12 @@ public class H_Interact : MonoBehaviour
             {
                 hit.transform.gameObject.GetComponent<O_KeyPadActivate>().KeyPadSwitch();
             }
+            else if (hit.transform.tag == "R3_Torch")
+            {
+                T_TorchController torch = hit.transform.gameObject.GetComponent<T_TorchController>();
+                torch.torchIsEnabled = !torch.torchIsEnabled;
+                torch.ToggleLight(torch.torchIsEnabled);
+            }
             else if (hit.transform.tag == "R2_PuzzleLever")
             {
                 hit.transform.gameObject.GetComponent<O_R2P1>().SwitchLever();
