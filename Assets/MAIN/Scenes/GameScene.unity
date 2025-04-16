@@ -5617,6 +5617,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1938217244687759661, guid: eaa342bf170667640990deb1d1c1e51a, type: 3}
+      propertyPath: ui
+      value: 
+      objectReference: {fileID: 8157842873329276544}
     - target: {fileID: 6996781175495572695, guid: eaa342bf170667640990deb1d1c1e51a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4
@@ -23763,7 +23767,7 @@ GameObject:
   - component: {fileID: 3324414067791371513}
   m_Layer: 5
   m_Name: UI
-  m_TagString: Untagged
+  m_TagString: GameUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

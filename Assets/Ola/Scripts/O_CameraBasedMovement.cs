@@ -6,6 +6,8 @@ public class O_CameraBasedMovement : MonoBehaviour
     CharacterController cc;
     [SerializeField] private float gravity = 9.8f;
 
+    [HideInInspector] public Canvas UI;
+
     public float mouseSensitivity = 100f;
 
     private float xRot = 0f;
@@ -18,12 +20,16 @@ public class O_CameraBasedMovement : MonoBehaviour
 
         QualitySettings.vSyncCount = 1;
         Application.targetFrameRate = 60;
+        UI = GameObject.FindGameObjectWithTag("GameUI").GetComponent<Canvas>();
     }
 
     void Update()
     {
-        CameraMovement();
-        ApplyGravity();
+        if (UI.enabled)
+        {
+            CameraMovement();
+            ApplyGravity();
+        }
     }
 
 
