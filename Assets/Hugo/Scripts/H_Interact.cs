@@ -2,8 +2,7 @@ using System.Linq;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem.HID;
-using static SlutPussel;
-using static UnityEditor.Progress;
+
 
 [RequireComponent(typeof(H_PlayerStats))]
 
@@ -23,7 +22,7 @@ public class H_Interact : MonoBehaviour
     public void Interact()
     {
         RaycastHit hit;
-        Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f,0.5f));
+        Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f,0.5f, 0f));
         if (Physics.Raycast(ray, out hit, 3f))
         {
             if (hit.transform.tag == "R1_Keypad")
