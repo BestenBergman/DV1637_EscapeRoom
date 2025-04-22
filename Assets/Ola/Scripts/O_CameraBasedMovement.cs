@@ -1,12 +1,15 @@
 using UnityEngine;
 
+[RequireComponent(typeof(H_PlayerStats))]
+[RequireComponent(typeof(CharacterController))]
+
 public class O_CameraBasedMovement : MonoBehaviour
 {
     [SerializeField] private float speed = 10.0f;
     CharacterController cc;
     [SerializeField] private float gravity = 9.8f;
 
-    [HideInInspector] public Canvas UI;
+    [HideInInspector] public H_PlayerStats ps;
 
     public float mouseSensitivity = 100f;
 
@@ -20,14 +23,17 @@ public class O_CameraBasedMovement : MonoBehaviour
 
         QualitySettings.vSyncCount = 1;
         Application.targetFrameRate = 60;
-        UI = GameObject.FindGameObjectWithTag("GameUI").GetComponent<Canvas>();
+        ps = GetComponent<H_PlayerStats>();
     }
 
     void Update()
     {
-        if (UI.enabled)
+        if (!ps.inKeyPad)
         {
-            CameraMovement();
+            if (!ps.isInspecting)
+            {
+                CameraMovement();
+            }
             ApplyGravity();
         }
     }

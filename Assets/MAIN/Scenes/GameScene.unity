@@ -5661,6 +5661,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8579038631401784648, guid: eaa342bf170667640990deb1d1c1e51a, type: 3}
+      propertyPath: HoldPos.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579038631401784648, guid: eaa342bf170667640990deb1d1c1e51a, type: 3}
+      propertyPath: HoldPos.y
+      value: -0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7222,6 +7230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0784ab5133c42cd4795ff7e92a1a4b09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ps: {fileID: 0}
   UI: {fileID: 923956784213922738}
   keyPad: {fileID: 1152786907}
   pusselTwo: {fileID: 1943376992}
@@ -11066,6 +11075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0784ab5133c42cd4795ff7e92a1a4b09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ps: {fileID: 0}
   UI: {fileID: 923956784213922738}
   keyPad: {fileID: 1482681706}
   pusselTwo: {fileID: 1369014130}
@@ -21523,6 +21533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0784ab5133c42cd4795ff7e92a1a4b09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ps: {fileID: 0}
   UI: {fileID: 923956784213922738}
   keyPad: {fileID: 4680383462615271202}
   pusselTwo: {fileID: 0}
