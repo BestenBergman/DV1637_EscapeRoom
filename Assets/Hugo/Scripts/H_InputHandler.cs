@@ -2,17 +2,21 @@ using UnityEngine;
 
 [RequireComponent(typeof(O_CameraBasedMovement))]
 [RequireComponent(typeof(H_Interact))]
+[RequireComponent(typeof(H_Inspect))]
+[RequireComponent(typeof(H_PlayerStats))]
 
 public class H_InputHandler : MonoBehaviour
 {
     [HideInInspector] public O_CameraBasedMovement O_cbm;
     [HideInInspector] public H_Interact H_Int;
-    [HideInInspector] public Canvas UI;
+    [HideInInspector] public H_Inspect H_Ispec;
+    [HideInInspector] public H_PlayerStats ps;
     void Start()
     {
         O_cbm = GetComponent<O_CameraBasedMovement>();
         H_Int = GetComponent<H_Interact>();
-        UI = GameObject.FindGameObjectWithTag("GameUI").GetComponent<Canvas>();
+        H_Ispec = GetComponent<H_Inspect>();
+        ps = GetComponent<H_PlayerStats>();
     }
 
     void Update()
@@ -25,13 +29,17 @@ public class H_InputHandler : MonoBehaviour
     /// </summary>
     private void InputHandler()
     {
-        if ((Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0) && UI.enabled)
+        if ((Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0) && !ps.inKeyPad && !ps.isInspecting)
         {
             O_cbm.PlayerMovement();
         }
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && !ps.isInspecting)
         {
             H_Int.Interact();
+        }
+        if (Input.GetKeyDown(KeyCode.Q) && !ps.inKeyPad && ps.hasItem)
+        {
+            H_Ispec.SwitchInspect();
         }
     }
 }

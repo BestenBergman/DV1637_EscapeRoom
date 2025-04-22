@@ -9,6 +9,8 @@ public class H_PlayerStats : MonoBehaviour
     [Tooltip("Säger vart ett item placeras när man holler i det")]
     public Vector3 HoldPos = new Vector3(0, 0, 0);
 
+    public Vector3 InspectPos = new Vector3(0, 0, 0);
+
     [Tooltip("Säger vilka tags som räknas som items och då kan plockas upp")]
     public string[] ItemTags = { "Item", "R1_Green", "R1_Red", "R1_Blue", "R4_BlueShard", "R4_RedShard", "R4_GreenShard" };
 
@@ -16,4 +18,7 @@ public class H_PlayerStats : MonoBehaviour
     [HideInInspector] public string[] Shards = { "R4_BlueShard", "R4_RedShard", "R4_GreenShard" };
 
     public bool hasTeleported = false;
+
+    public bool inKeyPad = false;
+    public bool isInspecting = false;
 }
