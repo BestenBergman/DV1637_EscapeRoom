@@ -7,6 +7,8 @@ using UnityEngine.Windows;
 
 public class O_KeyPadActivate : MonoBehaviour
 {
+    [HideInInspector] public H_PlayerStats ps;
+
     public Canvas UI;
     public Canvas keyPad;
 
@@ -36,7 +38,9 @@ public class O_KeyPadActivate : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        ps = GameObject.FindGameObjectWithTag("Player").GetComponent<H_PlayerStats>();
         UI.enabled = true;
+        ps.inKeyPad = false;
         keyPad.enabled = false;
         correct.SetActive(false);
         wrong.SetActive(false);
@@ -63,10 +67,12 @@ public class O_KeyPadActivate : MonoBehaviour
             keyPadOn = false;
             Cursor.lockState = CursorLockMode.Locked;
             UI.enabled = true;
+            ps.inKeyPad = false;
         }
         else
         {
             UI.enabled = false;
+            ps.inKeyPad = true;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             keyPad.enabled = true;
@@ -85,6 +91,7 @@ public class O_KeyPadActivate : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.Locked;
             UI.enabled = true;
+            ps.inKeyPad = false;
         }
     }
     IEnumerator Closing()
