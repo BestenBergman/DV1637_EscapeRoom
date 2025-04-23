@@ -8,13 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MAIN/Scenes/GameScene.unity
     guid: 6dc58c3bfa23c5c4bbe5cad7137b5828
-  - enabled: 0
+  - enabled: 1
     path: Assets/Theo/Scenes/MainMenu.unity
     guid: 59da372f956de7349b8f976a29a9eebd
-  - enabled: 0
+  - enabled: 1
     path: Assets/Theo/Scenes/CreditsMenu.unity
     guid: 0a7ec5f27a39abe4d8fc7d7a71be7b70
-  - enabled: 0
+  - enabled: 1
     path: Assets/Theo/Scenes/SettingsMenu.unity
     guid: be15de8806ad75d44a95fa31a0e4ecc5
   - enabled: 0
