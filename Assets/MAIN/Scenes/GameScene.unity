@@ -20214,7 +20214,7 @@ Transform:
   m_GameObject: {fileID: 5661800386602781609}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.56, y: -1.5, z: -2.5}
+  m_LocalPosition: {x: -7.56, y: -0.5, z: -2.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20637,7 +20637,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: f3c05c7034eddd244b02889ff2a20c09, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20927,27 +20927,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7462007650040191448}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &5455581624270555625
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5661800386602781609}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5461408960316497430
 GameObject:
   m_ObjectHideFlags: 0
@@ -21160,7 +21139,7 @@ GameObject:
   - component: {fileID: 5015117817546157950}
   - component: {fileID: 6371680939076492071}
   - component: {fileID: 5321364093486746599}
-  - component: {fileID: 5455581624270555625}
+  - component: {fileID: 7164622430650506580}
   - component: {fileID: 7164622430650506579}
   m_Layer: 0
   m_Name: redBox
@@ -21864,7 +21843,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5661800386602781609}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4068373912626513877, guid: a7f94580fcb83844ea7ae3fd24ca46b6, type: 3}
 --- !u!224 &6386865179196583211
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22723,6 +22702,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wantedTag: R4_RedShard
+--- !u!65 &7164622430650506580
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5661800386602781609}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.5766317, y: 2, z: 1.5766317}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &7166614595364053763
 MeshRenderer:
   m_ObjectHideFlags: 0
