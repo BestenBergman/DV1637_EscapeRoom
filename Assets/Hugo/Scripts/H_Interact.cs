@@ -141,7 +141,7 @@ public class H_Interact : MonoBehaviour
     {
         GameObject shard = gameObject.transform.GetChild(0).GetChild(1).gameObject;
         shard.transform.parent = shardBox.transform;
-        shard.transform.localPosition = new Vector3(0,1,0);
+        shard.transform.localPosition = new Vector3(0,0,0);
         shard.transform.localRotation = Quaternion.identity;
         ps.hasItem = false;
     }
