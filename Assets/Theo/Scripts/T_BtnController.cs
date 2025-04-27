@@ -22,4 +22,17 @@ public class T_BtnController : MonoBehaviour
     {
         Application.Quit();
     }
+
+
+    public void Resume()
+    {
+        T_PauseGame pause = transform.parent.parent.parent.GetComponent<T_PauseGame>();
+        if(pause != null)
+        {
+            pause.PauseGame();
+        }
+
+        //Debug.Log("Pause component found: " + (pause != null));
+    }
+
 }
