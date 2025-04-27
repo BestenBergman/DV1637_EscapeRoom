@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class T_Timer : MonoBehaviour
 {
+
     public Slider timerSlider;
     private Image imgFill;
 
@@ -31,10 +32,10 @@ public class T_Timer : MonoBehaviour
         int milli = Mathf.FloorToInt((time - sec) * 100f); // milliseconds
 
 
-        string txtTime = string.Format("{0:00}.{1:00}", sec, milli);
+        string txtTime = string.Format("{0:000}.{1:00}", sec, milli);
         if (time <= 0)
         {
-            txtTime = "00.00";
+            txtTime = "000.00";
             time = 0;
         }
 
