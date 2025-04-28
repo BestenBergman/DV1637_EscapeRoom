@@ -483,6 +483,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rom2
       objectReference: {fileID: 0}
+    - target: {fileID: 1954859237364998489, guid: 4345866b24e076d408bac60c110bde25, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d2f83e3b2cbcf34409b7def1cd2e6dea, type: 2}
     - target: {fileID: 2599524670212331817, guid: 4345866b24e076d408bac60c110bde25, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
