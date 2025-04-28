@@ -12,6 +12,10 @@ public class T_HourglassTimer : MonoBehaviour
     public float timer;                
     private float lerpSpeed = 3f;
 
+
+    public bool startTimer = false;
+
+
     private void Start()
     {
         timer = maxGameTime;
@@ -23,30 +27,33 @@ public class T_HourglassTimer : MonoBehaviour
 
     private void Update()
     {
-        if (timer > 0f)
+        if (startTimer)
         {
-            timer -= Time.deltaTime;
-
-            if (timer < 0f)
+            if (timer > 0f)
             {
-                timer = 0f;
-            }   
+                timer -= Time.deltaTime;
+
+                if (timer < 0f)
+                {
+                    timer = 0f;
+                }
+            }
+
+            // Calculate seconds and milliseconds
+            int sec = Mathf.FloorToInt(timer);
+            int milli = Mathf.FloorToInt((timer - sec) * 100f);
+
+
+
+            // Format the countdown timer text
+            string txtTime = string.Format("{0:000}.{1:00}", sec, milli);
+            timerTxt.text = txtTime;
+
+            Fill(imgTimerDown, true);
+            Fill(imgTimerUp, false);
+
+            ColorChanger();
         }
-
-        // Calculate seconds and milliseconds
-        int sec = Mathf.FloorToInt(timer);
-        int milli = Mathf.FloorToInt((timer - sec) * 100f);
-
-
-
-        // Format the countdown timer text
-        string txtTime = string.Format("{0:000}.{1:00}", sec, milli);
-        timerTxt.text = txtTime;
-
-        Fill(imgTimerDown, true);
-        Fill(imgTimerUp, false);
-
-        ColorChanger();
     }
 
 

@@ -8,6 +8,9 @@ using UnityEngine.InputSystem.HID;
 
 public class H_Interact : MonoBehaviour
 {
+    public GameObject UI; //Theo
+
+
     [HideInInspector] public H_PlayerStats ps;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -83,7 +86,8 @@ public class H_Interact : MonoBehaviour
             }
             else if (hit.transform.tag == "R1_Chest")
             {
-                hit.transform.gameObject.GetComponent<O_Startscript>().Starter();
+                UI.transform.gameObject.GetComponent<T_HourglassTimer>().startTimer = true;
+                //hit.transform.gameObject.GetComponent<O_Startscript>().Starter();
             }
         }
         else if (ps.hasItem)
