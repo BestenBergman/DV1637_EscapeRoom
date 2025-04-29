@@ -22,7 +22,7 @@ public class O_Startscript : MonoBehaviour
     {
         if (!timerOn)
             {
-                door.transform.localPosition = new Vector3(-4, 3f, 10.5f);
+                door.transform.localPosition = new Vector3(-4, 3f, 10.25f);
                 timerOn = true;
             }
        
