@@ -9,10 +9,15 @@ public class T_PressurePlate : MonoBehaviour
     // Indicates whether the pressure plate is currently being pressed
     public bool isPressed = false;
 
+    // Count of objects currently on the plate
+    private int pressCount = 0;
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "R3_Box" || other.tag == "Player")
         {
+            pressCount++;
+
             // Set the isPressed to true when either of the tag objects steps on the plate
             isPressed = true;
         }
@@ -28,8 +33,23 @@ public class T_PressurePlate : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        // Reset the isPressed when the object leaves the pressure plate
-        isPressed = false;
+        if (other.tag == "R3_Box" || other.tag == "Player")
+        {
+            pressCount--;
+            if (pressCount < 0)
+            {
+                pressCount = 0;
+            }
+
+            if (pressCount > 0)
+            {
+                isPressed = true;
+            }
+            else
+            {
+                isPressed = false;
+            }
+        }
     }
 
 }
