@@ -10,12 +10,12 @@ public class O_R2P1 : MonoBehaviour
 
         if (!on)
         {
-            transform.parent.eulerAngles = new Vector3(0, 0, -22.5f);
+            transform.parent.eulerAngles = new Vector3(-16, 0, 0);
             on = true;
         }
         else
         {
-            transform.parent.eulerAngles = new Vector3(0, 0, 22.5f);
+            transform.parent.eulerAngles = new Vector3(16, 0, 0);
             on = false;
         }
     }
