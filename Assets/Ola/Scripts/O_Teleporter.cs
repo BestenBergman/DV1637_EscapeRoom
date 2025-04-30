@@ -49,7 +49,7 @@ public class O_Teleporter : MonoBehaviour
 
     IEnumerator Teleporting()
     {
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(0.8f);
         if (isTeleporting)
         {
             ps.hasTeleported = true;
