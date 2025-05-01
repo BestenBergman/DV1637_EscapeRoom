@@ -10,6 +10,8 @@ public class T_TorchManager : T_ManagerBase<T_TorchController>
         return torch.torchIsEnabled;
     }
 
+    
+
     //protected override void PrintOutResult(bool allLit)
     //{
     //    if (allLit)

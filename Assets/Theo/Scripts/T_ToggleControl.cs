@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class T_GateController : MonoBehaviour
+public class T_ToggleControl : MonoBehaviour
 {
     public GameObject triggerSource;
 
@@ -12,6 +12,7 @@ public class T_GateController : MonoBehaviour
     private O_KeyPadActivate keypad;
     private T_PressurePlate pressurePlate;
     private T_PressurePlateManager pressurePlateManager;
+    private T_TorchManager torchManager;
 
     private void Start()
     {
@@ -23,7 +24,7 @@ public class T_GateController : MonoBehaviour
 
 
         // Set initial door state based on tag
-        if (CompareTag("R1_Door"))
+        if (CompareTag("R1_Door") || objectToControl.name == "TP_Trigger 3-4")
         {
             isOpen = true;
         }
@@ -41,6 +42,7 @@ public class T_GateController : MonoBehaviour
             keypad = triggerSource.GetComponent<O_KeyPadActivate>();
             pressurePlate = triggerSource.GetComponent<T_PressurePlate>();
             pressurePlateManager = triggerSource.GetComponent<T_PressurePlateManager>();
+            torchManager = triggerSource.GetComponent<T_TorchManager>();
         }
     }
 
@@ -60,8 +62,12 @@ public class T_GateController : MonoBehaviour
 
         if (pressurePlateManager != null && pressurePlateManager.AllConditionsMet == true)
         {
-            //SetObjectState(true);
             isOpen = true;
+        }
+
+        if (torchManager != null && torchManager.AllConditionsMet == true)
+        {
+            isOpen = false;
         }
 
         if (pressurePlate != null)
