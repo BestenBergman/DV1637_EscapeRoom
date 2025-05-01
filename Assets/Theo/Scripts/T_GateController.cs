@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class T_GateControl : MonoBehaviour
+public class T_GateController : MonoBehaviour
 {
     public GameObject triggerSource;
-    
-    public bool isDoorOpen;
-    private GameObject door;
+
+    public bool isOpen;
+    private GameObject objectToControl;
 
     // Possible trigger components
     private T_HourglassTimer hourglass;
@@ -15,19 +15,19 @@ public class T_GateControl : MonoBehaviour
     private void Start()
     {
         // Assume the door is the first child
-        door = transform.GetChild(0).gameObject;
+        objectToControl = transform.GetChild(0).gameObject;
 
         // Set initial door state based on tag
         if (CompareTag("R1_Door"))
         {
-            isDoorOpen = true;
+            isOpen = true;
         }
         else
         {
-            isDoorOpen = false;
+            isOpen = false;
         }
 
-        door.SetActive(!isDoorOpen);
+        objectToControl.SetActive(!isOpen);
 
 
         if (triggerSource != null)
@@ -42,35 +42,35 @@ public class T_GateControl : MonoBehaviour
     {
         if (hourglass != null && hourglass.startTimer == true)
         {
-            SetDoorState(false); // Close door when hourglass/timer is active
+            SetObjectState(false); // Close door when hourglass/timer is active
             return;
         }
 
         if (keypad != null && keypad.keyPadComplete == true)
         {
-            SetDoorState(true); // Open door when keypad is complete
+            SetObjectState(true); // Open door when keypad is complete
             return;
         }
 
         if (pressurePlate != null)
         {
-            SetDoorState(pressurePlate.isPressed); // Open/close based on plate
+            SetObjectState(pressurePlate.isPressed); // Open/close based on plate
         }
     }
 
-    private void SetDoorState(bool openDoor)
+    private void SetObjectState(bool open)
     {
-        if (isDoorOpen == openDoor) return; // No change needed
+        if (isOpen == open) return; // No change needed
 
-        isDoorOpen = openDoor;
-        DoorAnimation();
+        isOpen = open;
+        Animation();
         
     }
 
 
-    private void DoorAnimation()
+    private void Animation()
     {
-        //Dont have door animation...
-        door.SetActive(!isDoorOpen);
+        //Dont have animation...
+        objectToControl.SetActive(!isOpen);
     }
 }
