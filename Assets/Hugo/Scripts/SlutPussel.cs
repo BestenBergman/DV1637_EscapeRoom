@@ -62,11 +62,13 @@ public class SlutPussel : MonoBehaviour
         {
             active = false;
             ljus.SetActive(false);
+            transform.localEulerAngles = Vector3.zero;
             hWV.hW.GetComponent<MeshRenderer>().material = hWV.m1;
         }
         else
         {
             ljus.SetActive(true);
+            transform.localEulerAngles = new Vector3 (-90f, 0f, 0f);
             active = true;
         }
     }
