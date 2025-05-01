@@ -1223,6 +1223,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6360000365247392394, guid: fc3afdb7fd1f62a4abfcd3ac20dd3242, type: 3}
+--- !u!1 &107828185 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1219345184218223562, guid: 57b404f88960e5f4190e01f2ef62b102, type: 3}
+  m_PrefabInstance: {fileID: 1681786544}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &123658914
 GameObject:
   m_ObjectHideFlags: 0
@@ -2285,6 +2290,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6800178367220565336, guid: 17d1993893269164098205f47746eab5, type: 3}
   m_PrefabInstance: {fileID: 301504785}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &306265476 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1219345184218223562, guid: 57b404f88960e5f4190e01f2ef62b102, type: 3}
+  m_PrefabInstance: {fileID: 1891286924}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &332195821
 PrefabInstance:
@@ -3872,7 +3882,7 @@ PrefabInstance:
     - target: {fileID: 4286339509926600530, guid: 9de2b06e60b68f94ba11554e39c79d7d, type: 3}
       propertyPath: tpEnd
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 306265476}
     - target: {fileID: 4286339509926600530, guid: 9de2b06e60b68f94ba11554e39c79d7d, type: 3}
       propertyPath: wrong
       value: 
@@ -3900,7 +3910,7 @@ PrefabInstance:
     - target: {fileID: 4286339509926600530, guid: 9de2b06e60b68f94ba11554e39c79d7d, type: 3}
       propertyPath: tpStart
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1779364877}
     - target: {fileID: 4286339509926600530, guid: 9de2b06e60b68f94ba11554e39c79d7d, type: 3}
       propertyPath: pusselTwo
       value: 
@@ -10534,7 +10544,7 @@ PrefabInstance:
     - target: {fileID: 4286339509926600530, guid: 9de2b06e60b68f94ba11554e39c79d7d, type: 3}
       propertyPath: tpEnd
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 107828185}
     - target: {fileID: 4286339509926600530, guid: 9de2b06e60b68f94ba11554e39c79d7d, type: 3}
       propertyPath: wrong
       value: 
@@ -15663,6 +15673,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.30000016, y: 0.3, z: 0.30000016}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1779364877 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1219345184218223562, guid: 57b404f88960e5f4190e01f2ef62b102, type: 3}
+  m_PrefabInstance: {fileID: 922613070}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1792081892
 PrefabInstance:
   m_ObjectHideFlags: 0
