@@ -5,17 +5,22 @@ public class T_GateController : MonoBehaviour
     public GameObject triggerSource;
 
     public bool isOpen;
-    private GameObject objectToControl;
+    public GameObject objectToControl;
 
     // Possible trigger components
     private T_HourglassTimer hourglass;
     private O_KeyPadActivate keypad;
     private T_PressurePlate pressurePlate;
+    private T_PressurePlateManager pressurePlateManager;
 
     private void Start()
     {
-        // Assume the door is the first child
-        objectToControl = transform.GetChild(0).gameObject;
+        if (objectToControl == null)
+        {
+            // Assume the door is the first child
+            objectToControl = transform.GetChild(0).gameObject;
+        }
+
 
         // Set initial door state based on tag
         if (CompareTag("R1_Door"))
@@ -35,6 +40,7 @@ public class T_GateController : MonoBehaviour
             hourglass = triggerSource.GetComponent<T_HourglassTimer>();
             keypad = triggerSource.GetComponent<O_KeyPadActivate>();
             pressurePlate = triggerSource.GetComponent<T_PressurePlate>();
+            pressurePlateManager = triggerSource.GetComponent<T_PressurePlateManager>();
         }
     }
 
@@ -42,35 +48,40 @@ public class T_GateController : MonoBehaviour
     {
         if (hourglass != null && hourglass.startTimer == true)
         {
-            SetObjectState(false); // Close door when hourglass/timer is active
-            return;
+            //SetObjectState(false); // Close door when hourglass/timer is active
+            isOpen = false;
         }
 
         if (keypad != null && keypad.keyPadComplete == true)
         {
-            SetObjectState(true); // Open door when keypad is complete
-            return;
+            //SetObjectState(true); // Open door when keypad is complete
+            isOpen = true;
+        }
+
+        if (pressurePlateManager != null && pressurePlateManager.AllConditionsMet == true)
+        {
+            //SetObjectState(true);
+            isOpen = true;
         }
 
         if (pressurePlate != null)
         {
-            SetObjectState(pressurePlate.isPressed); // Open/close based on plate
+            //tObjectState(pressurePlate.isPressed); // Open/close based on plate
+            isOpen = pressurePlate.isPressed;
         }
+
+        SetObjectState();
     }
 
-    private void SetObjectState(bool open)
+    private void SetObjectState()
     {
-        if (isOpen == open) return; // No change needed
-
-        isOpen = open;
-        Animation();
-        
+        objectToControl.SetActive(!isOpen);
     }
 
 
-    private void Animation()
+    private void ActivateObjectAnim()
     {
         //Dont have animation...
-        objectToControl.SetActive(!isOpen);
+        
     }
 }
