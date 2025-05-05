@@ -87,7 +87,7 @@ public class H_Interact : MonoBehaviour
             else if (hit.transform.tag == "R1_Chest")
             {
                 UI.transform.gameObject.GetComponent<T_HourglassTimer>().startTimer = true;
-                //hit.transform.gameObject.GetComponent<O_Startscript>().Starter();
+                hit.transform.parent.gameObject.GetComponent<O_StartAnim>().Started();
             }
         }
         else if (ps.hasItem)
