@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2965813624098923603}
   - component: {fileID: 2803399100990455280}
   - component: {fileID: 8544946860583178712}
-  - component: {fileID: 2233858157874089290}
   m_Layer: 0
   m_Name: Anubis
   m_TagString: Untagged
@@ -87,28 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &2233858157874089290
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 46461613342806332}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -7542109610656541042, guid: 2e5d6fc6f00f313479cc9cb1527f620c, type: 3}
 --- !u!1 &1357887744050552803
 GameObject:
   m_ObjectHideFlags: 0
