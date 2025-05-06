@@ -7,8 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: standardSurface2
+      name: M_Box
     second: {fileID: 2100000, guid: b9ada952062b43a4cbfc31383d77649f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: standardSurface2
+    second: {instanceID: 0}
   materials:
     materialImportMode: 2
     materialName: 0

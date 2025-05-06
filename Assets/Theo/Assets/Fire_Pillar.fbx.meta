@@ -7,6 +7,16 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: M_Holder
+    second: {fileID: 2100000, guid: c4dcfb3751cd97c44aab3f1eab81620b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Pillar
+    second: {fileID: 2100000, guid: f69da50f3c7e6214eb78f8f220d30f2a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: standardSurface2
     second: {fileID: 2100000, guid: c8b2e4f7ff2d98b44b2e13ec1ac2af03, type: 2}
   materials:
