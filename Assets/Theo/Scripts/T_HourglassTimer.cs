@@ -75,7 +75,22 @@ public class T_HourglassTimer : MonoBehaviour
 
     void ColorChanger()
     {
-        imgTimerUp.color = Color.Lerp(Color.red, Color.green, timer / maxGameTime);
-        imgTimerDown.color = Color.Lerp(Color.red, Color.green, timer / maxGameTime);
+        if (timer > maxGameTime/2f)
+        {
+            imgTimerUp.color = Color.green;
+            imgTimerDown.color = Color.green;
+        }
+        else if (timer > maxGameTime/10f)
+        {
+            imgTimerUp.color = Color.yellow;
+            imgTimerDown.color = Color.yellow;
+        }
+        else
+        {
+            imgTimerUp.color = Color.red;
+            imgTimerDown.color = Color.red;
+        }
+        //imgTimerUp.color = Color.Lerp(Color.red, Color.green, timer / maxGameTime);
+        //imgTimerDown.color = Color.Lerp(Color.red, Color.green, timer / maxGameTime);
     }
 }
