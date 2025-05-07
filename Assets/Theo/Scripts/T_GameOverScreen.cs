@@ -21,21 +21,22 @@ public class T_GameOverScreen : MonoBehaviour
 
     private void Update()
     {
-        if (trigger.GameOver)
+        if (trigger.Win)
         {
             Time.timeScale = 0f;
             Cursor.lockState = CursorLockMode.None;
 
-            if (hourglassTimer.timer <= 0)
-            {
-                gameOverScreen.SetActive(true);
-            }
-            else
-            {
-                winScreen.SetActive(true);
-            }
+            winScreen.SetActive(true);
 
             TimeTxt.text = "Time Left: "+hourglassTimer.timer.ToString();
+        }
+
+        if (hourglassTimer.timer <= 0)
+        {
+            Time.timeScale = 0f;
+            Cursor.lockState = CursorLockMode.None;
+
+            gameOverScreen.SetActive(true);
         }
 
     }

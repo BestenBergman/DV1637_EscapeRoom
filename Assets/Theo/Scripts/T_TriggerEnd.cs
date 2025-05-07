@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class T_TriggerEnd : MonoBehaviour
 {
-    public bool GameOver = false;
+    public bool Win = false;
     public GameObject UI;
 
     private T_HourglassTimer hourglassTimer;
@@ -14,7 +14,7 @@ public class T_TriggerEnd : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         hourglassTimer.startTimer = false;
-        GameOver = true;
+        Win = true;
     }
 
 }
