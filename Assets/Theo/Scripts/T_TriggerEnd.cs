@@ -11,9 +11,10 @@ public class T_TriggerEnd : MonoBehaviour
         hourglassTimer = UI.GetComponent<T_HourglassTimer>();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
         hourglassTimer.startTimer = false;
         GameOver = true;
     }
+
 }
