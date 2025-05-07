@@ -5899,7 +5899,7 @@ MonoBehaviour:
   timerTxt: {fileID: 647955581}
   imgTimerUp: {fileID: 1312488763}
   imgTimerDown: {fileID: 533964626}
-  maxGameTime: 100
+  maxGameTime: 600
   timer: 0
   startTimer: 0
 --- !u!1 &516190473
