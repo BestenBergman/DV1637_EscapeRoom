@@ -75,12 +75,12 @@ public class O_Hints : MonoBehaviour
         }
         else if (!fifth)
         {
-            hint.text = "Boxes";
+            hint.text = "I placed all I had—three gifts of weight—but something was still missing. In the end, I had to take the final step myself.";
             StartCoroutine("ResetHint");
         }
         else if (!sixth)
         {
-          hint.text = "Torches";
+          hint.text = "So much darkness… perhaps it only yields when touched by a flame.";
           StartCoroutine("ResetHint");
         }
         else if (!seventh)
