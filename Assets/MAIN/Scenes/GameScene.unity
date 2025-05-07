@@ -2597,15 +2597,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -17220,7 +17220,7 @@ MonoBehaviour:
   puzzle1room2: {fileID: 1092175741}
   puzzle2room2: {fileID: 670918618}
   puzzle1room3: {fileID: 780906944}
-  puzzle2room3: {fileID: 1760378511}
+  puzzle2room3: {fileID: 2018752164}
   puzzle1room4: {fileID: 6643611858268816344}
   puzzle2room4: {fileID: 1189439232}
   hint: {fileID: 1767916276}
@@ -20321,15 +20321,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -20625,15 +20625,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -20823,7 +20823,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3524248075831010128, guid: 60f3cf490cc4c0b4ab62b561ecfe9261, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.8809185
+      value: -0.33
       objectReference: {fileID: 0}
     - target: {fileID: 3524248075831010128, guid: 60f3cf490cc4c0b4ab62b561ecfe9261, type: 3}
       propertyPath: m_LocalPosition.y
@@ -20831,7 +20831,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3524248075831010128, guid: 60f3cf490cc4c0b4ab62b561ecfe9261, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -22.675432
+      value: -23.92
       objectReference: {fileID: 0}
     - target: {fileID: 3524248075831010128, guid: 60f3cf490cc4c0b4ab62b561ecfe9261, type: 3}
       propertyPath: m_LocalRotation.w

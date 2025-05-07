@@ -50,7 +50,7 @@ public class O_Hints : MonoBehaviour
         third = puzzle1room2.GetComponent<O_R2P1_Check>().r2p1Completed;
         fourth = puzzle2room2.GetComponent<O_KeyPadActivate>().keyPadComplete;
         fifth = puzzle1room3.GetComponent<T_ToggleControl>().isOpen;
-        //sixth = puzzle2room3.GetComponent<
+        sixth = puzzle2room3.GetComponent<T_TorchManager>().AllConditionsMet;
         seventh = puzzle1room4.GetComponent<SlutPussel>().puzzleComplete;
         eighth = puzzle2room4.GetComponent<O_KeyPadActivate>().keyPadComplete;
         if (!first)
@@ -78,11 +78,11 @@ public class O_Hints : MonoBehaviour
             hint.text = "Boxes";
             StartCoroutine("ResetHint");
         }
-        //else if (!sixth)
-        //{
-        //  hint.text = "Torches";
-        //  StartCoroutine("ResetHint");
-        //}
+        else if (!sixth)
+        {
+          hint.text = "Torches";
+          StartCoroutine("ResetHint");
+        }
         else if (!seventh)
         {
             hint.text = "Shards";
