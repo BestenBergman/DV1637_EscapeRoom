@@ -47,14 +47,14 @@ public class O_Hints : MonoBehaviour
 
     public void HintChecker()
     {
-        first = gameObject.GetComponent<O_PusselEttCheck>().pusselEttComplete;
-        second = gameObject.GetComponent<O_KeyPadActivate>().keyPadComplete;
-        third = gameObject.GetComponent<O_R2P1_Check>().r2p1Completed;
-        fourth = gameObject.GetComponent<O_KeyPadActivate>().keyPadComplete;
-        fifth = gameObject.GetComponent<T_ToggleControl>().isOpen;
-        //sixth = gameObject.GetComponent<
-        seventh = gameObject.GetComponent<SlutPussel>().puzzleComplete;
-        eighth = gameObject.GetComponent<O_KeyPadActivate>().keyPadComplete;
+        first = puzzle1room1.GetComponent<O_PusselEttCheck>().pusselEttComplete;
+        second = puzzle2room1.GetComponent<O_KeyPadActivate>().keyPadComplete;
+        third = puzzle1room2.GetComponent<O_R2P1_Check>().r2p1Completed;
+        fourth = puzzle2room2.GetComponent<O_KeyPadActivate>().keyPadComplete;
+        fifth = puzzle1room3.GetComponent<T_ToggleControl>().isOpen;
+        //sixth = puzzle2room3.GetComponent<
+        seventh = puzzle1room4.GetComponent<SlutPussel>().puzzleComplete;
+        eighth = puzzle2room4.GetComponent<O_KeyPadActivate>().keyPadComplete;
         if (!first)
         {
             hint.text = "Stones";

@@ -14,7 +14,7 @@ public class O_CameraBasedMovement : MonoBehaviour
     public float mouseSensitivity = 100f;
 
     private float xRot = 0f;
-    private float yRot = 0f;
+    private float yRot = 180f;
 
     void Start()
     {

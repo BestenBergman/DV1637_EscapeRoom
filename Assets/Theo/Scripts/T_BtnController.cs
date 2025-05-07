@@ -12,6 +12,7 @@ public class T_BtnController : MonoBehaviour
     /// <param name="sceneName"></param>
     public void OpenScene(string sceneName)
     {
+        Time.timeScale = 1.0f;
         SceneManager.LoadScene(sceneName);
     }
 
