@@ -7,6 +7,46 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: M_Door
+    second: {fileID: 2100000, guid: a01123f2b6661504a98f83e7fc872aea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Pillar
+    second: {fileID: 2100000, guid: c92b2fd0cf8edf9408af0e39bf8e8c6b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Plate
+    second: {fileID: 2100000, guid: 9b1ff8f2037ab3f4885f56fc4f6e0863, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Platform
+    second: {fileID: 2100000, guid: d8508b164e2f1804480b6a7e34c2e7cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Roof
+    second: {fileID: 2100000, guid: 718b65b06cde36a478cd92e56cd2032c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_StairsType_1
+    second: {fileID: 2100000, guid: f7794886da0c3c248ab35134060330b5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_StairsType_2
+    second: {fileID: 2100000, guid: 1c6213f50657de646ba63560bb0751bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Wall
+    second: {fileID: 2100000, guid: 42673c59aa8c5024694c8f5eb383794e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: standardSurface2
     second: {fileID: 2100000, guid: c8b2e4f7ff2d98b44b2e13ec1ac2af03, type: 2}
   materials:
