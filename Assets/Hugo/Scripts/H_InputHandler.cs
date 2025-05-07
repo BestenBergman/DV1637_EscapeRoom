@@ -11,12 +11,14 @@ public class H_InputHandler : MonoBehaviour
     [HideInInspector] public H_Interact H_Int;
     [HideInInspector] public H_Inspect H_Ispec;
     [HideInInspector] public H_PlayerStats ps;
+    [HideInInspector] public O_Hints O_Hints;
     void Start()
     {
         O_cbm = GetComponent<O_CameraBasedMovement>();
         H_Int = GetComponent<H_Interact>();
         H_Ispec = GetComponent<H_Inspect>();
         ps = GetComponent<H_PlayerStats>();
+        O_Hints = GetComponent<O_Hints>();
     }
 
     void Update()
@@ -40,6 +42,10 @@ public class H_InputHandler : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q) && !ps.inKeyPad && ps.hasItem)
         {
             H_Ispec.SwitchInspect();
+        }
+        if(Input.GetKeyDown(KeyCode.H))
+        {
+            O_Hints.HintChecker();
         }
     }
 }
