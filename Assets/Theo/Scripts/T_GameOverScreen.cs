@@ -15,6 +15,9 @@ public class T_GameOverScreen : MonoBehaviour
 
     private void Start()
     {
+        winScreen.SetActive(true);
+        gameOverScreen.SetActive(true);
+
         hourglassTimer = UI.GetComponent<T_HourglassTimer>();
         trigger = Trigger.GetComponent<T_TriggerEnd>();
     }
