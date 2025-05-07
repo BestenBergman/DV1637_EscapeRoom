@@ -18,6 +18,8 @@ public class SlutPussel : MonoBehaviour
     [Tooltip("Variabler för de script som sitter på blue-, red-, greenBox")]
     public ShardBoxes sB;
 
+    [HideInInspector]public bool puzzleComplete = false;
+
     [System.Serializable]
     public struct HitWallVariables
     {
@@ -82,6 +84,7 @@ public class SlutPussel : MonoBehaviour
         if (sB.bBF.HasRightChild() && sB.rBF.HasRightChild() && sB.gBF.HasRightChild())
         {
             hWV.hW.GetComponent<MeshRenderer>().material = hWV.m2;
+            puzzleComplete = true;
         }
         else
         {
