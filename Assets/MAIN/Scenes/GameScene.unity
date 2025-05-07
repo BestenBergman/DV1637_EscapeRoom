@@ -20500,7 +20500,7 @@ GameObject:
   - component: {fileID: 1767916277}
   - component: {fileID: 1767916276}
   m_Layer: 5
-  m_Name: Hints
+  m_Name: HintsPopUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -23,11 +23,8 @@ public class O_IA_PopUp : MonoBehaviour
             Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0.0f));
             if (Physics.Raycast(ray, out hit, 3.0f))
             {
-                if (ps.ItemTags.Contains(hit.transform.tag))
-                {
-                    IA_PopUp.text = "Press (E) to pick up item";
-                }
-                else if (hit.transform.tag == "R1_Keypad" || hit.transform.tag == "R2_Keypad")
+                
+                if (hit.transform.tag == "R1_Keypad" || hit.transform.tag == "R2_Keypad")
                 {
                     IA_PopUp.text = "Press (E) to activate keypad";
                 }
@@ -42,6 +39,10 @@ public class O_IA_PopUp : MonoBehaviour
                 else if (hit.transform.tag == "R4_Button")
                 {
                     IA_PopUp.text = "Press (E) to press button";
+                }
+                else if (ps.ItemTags.Contains(hit.transform.tag))
+                {
+                    IA_PopUp.text = "Press (E) to pick up item";
                 }
                 else
                 {

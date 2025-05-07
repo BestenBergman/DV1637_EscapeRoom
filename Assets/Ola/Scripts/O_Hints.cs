@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -39,10 +40,7 @@ public class O_Hints : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            HintChecker();
-        }
+        
     }
 
     public void HintChecker()
@@ -57,40 +55,55 @@ public class O_Hints : MonoBehaviour
         eighth = puzzle2room4.GetComponent<O_KeyPadActivate>().keyPadComplete;
         if (!first)
         {
-            hint.text = "Stones";
+            hint.text = "There are a lot of rocks, maybe they can tell you something!";
+            StartCoroutine("ResetHint");
         }
         else if (!second)
         {
-            hint.text = "Lights";
+            hint.text = "The lights, the door, the key pad, it's all connected!";
+            StartCoroutine("ResetHint");
         }
         else if (!third)
         {
-            hint.text = "Spakar";
+            hint.text = "The walls are telling you something, keep on pushing and pulling!";
+            StartCoroutine("ResetHint");
         }
         else if (!fourth)
         {
             hint.text = "Papper";
+            StartCoroutine("ResetHint");
         }
         else if (!fifth)
         {
             hint.text = "Boxes";
+            StartCoroutine("ResetHint");
         }
         //else if (!sixth)
         //{
         //  hint.text = "Torches";
+        //  StartCoroutine("ResetHint");
         //}
         else if (!seventh)
         {
             hint.text = "Shards";
+            StartCoroutine("ResetHint");
         }
         else if (!eighth)
         {
             hint.text = "Buttons";
+            StartCoroutine("ResetHint");
         }
         else if (first && second &&  third && fourth && fifth && seventh && eighth)
         {
             hint.text = "RUUUUUN";
+            StartCoroutine("ResetHint");
         }
         
+    }
+
+    IEnumerator ResetHint()
+    {
+        yield return new WaitForSeconds(5);
+        hint.text = "Press (H) for hints";
     }
 }
