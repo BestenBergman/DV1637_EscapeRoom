@@ -9,11 +9,24 @@ public class ButtonSwitchState : MonoBehaviour
     [Tooltip("Säger om denna knapp är nedtryckt eller inte")]
     public bool isPressed;
 
+    private Vector3 startPos;
+    private void Start()
+    {
+        startPos = transform.localPosition;
+    }
     /// <summary>
     /// Aktiverar eller avaktiverar en knapp
     /// </summary>
     public void SwitchState()
     {
-        isPressed = !isPressed;
+        if (!isPressed)
+        {
+            transform.localPosition = startPos + new Vector3(0,0,0.1f);
+        }
+        else
+        {
+            transform.localPosition = startPos;
+        }
+            isPressed = !isPressed;
     }
 }
