@@ -176,6 +176,7 @@ MonoBehaviour:
   H_Int: {fileID: 0}
   H_Ispec: {fileID: 0}
   ps: {fileID: 0}
+  O_Hints: {fileID: 0}
 --- !u!114 &321718649150052314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,6 +240,10 @@ MonoBehaviour:
   hasTeleported: 0
   inKeyPad: 0
   isInspecting: 0
+  fStartWalk: 0
+  fEndWalk: 0
+  fWalkDir: {x: 0, y: 0, z: 0}
+  fLookDir: {x: 0, y: 0, z: 0}
 --- !u!114 &7103776386326977871
 MonoBehaviour:
   m_ObjectHideFlags: 0

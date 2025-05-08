@@ -6,7 +6,7 @@ public class H_PlayerStats : MonoBehaviour
     [Tooltip("Säger om spelaren holler i ett item eller inte")]
     public bool hasItem = false;
 
-    [Tooltip("Säger vart ett item placeras när man holler i det")]
+    [Tooltip("Säger vart ett item placeras när man håller i det")]
     public Vector3 HoldPos = new Vector3(0, 0, 0);
 
     public Vector3 InspectPos = new Vector3(0, 0, 0);
@@ -17,8 +17,15 @@ public class H_PlayerStats : MonoBehaviour
     [HideInInspector] public string[] ShardBoxes = { "R4_BlueBox", "R4_RedBox", "R4_GreenBox" };
     [HideInInspector] public string[] Shards = { "R4_BlueShard", "R4_RedShard", "R4_GreenShard" };
 
+    public bool hasOpenedChest = false;
+
     public bool hasTeleported = false;
 
     public bool inKeyPad = false;
     public bool isInspecting = false;
+
+    public bool fStartWalk = false;
+    public bool fEndWalk = false;
+    public Vector3 fWalkDir = Vector3.zero;
+    public Vector2 fLookDir = Vector2.zero;
 }

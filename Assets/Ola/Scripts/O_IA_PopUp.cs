@@ -7,6 +7,7 @@ public class O_IA_PopUp : MonoBehaviour
     [HideInInspector] public H_PlayerStats ps;
     public TextMeshProUGUI IA_PopUp;
     public TextMeshProUGUI inspectPopUp;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -43,6 +44,10 @@ public class O_IA_PopUp : MonoBehaviour
                 else if (ps.ItemTags.Contains(hit.transform.tag))
                 {
                     IA_PopUp.text = "Press (E) to pick up item";
+                }
+                else if (hit.transform.tag == "R1_Chest" && !ps.hasOpenedChest)
+                {
+                    IA_PopUp.text = "Press (E) to open chest";
                 }
                 else
                 {
