@@ -35,7 +35,7 @@ public class T_HourglassTimer : MonoBehaviour
 
                 if (timer < 0f)
                 {
-                    timer = 0f;
+                    timer = -0.1f;
                 }
             }
 

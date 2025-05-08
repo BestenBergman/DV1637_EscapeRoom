@@ -15,8 +15,8 @@ public class T_GameOverScreen : MonoBehaviour
 
     private void Start()
     {
-        winScreen.SetActive(true);
-        gameOverScreen.SetActive(true);
+        winScreen.SetActive(false);
+        gameOverScreen.SetActive(false);
 
         hourglassTimer = UI.GetComponent<T_HourglassTimer>();
         trigger = Trigger.GetComponent<T_TriggerEnd>();
@@ -34,7 +34,7 @@ public class T_GameOverScreen : MonoBehaviour
             TimeTxt.text = "Time Left: "+hourglassTimer.timer.ToString();
         }
 
-        if (hourglassTimer.timer <= 0)
+        if (hourglassTimer.timer <= -0.1f)
         {
             Time.timeScale = 0f;
             Cursor.lockState = CursorLockMode.None;
