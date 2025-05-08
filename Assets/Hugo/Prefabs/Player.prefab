@@ -160,6 +160,7 @@ MonoBehaviour:
   gravity: 9.8
   ps: {fileID: 0}
   mouseSensitivity: 100
+  yRot: 180
 --- !u!114 &664646134049015420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,13 +238,13 @@ MonoBehaviour:
   - R4_BlueShard
   - R4_RedShard
   - R4_GreenShard
+  hasOpenedChest: 0
   hasTeleported: 0
   inKeyPad: 0
   isInspecting: 0
-  fStartWalk: 0
-  fEndWalk: 0
+  fWalk: 0
   fWalkDir: {x: 0, y: 0, z: 0}
-  fLookDir: {x: 0, y: 0, z: 0}
+  fLookDir: {x: 0, y: 0}
 --- !u!114 &7103776386326977871
 MonoBehaviour:
   m_ObjectHideFlags: 0

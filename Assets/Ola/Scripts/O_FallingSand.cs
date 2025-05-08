@@ -7,12 +7,18 @@ public class O_FallingSand : MonoBehaviour
     private float timer;
     public ParticleSystem fsps;
     float amountOfSand = 5f;
-
+    float startEm = 1f;
+    bool sandStarted = false;
+    bool firstIncrease = false;
+    bool secondIncrease = false;
+    [HideInInspector] public H_PlayerStats ps;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
-        //var emission = fsps.emission;
+        ps = GameObject.FindGameObjectWithTag("Player").GetComponent<H_PlayerStats>();
+        var emission = fsps.emission;
+        emission.rateOverTime = 0f;
         Color color = sand.color;
         color.a = 0.2f;
         sand.color = color;
@@ -22,13 +28,24 @@ public class O_FallingSand : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        var emission = fsps.emission;
-        if (timer > 20)
+        if (ps.hasOpenedChest && !sandStarted)
         {
-            emission.rateOverTime = amountOfSand;
+            var emission = fsps.emission;
+            emission.rateOverTime = startEm;
+            sandStarted = true;
+        }
+        else if (timer > 5f && !firstIncrease)
+        {
             Color color = sand.color;
             color.a += 0.1f * Time.deltaTime;
             sand.color = color;
+            firstIncrease = true;
+        }
+        else if(timer > 20f && !secondIncrease)
+        {
+            var emission = fsps.emission;
+            emission.rateOverTime = amountOfSand;
+            secondIncrease = true;
         }
     }
 }
