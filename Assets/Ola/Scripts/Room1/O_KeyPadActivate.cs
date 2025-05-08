@@ -9,7 +9,6 @@ public class O_KeyPadActivate : MonoBehaviour
 {
     [HideInInspector] public H_PlayerStats ps;
 
-    public Canvas UI;
     public Canvas keyPad;
 
     public GameObject pusselTwo;
@@ -39,7 +38,6 @@ public class O_KeyPadActivate : MonoBehaviour
     void Start()
     {
         ps = GameObject.FindGameObjectWithTag("Player").GetComponent<H_PlayerStats>();
-        UI.enabled = true;
         ps.inKeyPad = false;
         keyPad.enabled = false;
         correct.SetActive(false);
@@ -66,12 +64,10 @@ public class O_KeyPadActivate : MonoBehaviour
             keyPad.enabled = false;
             keyPadOn = false;
             Cursor.lockState = CursorLockMode.Locked;
-            UI.enabled = true;
             ps.inKeyPad = false;
         }
         else
         {
-            UI.enabled = false;
             ps.inKeyPad = true;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
@@ -86,11 +82,7 @@ public class O_KeyPadActivate : MonoBehaviour
         {
             keyPad.enabled = false;
             keyPadOn = false;
-        }
-        if (!UI.isActiveAndEnabled)
-        {
             Cursor.lockState = CursorLockMode.Locked;
-            UI.enabled = true;
             ps.inKeyPad = false;
         }
     }
