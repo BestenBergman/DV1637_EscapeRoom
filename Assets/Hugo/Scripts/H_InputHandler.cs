@@ -31,7 +31,7 @@ public class H_InputHandler : MonoBehaviour
     /// </summary>
     private void InputHandler()
     {
-        if ((Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0) && !ps.inKeyPad && !ps.isInspecting && !ps.fStartWalk)
+        if ((Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0) && !ps.inKeyPad && !ps.isInspecting && !ps.fWalk)
         {
             O_cbm.PlayerMovement();
         }
@@ -43,7 +43,7 @@ public class H_InputHandler : MonoBehaviour
         {
             H_Ispec.SwitchInspect();
         }
-        if(Input.GetKeyDown(KeyCode.H) && !ps.fStartWalk)
+        if(Input.GetKeyDown(KeyCode.H) && !ps.fWalk)
         {
             O_Hints.HintChecker();
         }
