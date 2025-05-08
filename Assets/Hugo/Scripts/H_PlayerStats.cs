@@ -24,8 +24,7 @@ public class H_PlayerStats : MonoBehaviour
     public bool inKeyPad = false;
     public bool isInspecting = false;
 
-    public bool fStartWalk = false;
-    public bool fEndWalk = false;
+    public bool fWalk = false;
     public Vector3 fWalkDir = Vector3.zero;
     public Vector2 fLookDir = Vector2.zero;
 }

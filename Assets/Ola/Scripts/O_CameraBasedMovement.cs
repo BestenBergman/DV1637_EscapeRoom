@@ -16,7 +16,7 @@ public class O_CameraBasedMovement : MonoBehaviour
     public float mouseSensitivity = 100f;
 
     private float xRot = 0f;
-    private float yRot = 180f;
+    [HideInInspector] public float yRot = 180f;
 
     void Start()
     {
@@ -26,13 +26,13 @@ public class O_CameraBasedMovement : MonoBehaviour
         QualitySettings.vSyncCount = 1;
         Application.targetFrameRate = 60;
         ps = GetComponent<H_PlayerStats>();
-        ps.fStartWalk = true;
+        ps.fWalk = true;
         StartCoroutine(startWalkPlayer());
     }
 
     void Update()
     {
-        if (ps.fStartWalk)
+        if (ps.fWalk)
         {
             ForcedPlayerMovment(ps.fWalkDir);
             ForcedCameraMovement(ps.fLookDir);

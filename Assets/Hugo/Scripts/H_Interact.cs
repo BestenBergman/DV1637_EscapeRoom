@@ -88,7 +88,7 @@ public class H_Interact : MonoBehaviour
             {
                 UI.transform.gameObject.GetComponent<T_HourglassTimer>().startTimer = true;
                 hit.transform.parent.gameObject.GetComponent<O_StartAnim>().Started();
-                ps.fStartWalk = false;
+                ps.fWalk = false;
                 ps.hasOpenedChest = true;
                 UI.transform.GetChild(3).gameObject.SetActive(true);
             }
