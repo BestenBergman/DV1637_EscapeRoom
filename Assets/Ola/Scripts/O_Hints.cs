@@ -60,7 +60,7 @@ public class O_Hints : MonoBehaviour
         }
         else if (!second)
         {
-            hint.text = "The lights, the door, the key pad, it's all connected!";
+            hint.text = "The lights, the door, the keypad, it's all connected!";
             StartCoroutine("ResetHint");
         }
         else if (!third)
@@ -70,32 +70,32 @@ public class O_Hints : MonoBehaviour
         }
         else if (!fourth)
         {
-            hint.text = "Papper";
+            hint.text = "The creators of this place worshipped the sun, maybe you should try to do the same!";
             StartCoroutine("ResetHint");
         }
         else if (!fifth)
         {
-            hint.text = "I placed all I had—three gifts of weight—but something was still missing. In the end, I had to take the final step myself.";
+            hint.text = "I placed all I had, three gifts of weight, but something was still missing. In the end, I had to take the final step myself!";
             StartCoroutine("ResetHint");
         }
         else if (!sixth)
         {
-          hint.text = "So much darkness… perhaps it only yields when touched by a flame.";
+          hint.text = "So much darkness… perhaps it only yields when touched by a flame!";
           StartCoroutine("ResetHint");
         }
         else if (!seventh)
         {
-            hint.text = "Shards";
+            hint.text = "You might have seen these symbols somewhere else, try going back and take a closer look!";
             StartCoroutine("ResetHint");
         }
         else if (!eighth)
         {
-            hint.text = "Buttons";
+            hint.text = "Follow the stars to get to the stairs!";
             StartCoroutine("ResetHint");
         }
-        else if (first && second &&  third && fourth && fifth && seventh && eighth)
+        else if (first && second &&  third && fourth && fifth && sixth && seventh && eighth)
         {
-            hint.text = "RUUUUUN";
+            hint.text = "You're done, GET OUT OF HERE!";
             StartCoroutine("ResetHint");
         }
         
