@@ -53,7 +53,7 @@ public class O_Hints : MonoBehaviour
         sixth = puzzle2room3.GetComponent<T_TorchManager>().AllConditionsMet;
         seventh = puzzle1room4.GetComponent<SlutPussel>().puzzleComplete;
         eighth = puzzle2room4.GetComponent<O_KeyPadActivate>().keyPadComplete;
-        if (!first)
+        if (!first && !second)
         {
             hint.text = "There are a lot of rocks, maybe they can tell you something!";
             StartCoroutine("ResetHint");
@@ -63,9 +63,9 @@ public class O_Hints : MonoBehaviour
             hint.text = "The lights, the door, the keypad, it's all connected!";
             StartCoroutine("ResetHint");
         }
-        else if (!third)
+        else if (!third && !fourth)
         {
-            hint.text = "The walls are telling you something, keep on pushing and pulling!";
+            hint.text = "The walls are telling you something, push, then pull, then pull some more and finally push through!";
             StartCoroutine("ResetHint");
         }
         else if (!fourth)
@@ -73,7 +73,7 @@ public class O_Hints : MonoBehaviour
             hint.text = "The creators of this place worshipped the sun, maybe you should try to do the same!";
             StartCoroutine("ResetHint");
         }
-        else if (!fifth)
+        else if (!fifth && !sixth)
         {
             hint.text = "I placed all I had, three gifts of weight, but something was still missing. In the end, I had to take the final step myself!";
             StartCoroutine("ResetHint");
@@ -83,7 +83,7 @@ public class O_Hints : MonoBehaviour
           hint.text = "So much darkness… perhaps it only yields when touched by a flame!";
           StartCoroutine("ResetHint");
         }
-        else if (!seventh)
+        else if (!seventh && !eighth)
         {
             hint.text = "You might have seen these symbols somewhere else, try going back and take a closer look!";
             StartCoroutine("ResetHint");
@@ -93,7 +93,7 @@ public class O_Hints : MonoBehaviour
             hint.text = "Follow the stars to get to the stairs!";
             StartCoroutine("ResetHint");
         }
-        else if (first && second &&  third && fourth && fifth && sixth && seventh && eighth)
+        else if (second && fourth && sixth && eighth)
         {
             hint.text = "You're done, GET OUT OF HERE!";
             StartCoroutine("ResetHint");
