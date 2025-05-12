@@ -24,78 +24,90 @@ public class H_Interact : MonoBehaviour
     /// </summary>
     public void Interact()
     {
-        RaycastHit hit;
-        Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f,0.5f, 0f));
-        if (Physics.Raycast(ray, out hit, 3f))
+        if (ps.isInspecting)
         {
-            if (hit.transform.tag == "R1_Keypad")
+            if (ps.hasItem)
             {
-                hit.transform.gameObject.GetComponent<O_KeyPadActivate>().KeyPadSwitch();
+                Cursor.lockState = CursorLockMode.Locked;
+                ps.isInspecting = false;
+                DropItem();
             }
-            else if (hit.transform.tag == "R2_Keypad")
+        }
+        else
+        {
+            RaycastHit hit;
+            Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
+            if (Physics.Raycast(ray, out hit, 3f))
             {
-                hit.transform.gameObject.GetComponent<O_KeyPadActivate>().KeyPadSwitch();
-            }
-            else if (hit.transform.tag == "R3_Torch")
-            {
-                T_TorchController torch = hit.transform.gameObject.GetComponent<T_TorchController>();
-                torch.torchIsEnabled = !torch.torchIsEnabled;
-                torch.ToggleLight(torch.torchIsEnabled);
-            }
-            else if (hit.transform.tag == "R2_PuzzleLever")
-            {
-                hit.transform.gameObject.GetComponent<O_R2P1>().SwitchLever();
-            }
-            else if (ps.ItemTags.Contains(hit.transform.tag))
-            {
-                PickUpItem(hit.transform.gameObject);
-            }
-            else if (hit.transform.tag == "Lever")
-            {
-                hit.transform.gameObject.GetComponent<SlutPussel>().SwitchState();
-            }
-            else if (hit.transform.tag == "R4_Button")
-            {
-                InteractWithButtons(hit.transform.gameObject);
-            }
-            else if (ps.ShardBoxes.Contains(hit.transform.tag))
-            {
-                if (ps.hasItem)
+                if (hit.transform.tag == "R1_Keypad" || hit.transform.tag == "R2_Keypad")
                 {
-                    if (ps.Shards.Contains(gameObject.transform.GetChild(0).transform.GetChild(1).tag))
+                    hit.transform.gameObject.GetComponent<O_KeyPadActivate>().KeyPadSwitch();
+                }
+                else if (hit.transform.tag == "R3_Torch")
+                {
+                    T_TorchController torch = hit.transform.gameObject.GetComponent<T_TorchController>();
+                    torch.torchIsEnabled = !torch.torchIsEnabled;
+                    torch.ToggleLight(torch.torchIsEnabled);
+                }
+                else if (hit.transform.tag == "R2_PuzzleLever")
+                {
+                    hit.transform.gameObject.GetComponent<O_R2P1>().SwitchLever();
+                }
+                else if (ps.ItemTags.Contains(hit.transform.tag))
+                {
+                    PickUpItem(hit.transform.gameObject);
+                }
+                else if (hit.transform.tag == "Lever")
+                {
+                    hit.transform.gameObject.GetComponent<SlutPussel>().SwitchState();
+                }
+                else if (hit.transform.tag == "R4_Button")
+                {
+                    InteractWithButtons(hit.transform.gameObject);
+                }
+                else if (ps.ShardBoxes.Contains(hit.transform.tag))
+                {
+                    if (ps.hasItem)
                     {
-                        if (hit.transform.childCount > 0)
+                        if (ps.Shards.Contains(gameObject.transform.GetChild(0).transform.GetChild(1).tag))
                         {
-                            PlaceShard(hit.transform.gameObject);
-                            PickUpShard(hit.transform.gameObject);
+                            if (hit.transform.childCount > 0)
+                            {
+                                PlaceShard(hit.transform.gameObject);
+                                PickUpShard(hit.transform.gameObject);
+                            }
+                            else
+                            {
+                                PlaceShard(hit.transform.gameObject);
+                            }
                         }
                         else
                         {
-                            PlaceShard(hit.transform.gameObject);
+                            DropItem();
                         }
                     }
+                    else if (hit.transform.childCount > 0)
+                    {
+                        PickUpShard(hit.transform.gameObject);
+                    }
                 }
-                else if (hit.transform.childCount > 0)
+                else if (ps.hasItem)
                 {
-                    PickUpShard(hit.transform.gameObject);
+                    DropItem();
+                }
+                else if (hit.transform.tag == "R1_Chest")
+                {
+                    UI.transform.gameObject.GetComponent<T_HourglassTimer>().startTimer = true;
+                    hit.transform.parent.gameObject.GetComponent<O_StartAnim>().Started();
+                    ps.fWalk = false;
+                    ps.hasOpenedChest = true;
+                    UI.transform.GetChild(3).gameObject.SetActive(true);
                 }
             }
             else if (ps.hasItem)
             {
                 DropItem();
             }
-            else if (hit.transform.tag == "R1_Chest")
-            {
-                UI.transform.gameObject.GetComponent<T_HourglassTimer>().startTimer = true;
-                hit.transform.parent.gameObject.GetComponent<O_StartAnim>().Started();
-                ps.fWalk = false;
-                ps.hasOpenedChest = true;
-                UI.transform.GetChild(3).gameObject.SetActive(true);
-            }
-        }
-        else if (ps.hasItem)
-        {
-            DropItem();
         }
     }
 

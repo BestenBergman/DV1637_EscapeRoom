@@ -27,7 +27,14 @@ public class O_IA_PopUp : MonoBehaviour
                 
                 if (hit.transform.tag == "R1_Keypad" || hit.transform.tag == "R2_Keypad")
                 {
-                    IA_PopUp.text = "Press (E) to activate keypad";
+                    if (!ps.inKeyPad)
+                    {
+                        IA_PopUp.text = "Press (E) to activate keypad";
+                    }
+                    else
+                    {
+                        IA_PopUp.text = "Press (E) to leave keypad";
+                    }
                 }
                 else if (hit.transform.tag == "R2_PuzzleLever" || hit.transform.tag == "Lever")
                 {
@@ -48,6 +55,17 @@ public class O_IA_PopUp : MonoBehaviour
                 else if (hit.transform.tag == "R1_Chest" && !ps.hasOpenedChest)
                 {
                     IA_PopUp.text = "Press (E) to open chest";
+                }
+                else if (ps.ShardBoxes.Contains(hit.transform.tag))
+                {
+                    if (hit.transform.childCount > 0)
+                    {
+                        IA_PopUp.text = "Press (E) to pick up shard";
+                    }
+                    else
+                    {
+                        IA_PopUp.text = "";
+                    }
                 }
                 else
                 {
@@ -103,6 +121,10 @@ public class O_IA_PopUp : MonoBehaviour
                         {
                             IA_PopUp.text = "Press (E) to place shard";
                         }
+                        else
+                        {
+                            IA_PopUp.text = "Press (E) to drop item";
+                        }
                     }
                     else
                     {
@@ -116,9 +138,10 @@ public class O_IA_PopUp : MonoBehaviour
             }
             else if (ps.isInspecting)
             {
-                IA_PopUp.text = "";
+                IA_PopUp.text = "Mouse DRAG to rotate item\nPress (E) to drop item";
                 inspectPopUp.text = "Press (Q) to uninspect item";
             }
         }
     }
 }
+

@@ -7,7 +7,9 @@ using UnityEngine;
 
 public class O_CameraBasedMovement : MonoBehaviour
 {
-    [SerializeField] private float speed = 10.0f;
+    [SerializeField] private float walkSpeed = 7.0f;
+    [SerializeField] private float runSpeed = 12.0f;
+    private float speed;
     CharacterController cc;
     [SerializeField] private float gravity = 9.8f;
 
@@ -20,6 +22,8 @@ public class O_CameraBasedMovement : MonoBehaviour
 
     void Start()
     {
+        speed = walkSpeed;
+
         cc = gameObject.GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
 
@@ -85,6 +89,11 @@ public class O_CameraBasedMovement : MonoBehaviour
     public void ApplyGravity()
     {
         cc.Move(new Vector3(0, -gravity * Time.deltaTime, 0));
+    }
+
+    public void SprintSwitch()
+    {
+        speed = speed == walkSpeed ? runSpeed : walkSpeed;
     }
 
     private void ForcedPlayerMovment(Vector3 walkDir)
