@@ -14,8 +14,13 @@ public class T_ToggleControl : MonoBehaviour
     private T_PressurePlateManager pressurePlateManager;
     private T_TorchManager torchManager;
 
+    //Anim
+    private Animator anim;
+
     private void Start()
     {
+        anim = GetComponent<Animator>();
+
         if (objectToControl == null)
         {
             // Assume the door is the first child
@@ -58,6 +63,7 @@ public class T_ToggleControl : MonoBehaviour
         {
             //SetObjectState(true); // Open door when keypad is complete
             isOpen = true;
+            
         }
 
         if (pressurePlateManager != null && pressurePlateManager.AllConditionsMet == true)
@@ -76,18 +82,13 @@ public class T_ToggleControl : MonoBehaviour
             isOpen = pressurePlate.isPressed;
         }
 
-        SetObjectState();
+        UpdateAnimator();
     }
 
-    private void SetObjectState()
+    private void UpdateAnimator()
     {
-        objectToControl.SetActive(!isOpen);
+        anim.SetBool("isOpen", isOpen);
     }
 
 
-    private void ActivateObjectAnim()
-    {
-        //Dont have animation...
-        
-    }
 }

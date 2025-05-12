@@ -26,7 +26,7 @@ public class O_CameraBasedMovement : MonoBehaviour
         QualitySettings.vSyncCount = 1;
         Application.targetFrameRate = 60;
         ps = GetComponent<H_PlayerStats>();
-        ps.fWalk = true;
+        //ps.fWalk = true;
         StartCoroutine(startWalkPlayer());
     }
 
