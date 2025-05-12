@@ -1,5 +1,7 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
 public class T_HourglassTimer : MonoBehaviour
@@ -14,6 +16,7 @@ public class T_HourglassTimer : MonoBehaviour
 
 
     public bool startTimer = false;
+    private Vignette vid;
 
 
     private void Start()
@@ -48,6 +51,8 @@ public class T_HourglassTimer : MonoBehaviour
             // Format the countdown timer text
             string txtTime = string.Format("{0:00}:{1:00}", min, sec);
             timerTxt.text = txtTime;
+
+            vid.intensity.value = Mathf.Clamp(1f - timer / (maxGameTime / 10), 0f, 1f);
 
             Fill(imgTimerDown, true);
             Fill(imgTimerUp, false);
