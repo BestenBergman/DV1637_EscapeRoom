@@ -4,7 +4,7 @@ public class T_ToggleControl : MonoBehaviour
 {
     public GameObject triggerSource;
 
-    public bool isOpen;
+    private bool isOpen;
     public GameObject objectToControl;
 
     // Possible trigger components
@@ -14,17 +14,22 @@ public class T_ToggleControl : MonoBehaviour
     private T_PressurePlateManager pressurePlateManager;
     private T_TorchManager torchManager;
 
+    //Anim
+    private Animator anim;
+
     private void Start()
     {
-        if (objectToControl == null)
-        {
-            // Assume the door is the first child
-            objectToControl = transform.GetChild(0).gameObject;
-        }
+        anim = GetComponent<Animator>();
+
+        //if (objectToControl == null)
+        //{
+        //    // Assume the door is the first child
+        //    objectToControl = transform.GetChild(0).gameObject;
+        //}
 
 
         // Set initial door state based on tag
-        if (CompareTag("R1_Door") || objectToControl.name == "TP_Trigger 3-4")
+        if (CompareTag("R1_Door") /*|| objectToControl.name == "TP_Trigger 3-4"*/)
         {
             isOpen = true;
         }
@@ -33,7 +38,7 @@ public class T_ToggleControl : MonoBehaviour
             isOpen = false;
         }
 
-        objectToControl.SetActive(!isOpen);
+        //objectToControl.SetActive(!isOpen);
 
 
         if (triggerSource != null)
@@ -44,50 +49,46 @@ public class T_ToggleControl : MonoBehaviour
             pressurePlateManager = triggerSource.GetComponent<T_PressurePlateManager>();
             torchManager = triggerSource.GetComponent<T_TorchManager>();
         }
+
+        UpdateAnimator();
+
     }
 
     private void Update()
     {
-        if (hourglass != null && hourglass.startTimer == true)
+        bool newState = isOpen;
+
+        if (hourglass != null && hourglass.startTimer)
         {
-            //SetObjectState(false); // Close door when hourglass/timer is active
-            isOpen = false;
+            newState = true;
         }
 
-        if (keypad != null && keypad.keyPadComplete == true)
+        if (keypad != null && keypad.keyPadComplete)
         {
-            //SetObjectState(true); // Open door when keypad is complete
-            isOpen = true;
+            newState = true;
         }
 
-        if (pressurePlateManager != null && pressurePlateManager.AllConditionsMet == true)
+        if (pressurePlateManager != null && pressurePlateManager.AllConditionsMet)
         {
-            isOpen = true;
+            newState = true;
         }
 
-        if (torchManager != null && torchManager.AllConditionsMet == true)
+        if (torchManager != null && torchManager.AllConditionsMet)
         {
-            isOpen = false;
+            newState = true;
         }
 
-        if (pressurePlate != null)
+        if (newState != isOpen)
         {
-            //tObjectState(pressurePlate.isPressed); // Open/close based on plate
-            isOpen = pressurePlate.isPressed;
+            isOpen = newState;
+            UpdateAnimator();
         }
-
-        SetObjectState();
     }
 
-    private void SetObjectState()
+    private void UpdateAnimator()
     {
-        objectToControl.SetActive(!isOpen);
+        anim.SetBool("isOpen", isOpen);
     }
 
 
-    private void ActivateObjectAnim()
-    {
-        //Dont have animation...
-        
-    }
 }
