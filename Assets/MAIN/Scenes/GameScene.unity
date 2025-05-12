@@ -9399,6 +9399,10 @@ PrefabInstance:
       propertyPath: speed
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1938217244687759661, guid: eaa342bf170667640990deb1d1c1e51a, type: 3}
+      propertyPath: walkSpeed
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3739440436828247094, guid: eaa342bf170667640990deb1d1c1e51a, type: 3}
       propertyPath: rotSpeed
       value: 200
