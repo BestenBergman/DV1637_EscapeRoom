@@ -28,11 +28,7 @@ public class H_Interact : MonoBehaviour
         Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f,0.5f, 0f));
         if (Physics.Raycast(ray, out hit, 3f))
         {
-            if (hit.transform.tag == "R1_Keypad")
-            {
-                hit.transform.gameObject.GetComponent<O_KeyPadActivate>().KeyPadSwitch();
-            }
-            else if (hit.transform.tag == "R2_Keypad")
+            if (hit.transform.tag == "R1_Keypad" || hit.transform.tag == "R2_Keypad")
             {
                 hit.transform.gameObject.GetComponent<O_KeyPadActivate>().KeyPadSwitch();
             }
@@ -73,6 +69,10 @@ public class H_Interact : MonoBehaviour
                         {
                             PlaceShard(hit.transform.gameObject);
                         }
+                    }
+                    else
+                    {
+                        DropItem();
                     }
                 }
                 else if (hit.transform.childCount > 0)
