@@ -4,42 +4,29 @@ public class T_ToggleControl : MonoBehaviour
 {
     public GameObject triggerSource;
 
-    private bool isOpen;
+    public bool isToggled;
     public GameObject objectToControl;
 
-    // Possible trigger components
-    private T_HourglassTimer hourglass;
-    private O_KeyPadActivate keypad;
-    private T_PressurePlate pressurePlate;
-    private T_PressurePlateManager pressurePlateManager;
-    private T_TorchManager torchManager;
 
-    //Anim
-    private Animator anim;
+    protected T_HourglassTimer hourglass;
+    protected O_KeyPadActivate keypad;
+    protected T_PressurePlate pressurePlate;
+    protected T_PressurePlateManager pressurePlateManager;
+    protected T_TorchManager torchManager;
 
-    private void Start()
+    
+    protected virtual void Start()
     {
-        anim = GetComponent<Animator>();
-
-        //if (objectToControl == null)
-        //{
-        //    // Assume the door is the first child
-        //    objectToControl = transform.GetChild(0).gameObject;
-        //}
-
-
-        // Set initial door state based on tag
-        if (CompareTag("R1_Door") /*|| objectToControl.name == "TP_Trigger 3-4"*/)
+        if (CompareTag("R1_Door") || CompareTag("TP_3-4"))
         {
-            isOpen = true;
+            isToggled = true;
         }
         else
         {
-            isOpen = false;
+            isToggled = false;
         }
 
-        //objectToControl.SetActive(!isOpen);
-
+        SetObjectState();
 
         if (triggerSource != null)
         {
@@ -49,46 +36,52 @@ public class T_ToggleControl : MonoBehaviour
             pressurePlateManager = triggerSource.GetComponent<T_PressurePlateManager>();
             torchManager = triggerSource.GetComponent<T_TorchManager>();
         }
-
-        UpdateAnimator();
-
     }
 
-    private void Update()
+    protected virtual void Update()
     {
-        bool newState = isOpen;
-
         if (hourglass != null && hourglass.startTimer)
         {
-            newState = true;
+            isToggled = false; //Door closes
         }
 
         if (keypad != null && keypad.keyPadComplete)
         {
-            newState = true;
+            isToggled = true; //Door opens
+        }
+
+        if (pressurePlate != null)
+        {
+            isToggled = pressurePlate.isPressed;
         }
 
         if (pressurePlateManager != null && pressurePlateManager.AllConditionsMet)
         {
-            newState = true;
+            isToggled = true; //Open chest
         }
 
         if (torchManager != null && torchManager.AllConditionsMet)
         {
-            newState = true;
+            isToggled = false; //Activate Teleport
         }
 
-        if (newState != isOpen)
-        {
-            isOpen = newState;
-            UpdateAnimator();
-        }
+        SetObjectState();
     }
 
-    private void UpdateAnimator()
+    protected virtual void SetObjectState()
     {
-        anim.SetBool("isOpen", isOpen);
+        if (objectToControl == null)
+        {
+            if (transform.childCount > 0)
+            {
+                objectToControl = transform.GetChild(0).gameObject;
+            }
+            else
+            {
+                return;
+            }
+        }
+        objectToControl.SetActive(!isToggled);
     }
-
 
 }
