@@ -19521,7 +19521,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6573337802372735514, guid: 632ca9c6264660648bc7352147af37bb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.67
+      value: 3.03
       objectReference: {fileID: 0}
     - target: {fileID: 6573337802372735514, guid: 632ca9c6264660648bc7352147af37bb, type: 3}
       propertyPath: m_LocalRotation.w
@@ -21673,7 +21673,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5725296108073373229, guid: 2becdb2d487849d42ba695d229e9c651, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -24.684
+      value: -24.45
       objectReference: {fileID: 0}
     - target: {fileID: 5725296108073373229, guid: 2becdb2d487849d42ba695d229e9c651, type: 3}
       propertyPath: m_LocalRotation.w
@@ -30166,6 +30166,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2960191911027227702}
   - component: {fileID: 6865706189808722176}
+  - component: {fileID: 6865706189808722177}
   m_Layer: 0
   m_Name: Door_Control
   m_TagString: Untagged
@@ -32807,6 +32808,28 @@ MonoBehaviour:
   triggerSource: {fileID: 1504478763}
   isOpen: 0
   objectToControl: {fileID: 3620830098237366304}
+--- !u!95 &6865706189808722177
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4689905225756324651}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4684b85b500cd77449176144c5839645, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6922670566543426455
 GameObject:
   m_ObjectHideFlags: 0
