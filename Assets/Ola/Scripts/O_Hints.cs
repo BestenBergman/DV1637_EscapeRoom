@@ -43,7 +43,7 @@ public class O_Hints : MonoBehaviour
         second = puzzle2room1.GetComponent<O_KeyPadActivate>().keyPadComplete;
         third = puzzle1room2.GetComponent<O_R2P1_Check>().r2p1Completed;
         fourth = puzzle2room2.GetComponent<O_KeyPadActivate>().keyPadComplete;
-        fifth = puzzle1room3.GetComponent<T_ToggleControl>().isOpen;
+        fifth = puzzle1room3.GetComponent<T_ToggleControl>().isToggled;
         sixth = puzzle2room3.GetComponent<T_TorchManager>().AllConditionsMet;
         seventh = puzzle1room4.GetComponent<SlutPussel>().puzzleComplete;
         eighth = puzzle2room4.GetComponent<O_KeyPadActivate>().keyPadComplete;

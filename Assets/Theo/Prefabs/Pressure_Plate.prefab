@@ -62,6 +62,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0753af5e02234bb428a2ef48f1a8f429, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2312039900759876512}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0753af5e02234bb428a2ef48f1a8f429, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3208519783892157795}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0753af5e02234bb428a2ef48f1a8f429, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3132995370221465806}
   m_SourcePrefab: {fileID: 100100000, guid: 0753af5e02234bb428a2ef48f1a8f429, type: 3}
 --- !u!1 &282990318291774900 stripped
 GameObject:
@@ -102,3 +108,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPressed: 0
+--- !u!95 &3208519783892157795
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282990318291774900}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 80ba41b118de6b249be74acbff23aeb9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3132995370221465806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282990318291774900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f826079ef9c443147be20cd07e57662c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerSource: {fileID: 0}
+  isToggled: 0
+  objectToControl: {fileID: 480528156202232037}
+--- !u!1 &480528156202232037 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8536812581196974080, guid: 0753af5e02234bb428a2ef48f1a8f429, type: 3}
+  m_PrefabInstance: {fileID: 1093261866524397797}
+  m_PrefabAsset: {fileID: 0}
