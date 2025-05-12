@@ -40,13 +40,13 @@ public class T_HourglassTimer : MonoBehaviour
             }
 
             // Calculate seconds and milliseconds
-            int sec = Mathf.FloorToInt(timer);
-            int milli = Mathf.FloorToInt((timer - sec) * 100f);
+            int min = Mathf.FloorToInt(timer / 60);
+            int sec = Mathf.FloorToInt(timer % 60);
 
 
 
             // Format the countdown timer text
-            string txtTime = string.Format("{0:000}.{1:00}", sec, milli);
+            string txtTime = string.Format("{0:00}:{1:00}", min, sec);
             timerTxt.text = txtTime;
 
             Fill(imgTimerDown, true);
