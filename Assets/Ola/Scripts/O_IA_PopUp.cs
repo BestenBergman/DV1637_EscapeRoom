@@ -138,7 +138,7 @@ public class O_IA_PopUp : MonoBehaviour
             }
             else if (ps.isInspecting)
             {
-                IA_PopUp.text = "Mouse DRAG to rotate item\nPress (E) to drop item";
+                IA_PopUp.text = "Use mouse to grab and rotate item";
                 inspectPopUp.text = "Press (Q) to uninspect item";
             }
         }
