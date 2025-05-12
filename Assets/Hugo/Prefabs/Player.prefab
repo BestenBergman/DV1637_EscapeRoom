@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 8579038631401784648}
   - component: {fileID: 7103776386326977871}
   - component: {fileID: 5645967520584757222}
+  - component: {fileID: 5992595464531275787}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -156,7 +157,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e4104781098d2f4a9c1f7fc67bd9094, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
+  walkSpeed: 7
+  runSpeed: 12
   gravity: 9.8
   ps: {fileID: 0}
   mouseSensitivity: 100
@@ -206,7 +208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ps: {fileID: 0}
   pov: {fileID: 0}
-  rotSpeed: 100
+  rotSpeed: 200
 --- !u!114 &8579038631401784648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,7 +222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasItem: 0
-  HoldPos: {x: 1, y: 0.5, z: 1}
+  HoldPos: {x: 0.5, y: -0.5, z: 1}
   InspectPos: {x: 0, y: 0, z: 1}
   ItemTags:
   - Item
@@ -273,6 +275,35 @@ MonoBehaviour:
   ps: {fileID: 0}
   IA_PopUp: {fileID: 0}
   inspectPopUp: {fileID: 0}
+--- !u!114 &5992595464531275787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012633574441835847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06118ba8fa8dea147bf534c9f54a36c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzle1room1: {fileID: 0}
+  puzzle2room1: {fileID: 0}
+  puzzle1room2: {fileID: 0}
+  puzzle2room2: {fileID: 0}
+  puzzle1room3: {fileID: 0}
+  puzzle2room3: {fileID: 0}
+  puzzle1room4: {fileID: 0}
+  puzzle2room4: {fileID: 0}
+  hint: {fileID: 0}
+  first: 0
+  second: 0
+  third: 0
+  fourth: 0
+  fifth: 0
+  sixth: 0
+  seventh: 0
+  eighth: 0
 --- !u!1 &5952993650981550618
 GameObject:
   m_ObjectHideFlags: 0
