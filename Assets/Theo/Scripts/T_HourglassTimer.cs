@@ -16,6 +16,7 @@ public class T_HourglassTimer : MonoBehaviour
 
 
     public bool startTimer = false;
+    public Volume globalVolume;
     private Vignette vid;
 
 
@@ -52,6 +53,7 @@ public class T_HourglassTimer : MonoBehaviour
             string txtTime = string.Format("{0:00}:{1:00}", min, sec);
             timerTxt.text = txtTime;
 
+            globalVolume.profile.TryGet(out vid);
             vid.intensity.value = Mathf.Clamp(1f - timer / (maxGameTime / 10), 0f, 1f);
 
             Fill(imgTimerDown, true);
