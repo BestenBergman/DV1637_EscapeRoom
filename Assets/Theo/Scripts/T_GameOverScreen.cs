@@ -35,7 +35,11 @@ public class T_GameOverScreen : MonoBehaviour
 
             winScreen.SetActive(true);
 
-            TimeTxt.text = "Time Left: "+hourglassTimer.timer.ToString();
+            TimeTxt.text = "Time Left: " + 
+                string.Format("{0:00} min {1:00}.{2:000} sec", 
+                Mathf.FloorToInt(hourglassTimer.timer / 60), 
+                Mathf.FloorToInt(hourglassTimer.timer % 60), 
+                Mathf.FloorToInt((hourglassTimer.timer - Mathf.FloorToInt(hourglassTimer.timer)) * 1000f));
         }
 
         if (hourglassTimer.timer <= -0.1f && !gameHasEnded)
