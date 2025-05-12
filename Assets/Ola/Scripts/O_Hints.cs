@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class O_Hints : MonoBehaviour
 {
+    
     public GameObject puzzle1room1;
     public GameObject puzzle2room1;
     public GameObject puzzle1room2;
@@ -27,14 +28,7 @@ public class O_Hints : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //first = gameObject.GetComponent<O_PusselEttCheck>().pusselEttComplete;
-        //second = gameObject.GetComponent<O_KeyPadActivate>().keyPadComplete;
-        //third = gameObject.GetComponent<O_R2P1_Check>().r2p1Completed;
-        //fourth = gameObject.GetComponent<O_KeyPadActivate>().keyPadComplete;
-        //fifth = gameObject.GetComponent<T_ToggleControl>().isOpen;
-        //sixth = gameObject.GetComponent<
-        //seventh = gameObject.GetComponent<SlutPussel>().puzzleComplete;
-        //eighth = gameObject.GetComponent<O_KeyPadActivate>().keyPadComplete;
+        
     }
 
     // Update is called once per frame
