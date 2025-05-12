@@ -7,6 +7,7 @@ public class O_IA_PopUp : MonoBehaviour
     [HideInInspector] public H_PlayerStats ps;
     public TextMeshProUGUI IA_PopUp;
     public TextMeshProUGUI inspectPopUp;
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
