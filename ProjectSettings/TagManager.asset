@@ -29,6 +29,7 @@ TagManager:
   - R2_Keypad
   - R3_Torch
   - GameUI
+  - TP_3-4
   layers:
   - Default
   - TransparentFX
