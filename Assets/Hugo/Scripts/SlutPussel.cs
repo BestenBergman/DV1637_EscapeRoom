@@ -48,7 +48,7 @@ public class SlutPussel : MonoBehaviour
     }
     private void Update()
     {
-        // Om ljuset är på kollas om glasskärvorna är på rätt plats
+        // Om ljuset är på så kollas om glasskärvorna är på rätt plats
         if (active)
         {
             CheckShards();

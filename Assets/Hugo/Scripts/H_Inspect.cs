@@ -9,6 +9,8 @@ public class H_Inspect : MonoBehaviour
 {
     [HideInInspector] public H_PlayerStats ps;
     [HideInInspector] public GameObject pov;
+
+    [Tooltip("Hastigheten man roterar objekt")]
     [SerializeField] private float rotSpeed = 200f;
 
     private GameObject item = null;
@@ -34,6 +36,10 @@ public class H_Inspect : MonoBehaviour
             }
         }
     }
+
+    /// <summary>
+    /// Byter mellan att inspektera eller att sluta inspektera
+    /// </summary>
     public void SwitchInspect()
     {
         if (!ps.isInspecting)
@@ -45,6 +51,10 @@ public class H_Inspect : MonoBehaviour
             CloseInspection();
         }
     }
+
+    /// <summary>
+    /// Gör att man inspekterar objektet man har i hanen
+    /// </summary>
     public void Inspect()
     {
         ps.isInspecting = true;
@@ -53,6 +63,10 @@ public class H_Inspect : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
+
+    /// <summary>
+    /// Gör att man slutar inspektera ett objekt
+    /// </summary>
     public void CloseInspection()
     {
         item.transform.localPosition = ps.HoldPos;
