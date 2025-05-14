@@ -9,13 +9,13 @@ public class O_IA_PopUp : MonoBehaviour
     public TextMeshProUGUI inspectPopUp;
     
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
     void Start()
     {
         ps = GameObject.FindGameObjectWithTag("Player").GetComponent<H_PlayerStats>();
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         inspectPopUp.text = "";
