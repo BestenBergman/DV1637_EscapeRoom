@@ -8,11 +8,12 @@ using UnityEngine.InputSystem.HID;
 
 public class H_Interact : MonoBehaviour
 {
+    [Tooltip("GameObjectet som har T_HourglassTimer på sig")]
     public GameObject UI; //Theo
 
 
     [HideInInspector] public H_PlayerStats ps;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
     void Start()
     {
         ps = GetComponent<H_PlayerStats>();
@@ -156,6 +157,10 @@ public class H_Interact : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Placerar den shard man har i handen på shardBox
+    /// </summary>
+    /// <param name="shardBox">Den pedestal man har interagerat med</param>
     public void PlaceShard(GameObject shardBox)
     {
         GameObject shard = gameObject.transform.GetChild(0).GetChild(1).gameObject;
@@ -165,6 +170,10 @@ public class H_Interact : MonoBehaviour
         ps.hasItem = false;
     }
 
+    /// <summary>
+    /// Plocka upp den shard som finns på shardBox
+    /// </summary>
+    /// <param name="shardBox">Den pedestal man har interagerat med</param>
     public void PickUpShard(GameObject shardBox)
     {
         ps.hasItem = true;

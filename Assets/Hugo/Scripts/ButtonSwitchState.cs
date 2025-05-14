@@ -19,14 +19,7 @@ public class ButtonSwitchState : MonoBehaviour
     /// </summary>
     public void SwitchState()
     {
-        if (!isPressed)
-        {
-            transform.localPosition = startPos + new Vector3(0,0,0.1f);
-        }
-        else
-        {
-            transform.localPosition = startPos;
-        }
-            isPressed = !isPressed;
+        transform.localPosition = !isPressed ? startPos + new Vector3(0, 0, 0.1f) : startPos;
+        isPressed = !isPressed;
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine.UIElements;
 public class RightChild : MonoBehaviour
 {
     [Tooltip("Den tag som letas efter")]
-    public string wantedTag = "Player";
+    public string wantedTag;
 
     /// <summary>
     /// Checks if its child has the right tag 

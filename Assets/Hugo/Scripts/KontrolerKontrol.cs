@@ -32,7 +32,9 @@ public class KontrolerKontrol : MonoBehaviour
         }
         return true;
     }
-
+    /// <summary>
+    /// Aktiverar slut trappan i rum 4
+    /// </summary>
     public void ActivateStairs()
     {
         stairs.SetActive(true);
