@@ -47,11 +47,11 @@ public class H_InputHandler : MonoBehaviour
         {
             O_Hints.HintChecker();
         }
-        if (Input.GetKeyDown(KeyCode.LeftControl) && !ps.fWalk)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && !ps.fWalk)
         {
             O_cbm.SprintSwitch();
         }
-        if (Input.GetKeyUp(KeyCode.LeftControl) && !ps.fWalk)
+        if (Input.GetKeyUp(KeyCode.LeftShift) && !ps.fWalk)
         {
             O_cbm.SprintSwitch();
         }
