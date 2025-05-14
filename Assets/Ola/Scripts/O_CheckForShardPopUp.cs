@@ -15,7 +15,7 @@ public class O_CheckForShardPopUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ps.hasItem && ps.Shards.Contains(gameObject.transform.GetChild(0).transform.GetChild(1).tag))
+        if (ps.isInspecting && ps.Shards.Contains(gameObject.transform.GetChild(0).transform.GetChild(1).tag))
         {
             shardPopUp.text = "This looks like something that can become useful later!";
         }

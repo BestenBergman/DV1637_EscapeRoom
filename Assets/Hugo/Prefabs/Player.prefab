@@ -20,7 +20,8 @@ GameObject:
   - component: {fileID: 8579038631401784648}
   - component: {fileID: 7103776386326977871}
   - component: {fileID: 5645967520584757222}
-  - component: {fileID: 5992595464531275787}
+  - component: {fileID: 1906687799272397829}
+  - component: {fileID: 617599669236502723}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -275,7 +276,7 @@ MonoBehaviour:
   ps: {fileID: 0}
   IA_PopUp: {fileID: 0}
   inspectPopUp: {fileID: 0}
---- !u!114 &5992595464531275787
+--- !u!114 &1906687799272397829
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -304,6 +305,21 @@ MonoBehaviour:
   sixth: 0
   seventh: 0
   eighth: 0
+  ps: {fileID: 0}
+--- !u!114 &617599669236502723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012633574441835847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c89a66e5c0954324eba392d758f90967, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shardPopUp: {fileID: 0}
+  ps: {fileID: 0}
 --- !u!1 &5952993650981550618
 GameObject:
   m_ObjectHideFlags: 0

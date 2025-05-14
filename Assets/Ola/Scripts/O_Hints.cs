@@ -24,17 +24,25 @@ public class O_Hints : MonoBehaviour
     [HideInInspector] public bool sixth;
     [HideInInspector] public bool seventh;
     [HideInInspector] public bool eighth;
+
+    [HideInInspector] public H_PlayerStats ps;
+    private bool started = false;
    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        ps = GetComponent<H_PlayerStats>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (ps.hasOpenedChest && !started)
+        {
+            hint.text = "Press (H) for hints";
+            started = true;
+        }
     }
 
     public void HintChecker()
