@@ -3,15 +3,16 @@ using UnityEngine;
 
 public class O_PusselTwoStart : MonoBehaviour
 {
-    public bool started = false;
-    public bool pusselOneCheck = false;
-    public bool switched = false;
+    [HideInInspector] public bool started = false;
+    [HideInInspector] public bool pusselOneCheck = false;
+    [HideInInspector] public bool switched = false;
+    
+    [Tooltip("The gameobject that holds the first puzzle")]
     public GameObject pusselOne;
 
     void Update()
     {
         Starter();
-
         if (started && !switched)
         {
             LightSwitch();

@@ -11,8 +11,9 @@ public class O_R2P1_Check : MonoBehaviour
     [HideInInspector] public bool lever2Check;
     [HideInInspector] public bool lever3Check;
     [HideInInspector] public bool lever4Check;
-    public bool r2p1Completed = false;
+    [HideInInspector] public bool r2p1Completed = false;
 
+    [Tooltip("The door that opens when the puzzle is complete")]
     public GameObject gateDoor;
 
 

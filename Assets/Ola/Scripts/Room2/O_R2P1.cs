@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class O_R2P1 : MonoBehaviour
 {
-    public bool on = false;
+    [HideInInspector] public bool on = false;
+    
+    [Tooltip("The light which is paired with the lever")]
     public GameObject tl; 
     
     /// <summary>

@@ -15,6 +15,7 @@ public class O_CameraBasedMovement : MonoBehaviour
 
     [HideInInspector] public H_PlayerStats ps;
 
+    
     public float mouseSensitivity = 100f;
 
     private float xRot = 0f;

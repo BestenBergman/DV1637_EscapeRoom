@@ -5,7 +5,8 @@ public class O_PusselEttCheck : MonoBehaviour
     public GameObject greenCube;
     public GameObject blueCube;
     public GameObject redCube;
-    public bool pusselEttComplete = false;
+    
+    [HideInInspector] public bool pusselEttComplete = false;
 
 
     void Update()

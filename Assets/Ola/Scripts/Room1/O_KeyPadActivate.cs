@@ -9,28 +9,45 @@ public class O_KeyPadActivate : MonoBehaviour
 {
     [HideInInspector] public H_PlayerStats ps;
 
+    [HideInInspector] public bool keyPadComplete = false;
+    [HideInInspector] public bool teleporterActive = false;
+    [HideInInspector] public bool keyPadOn = false;
+
+    [HideInInspector] public string code1 = "";
+    [HideInInspector] public string code2 = "";
+    [HideInInspector] public string code3 = "";
+
+    [Tooltip("The keypad-canvas for this keypad")]
     public Canvas keyPad;
 
-    public GameObject pusselTwo;
+    [Tooltip("The teleporter that will be activated")] 
     public GameObject tpStart;
+    
+    [Tooltip("The teleporter to which you are teleported")]
     public GameObject tpEnd;
+    
+    [Tooltip("The gameobject that is named 'Correct' in the keypad UI")]
     public GameObject correct;
+    
+    [Tooltip("The gameobject that is named 'Wrong' in the keypad UI")]
     public GameObject wrong;
 
-    public bool keyPadComplete = false;
-    public bool teleporterActive = false;
-    public bool keyPadOn = false;
-    
-    public string code1 = "";
-    public string code2 = "";
-    public string code3 = "";
-
+    [Tooltip("First digit in the password")]
     public string p1;
+
+    [Tooltip("Second digit in the password")] 
     public string p2;
+
+    [Tooltip("Third digit in the password")] 
     public string p3;
 
+    [Tooltip("TextMeshPro named 'Input 1' in keypad UI")]
     public TextMeshProUGUI input1;
+
+    [Tooltip("TextMeshPro named 'Input 2' in keypad UI")]
     public TextMeshProUGUI input2;
+
+    [Tooltip("TextMeshPro named 'Input 3' in keypad UI")]
     public TextMeshProUGUI input3;
 
 

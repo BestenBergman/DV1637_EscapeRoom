@@ -14,6 +14,7 @@ public class O_Hints : MonoBehaviour
     public GameObject puzzle1room4;
     public GameObject puzzle2room4;
 
+    [Tooltip("TextMeshPro that is connected to hints")]
     public TextMeshProUGUI hint;
 
     [HideInInspector] public bool first;

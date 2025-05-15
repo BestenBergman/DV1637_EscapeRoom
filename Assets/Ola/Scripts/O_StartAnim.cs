@@ -4,6 +4,7 @@ using UnityEngine;
 public class O_StartAnim : MonoBehaviour
 
 {
+    [Tooltip("Animator of the chest")]
     public Animator anim;
 
    

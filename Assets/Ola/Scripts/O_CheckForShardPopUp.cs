@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class O_CheckForShardPopUp : MonoBehaviour
 {
+    [Tooltip("TextMeshPro that give hints about the shards")]
     public TextMeshProUGUI shardPopUp;
     [HideInInspector] public H_PlayerStats ps;
     

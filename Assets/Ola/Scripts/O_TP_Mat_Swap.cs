@@ -3,7 +3,9 @@ using UnityEngine;
 
 public class O_TP_Mat_Swap : MonoBehaviour
 {
+    [Tooltip("The materials which the teleporter will use in the swap")]
     public Material[] mList;
+    
     private bool started = false;
     private MeshRenderer mR;
 

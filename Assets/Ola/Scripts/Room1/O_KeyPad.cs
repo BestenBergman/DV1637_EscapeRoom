@@ -3,9 +3,14 @@ using UnityEngine;
 
 public class O_KeyPad : MonoBehaviour
 
-    {
+{
+    [Tooltip("TextMeshPro named 'Input 1' in keypad UI")]
     public TextMeshProUGUI input1;
+
+    [Tooltip("TextMeshPro named 'Input 2' in keypad UI")]
     public TextMeshProUGUI input2;
+
+    [Tooltip("TextMeshPro named 'Input 3' in keypad UI")]
     public TextMeshProUGUI input3;
 
     /// <summary>

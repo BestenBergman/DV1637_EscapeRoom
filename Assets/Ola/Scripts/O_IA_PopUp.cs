@@ -5,10 +5,13 @@ using UnityEngine;
 public class O_IA_PopUp : MonoBehaviour
 {
     [HideInInspector] public H_PlayerStats ps;
+    
+    [Tooltip("TextMeshPro that is connected to interract")]
     public TextMeshProUGUI IA_PopUp;
+    
+    [Tooltip("TextMeshPro that is connected to inspect")]
     public TextMeshProUGUI inspectPopUp;
     
-
     
     void Start()
     {

@@ -6,11 +6,12 @@ public class O_Teleporter : MonoBehaviour
 {
     [HideInInspector] public GameObject player;
     [HideInInspector] public H_PlayerStats ps;
-    public Transform endPosition;
-    public bool isTeleporting = false;
+    [HideInInspector] public bool isTeleporting = false;
     [HideInInspector] public Vector3 tpPosition = Vector3.zero;
 
-    
+    [Tooltip("The position of the connected teleporter, where you will end up")]
+    public Transform endPosition;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");

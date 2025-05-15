@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class O_PusselEtt : MonoBehaviour
 {
-    public bool placedCorrectly = false;
+    [HideInInspector] public bool placedCorrectly = false;
     
     /// <summary>
     /// Check to see if the stone placed on the plate is the right one
