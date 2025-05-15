@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class O_R2P1 : MonoBehaviour
 {
-    public bool on = false;
+    [HideInInspector] public bool on = false;
+    
+    [Tooltip("The light which is paired with the lever")]
     public GameObject tl; 
     
-    private void Start()
-    {
-        
-    }
-
-
+    /// <summary>
+    /// Switch the lever on/off and turn the
+    /// corresponding light on/off 
+    /// </summary>
     public void SwitchLever()
     {
 

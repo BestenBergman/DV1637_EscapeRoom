@@ -2,7 +2,10 @@ using UnityEngine;
 
 public class O_TorchLever : MonoBehaviour
 {
+    [Tooltip("The gameObject which contains the particle system and point light of the torch")]
     public GameObject flames;
+    
+    [Tooltip("The lever which is paired with the torch")]
     public GameObject lever;
     
     [HideInInspector] public bool checkOne;
@@ -11,12 +14,6 @@ public class O_TorchLever : MonoBehaviour
     {
         flames.SetActive(false);
         checkOne = lever.GetComponent<O_R2P1>().on;
-    }
-
-    
-    void Update()
-    {
-        //SwitchLights();
     }
     
     /// <summary>

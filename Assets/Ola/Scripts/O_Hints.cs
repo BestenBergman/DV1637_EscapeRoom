@@ -14,6 +14,7 @@ public class O_Hints : MonoBehaviour
     public GameObject puzzle1room4;
     public GameObject puzzle2room4;
 
+    [Tooltip("TextMeshPro that is connected to hints")]
     public TextMeshProUGUI hint;
 
     [HideInInspector] public bool first;
@@ -32,7 +33,6 @@ public class O_Hints : MonoBehaviour
     void Start()
     {
         ps = GetComponent<H_PlayerStats>();
-
     }
 
     void Update()
@@ -44,6 +44,9 @@ public class O_Hints : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Hintsystem that checks how far along the player is and gives a hint to help with the next puzzle.
+    /// </summary>
     public void HintChecker()
     {
         first = puzzle1room1.GetComponent<O_PusselEttCheck>().pusselEttComplete;
@@ -102,6 +105,10 @@ public class O_Hints : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// Reseting the text to empty
+    /// </summary>
+    /// <returns></returns>
     IEnumerator ResetHint()
     {
         yield return new WaitForSeconds(5);

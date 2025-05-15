@@ -5,10 +5,13 @@ using UnityEngine;
 public class O_IA_PopUp : MonoBehaviour
 {
     [HideInInspector] public H_PlayerStats ps;
+    
+    [Tooltip("TextMeshPro that is connected to interract")]
     public TextMeshProUGUI IA_PopUp;
+    
+    [Tooltip("TextMeshPro that is connected to inspect")]
     public TextMeshProUGUI inspectPopUp;
     
-
     
     void Start()
     {
@@ -18,6 +21,14 @@ public class O_IA_PopUp : MonoBehaviour
     
     void Update()
     {
+        TextHandler();
+    }
+
+    /// <summary>
+    /// Handler of the interract and inspect pop-up texts
+    /// </summary>
+    public void TextHandler ()
+    {
         inspectPopUp.text = "";
         RaycastHit hit;
         Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0.0f));
@@ -25,7 +36,7 @@ public class O_IA_PopUp : MonoBehaviour
         {
             if (Physics.Raycast(ray, out hit, 3.0f))
             {
-                
+
                 if (hit.transform.tag == "R1_Keypad" || hit.transform.tag == "R2_Keypad")
                 {
                     if (!ps.inKeyPad)
@@ -80,7 +91,7 @@ public class O_IA_PopUp : MonoBehaviour
         }
         else
         {
-            if(!ps.isInspecting)
+            if (!ps.isInspecting)
             {
                 if (!ps.inKeyPad)
                 {
@@ -144,5 +155,7 @@ public class O_IA_PopUp : MonoBehaviour
             }
         }
     }
-}
+}   
+
+
 
