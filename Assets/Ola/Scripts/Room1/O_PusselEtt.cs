@@ -4,19 +4,10 @@ public class O_PusselEtt : MonoBehaviour
 {
     public bool placedCorrectly = false;
     
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
+    /// <summary>
+    /// Check to see if the stone placed on the plate is the right one
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == gameObject.tag + "plate")
@@ -24,6 +15,7 @@ public class O_PusselEtt : MonoBehaviour
             placedCorrectly = true;
         }
     }
+
     private void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject.tag == gameObject.tag + "plate")

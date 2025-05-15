@@ -15,13 +15,7 @@ public class O_R2P1_Check : MonoBehaviour
 
     public GameObject gateDoor;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         if(!r2p1Completed)
@@ -30,6 +24,10 @@ public class O_R2P1_Check : MonoBehaviour
         }
     }
 
+
+    /// <summary>
+    /// Checking the position of the levers.
+    /// </summary>
     public void CheckLevers()
     {
         lever1Check = lever1.GetComponent<O_R2P1>().on;
@@ -41,7 +39,6 @@ public class O_R2P1_Check : MonoBehaviour
         {
             r2p1Completed = true;
             gateDoor.SetActive(false);
-            Debug.Log("Wahoo");
         }
     }
 }

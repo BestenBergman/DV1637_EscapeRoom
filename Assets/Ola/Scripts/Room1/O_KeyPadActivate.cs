@@ -34,7 +34,6 @@ public class O_KeyPadActivate : MonoBehaviour
     public TextMeshProUGUI input3;
 
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         ps = GameObject.FindGameObjectWithTag("Player").GetComponent<H_PlayerStats>();
@@ -46,7 +45,6 @@ public class O_KeyPadActivate : MonoBehaviour
         tpEnd.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         CodeCheck();
@@ -57,6 +55,9 @@ public class O_KeyPadActivate : MonoBehaviour
          
     }
 
+    /// <summary>
+    /// Switching UI between game and Keypad
+    /// </summary>
     public void KeyPadSwitch()
     {
         if (keyPad.isActiveAndEnabled)
@@ -76,6 +77,9 @@ public class O_KeyPadActivate : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Automatic closing of the keypad when completing it
+    /// </summary>
     public void KeyPadComplete()
     {
         if (keyPad.isActiveAndEnabled)
@@ -86,20 +90,10 @@ public class O_KeyPadActivate : MonoBehaviour
             ps.inKeyPad = false;
         }
     }
-    IEnumerator Closing()
-    {
-        teleporterActive = true;
-        yield return new WaitForSeconds(0.5f);
-        correct.SetActive(true);
-        input1.text = "";
-        input2.text = "";
-        input3.text = "";
-        yield return new WaitForSeconds(1.0f);
-        KeyPadComplete();
-        correct.SetActive(false);
-
-    }
-
+ 
+    /// <summary>
+    /// When three digits have been entered, it checks if they are correct.
+    /// </summary>
     public void CodeCheck()
     {
         code1 = input1.text;
@@ -115,17 +109,39 @@ public class O_KeyPadActivate : MonoBehaviour
                     keyPadComplete = true;
                     tpStart.SetActive(true);
                     tpEnd.SetActive(true);
-
                 }
             }
         }
         if (code1 != "" && code2 != "" && code3 != "" && !keyPadComplete)
         {
             StartCoroutine("WrongCode");
-
         }
     }
 
+
+    /// <summary>
+    /// Resets the digits and shows a green box when entering the correct code.
+    /// Also activates the teleporter/corresponding door.
+    /// </summary>
+    /// <returns></returns>
+    IEnumerator Closing()
+    {
+        teleporterActive = true;
+        yield return new WaitForSeconds(0.5f);
+        correct.SetActive(true);
+        input1.text = "";
+        input2.text = "";
+        input3.text = "";
+        yield return new WaitForSeconds(0.5f);
+        KeyPadComplete();
+        correct.SetActive(false);
+    }
+
+
+    /// <summary>
+    /// Resets the digits and shows a red box when entering the wrong code.
+    /// </summary>
+    /// <returns></returns>
     IEnumerator WrongCode()
     {
         yield return new WaitForSeconds(0.5f);
@@ -133,7 +149,7 @@ public class O_KeyPadActivate : MonoBehaviour
         input1.text = "";
         input2.text = "";
         input3.text = "";
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.5f);
         wrong.SetActive(false);
 
     }

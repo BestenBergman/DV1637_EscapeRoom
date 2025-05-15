@@ -8,18 +8,9 @@ public class O_KeyPad : MonoBehaviour
     public TextMeshProUGUI input2;
     public TextMeshProUGUI input3;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    /// <summary>
+    /// Updating the Keypad-UI with the number that was pressed.
+    /// </summary>
     public void KeyPadPress()
     {
         if (input1.text == "")

@@ -7,7 +7,7 @@ public class O_TP_Mat_Swap : MonoBehaviour
     private bool started = false;
     private MeshRenderer mR;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
     void Start()
     {
         mR = GetComponent<MeshRenderer>();
@@ -23,7 +23,11 @@ public class O_TP_Mat_Swap : MonoBehaviour
         }
     }
 
-
+    /// <summary>
+    /// Swapping material on the teleporter base 10 times/second to create the illusion of a spinning light.
+    /// </summary>
+    /// <param name="i"></param>
+    /// <returns></returns>
     IEnumerator MaterialSwap(int i = 0)
     {
         if(i > 3)

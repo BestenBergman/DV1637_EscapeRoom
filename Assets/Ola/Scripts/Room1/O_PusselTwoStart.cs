@@ -7,13 +7,7 @@ public class O_PusselTwoStart : MonoBehaviour
     public bool pusselOneCheck = false;
     public bool switched = false;
     public GameObject pusselOne;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         Starter();
@@ -24,6 +18,10 @@ public class O_PusselTwoStart : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Checks if the first puzzle is done and if so
+    /// starts the second puzzle with the lights.
+    /// </summary>
     public void Starter()
     {
         if (!started)
@@ -35,7 +33,9 @@ public class O_PusselTwoStart : MonoBehaviour
             }
         }
     }
-
+    /// <summary>
+    /// Turns of the lights to reveal the binary code.
+    /// </summary>
     public void LightSwitch()
     {
         Array lights = GameObject.FindGameObjectsWithTag("R1_Switchable");
