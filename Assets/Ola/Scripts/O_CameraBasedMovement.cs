@@ -69,8 +69,6 @@ public class O_CameraBasedMovement : MonoBehaviour
     
     public void PlayerMovement()
     {
-        
-
         //Movementfunctionality with normalized vectors to ensure the player moves in uniform speed in all directions.
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
@@ -91,11 +89,21 @@ public class O_CameraBasedMovement : MonoBehaviour
         cc.Move(new Vector3(0, -gravity * Time.deltaTime, 0));
     }
 
+    /// <summary>
+    /// Togglar sprint av och på
+    /// - Hugo
+    /// </summary>
     public void SprintSwitch()
     {
         speed = speed == walkSpeed ? runSpeed : walkSpeed;
     }
 
+    /// <summary>
+    /// En version av PlayerMovment som kan ta in satta värden
+    /// för rörelse
+    /// - Hugo
+    /// </summary>
+    /// <param name="walkDir">Spelarens rörelse riktning</param>
     private void ForcedPlayerMovment(Vector3 walkDir)
     {
         float x = walkDir.x;
@@ -112,9 +120,14 @@ public class O_CameraBasedMovement : MonoBehaviour
         cc.Move(move);
     }
 
+    /// <summary>
+    /// En version av CameraMovement som kan ta in satta värden
+    /// för mus rörelse
+    /// - Hugo
+    /// </summary>
+    /// <param name="lookDir">Musens rörelse riktning</param>
     public void ForcedCameraMovement(Vector2 lookDir)
     {
-        // Camerafuncionality with a constraint on the x-angle to ensure the player doesn't fold themselves over backwards.
         float xLook = lookDir.x * mouseSensitivity * Time.deltaTime;
         float yLook = lookDir.y * mouseSensitivity * Time.deltaTime;
 
@@ -126,6 +139,12 @@ public class O_CameraBasedMovement : MonoBehaviour
         transform.localRotation = Quaternion.Euler(0f, yRot, 0f);
     }
 
+    /// <summary>
+    /// Ska likna mänskliga inputs och då få spelaren att röra
+    /// sig enlight start sekvensen
+    /// - Hugo
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator startWalkPlayer()
     {
         ps.fWalkDir = new Vector3(0, 0, 1);
