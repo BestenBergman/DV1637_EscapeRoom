@@ -5,12 +5,10 @@ public class O_R2P1 : MonoBehaviour
     public bool on = false;
     public GameObject tl; 
     
-    private void Start()
-    {
-        
-    }
-
-
+    /// <summary>
+    /// Switch the lever on/off and turn the
+    /// corresponding light on/off 
+    /// </summary>
     public void SwitchLever()
     {
 

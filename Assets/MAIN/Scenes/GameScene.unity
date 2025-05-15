@@ -14270,6 +14270,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3375731920116735945, guid: 9de2b06e60b68f94ba11554e39c79d7d, type: 3}
   m_PrefabInstance: {fileID: 546034258}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1192404207 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 705722610396586011, guid: c876bff781bf3fe46a2893dc55119ebc, type: 3}
+  m_PrefabInstance: {fileID: 1867303868}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1192459868
 GameObject:
   m_ObjectHideFlags: 0
@@ -16927,6 +16932,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6585956149863439662, guid: fc3afdb7fd1f62a4abfcd3ac20dd3242, type: 3}
+--- !u!1 &1381003443 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2250168376858234853, guid: c876bff781bf3fe46a2893dc55119ebc, type: 3}
+  m_PrefabInstance: {fileID: 1867303868}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1381777130
 GameObject:
   m_ObjectHideFlags: 0
@@ -17119,6 +17129,11 @@ Transform:
   - {fileID: 1642409645}
   m_Father: {fileID: 474436698}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1413316923 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 603621332537868288, guid: c876bff781bf3fe46a2893dc55119ebc, type: 3}
+  m_PrefabInstance: {fileID: 1867303868}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1419241279
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17385,6 +17400,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7181306226360760951}
     m_Modifications:
+    - target: {fileID: 459817262613010947, guid: 32c23e6f6e738504a935d1561c7d34c8, type: 3}
+      propertyPath: tl
+      value: 
+      objectReference: {fileID: 1413316923}
+    - target: {fileID: 2037465609110765320, guid: 32c23e6f6e738504a935d1561c7d34c8, type: 3}
+      propertyPath: tl
+      value: 
+      objectReference: {fileID: 1192404207}
     - target: {fileID: 2408407402715657950, guid: 32c23e6f6e738504a935d1561c7d34c8, type: 3}
       propertyPath: m_TagString
       value: R2_PuzzleLever
@@ -17397,10 +17420,18 @@ PrefabInstance:
       propertyPath: m_TagString
       value: R2_PuzzleLever
       objectReference: {fileID: 0}
+    - target: {fileID: 3548484992625008703, guid: 32c23e6f6e738504a935d1561c7d34c8, type: 3}
+      propertyPath: tl
+      value: 
+      objectReference: {fileID: 1381003443}
     - target: {fileID: 4750181246816439399, guid: 32c23e6f6e738504a935d1561c7d34c8, type: 3}
       propertyPath: m_TagString
       value: R2_PuzzleLever
       objectReference: {fileID: 0}
+    - target: {fileID: 6259047060486131974, guid: 32c23e6f6e738504a935d1561c7d34c8, type: 3}
+      propertyPath: tl
+      value: 
+      objectReference: {fileID: 1449573150}
     - target: {fileID: 6438541865867553650, guid: 32c23e6f6e738504a935d1561c7d34c8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18
@@ -17449,7 +17480,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2515193065415183753, guid: 32c23e6f6e738504a935d1561c7d34c8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -17787,6 +17819,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.30000016, y: 0.3, z: 0.30000016}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1449573150 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5729382785922387071, guid: c876bff781bf3fe46a2893dc55119ebc, type: 3}
+  m_PrefabInstance: {fileID: 1867303868}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1459505283
 PrefabInstance:
   m_ObjectHideFlags: 0

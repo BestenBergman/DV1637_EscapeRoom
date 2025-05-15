@@ -12,12 +12,6 @@ public class O_TorchLever : MonoBehaviour
         flames.SetActive(false);
         checkOne = lever.GetComponent<O_R2P1>().on;
     }
-
-    
-    void Update()
-    {
-        //SwitchLights();
-    }
     
     /// <summary>
     /// Turning lights on/off when switching levers

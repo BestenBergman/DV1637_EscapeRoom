@@ -7,12 +7,16 @@ public class O_CheckForShardPopUp : MonoBehaviour
     public TextMeshProUGUI shardPopUp;
     [HideInInspector] public H_PlayerStats ps;
     
+    
     void Start()
     {
         ps = GetComponent<H_PlayerStats>();
     }
 
-    
+    /// <summary>
+    /// Pop-up text to that shows when
+    /// inspecting a shard.
+    /// </summary>
     void Update()
     {
         if (ps.isInspecting && ps.Shards.Contains(gameObject.transform.GetChild(0).transform.GetChild(1).tag))
