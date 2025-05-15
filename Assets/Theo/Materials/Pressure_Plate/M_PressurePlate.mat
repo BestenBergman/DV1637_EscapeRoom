@@ -12,12 +12,11 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _EMISSION
   - _METALLICSPECGLOSSMAP
   - _NORMALMAP
   - _PARALLAXMAP
   m_InvalidKeywords: []
-  m_LightmapFlags: 2
+  m_LightmapFlags: 6
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -30,11 +29,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: f5c37933af541de49a521dbf2f29db90, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2a89a9a03bd3fb440a34989d653c71b5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: ef6d7b405782a31409e2f3ba5be51cf4, type: 3}
+        m_Texture: {fileID: 2800000, guid: b03d7978d58aeb5409bce449cd79d7cd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -54,11 +53,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: f5c37933af541de49a521dbf2f29db90, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2a89a9a03bd3fb440a34989d653c71b5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 1c2e536a52708494699b9794d30034a0, type: 3}
+        m_Texture: {fileID: 2800000, guid: a6ecf77625b73cc4a8e80dc2055f3cfc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -66,7 +65,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
-        m_Texture: {fileID: 2800000, guid: cd143b057501d3b42973c19c5949e7d6, type: 3}
+        m_Texture: {fileID: 2800000, guid: 598c2c8444300a24c9acd8b57cf3973d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -107,10 +106,10 @@ Material:
     - _GlossyReflections: 0
     - _Metallic: 0
     - _OcclusionStrength: 1
-    - _Parallax: 0.005
+    - _Parallax: 0.0141
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Smoothness: 0.373
+    - _Smoothness: 0.228
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -119,9 +118,9 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 1, g: 0.9386792, b: 0.9386792, a: 1}
-    - _Color: {r: 1, g: 0.9386792, b: 0.9386792, a: 1}
-    - _EmissionColor: {r: 0.028301895, g: 0.022561416, b: 0.022561416, a: 1}
+    - _BaseColor: {r: 1, g: 0.93017626, b: 0.79607844, a: 1}
+    - _Color: {r: 1, g: 0.93017626, b: 0.79607844, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

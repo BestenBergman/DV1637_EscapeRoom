@@ -16,13 +16,15 @@ public class T_PushObject : MonoBehaviour
         // Checks if the object has a Rigidbody and is not kinematic
         if (rB != null && !rB.isKinematic)
         {
-            // Create a force direction vector based on the players movement, ignoring the Y axis (no vertical)
+            //Create a force direction vector based on the players movement, ignoring the Y axis(no vertical)
             Vector3 forceDirection = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
-            
+
             // Get the point of contact on the object
             Vector3 collisionPoint = hit.point;
 
             rB.AddForceAtPosition(forceDirection * pushForce, collisionPoint, ForceMode.Impulse);
+
+
         }
     }
 
