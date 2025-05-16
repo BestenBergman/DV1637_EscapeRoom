@@ -124,6 +124,7 @@ public class O_KeyPadActivate : MonoBehaviour
                 if (code3 == p3)
                 {
                     keyPadComplete = true;
+                    // Spela teleport ljud
                     tpStart.SetActive(true);
                     tpEnd.SetActive(true);
                 }
