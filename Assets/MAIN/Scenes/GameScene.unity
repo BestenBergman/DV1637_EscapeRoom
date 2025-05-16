@@ -28365,6 +28365,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 886725060}
     m_Modifications:
+    - target: {fileID: 375532004982589861, guid: d6420f80599610d4f99edd4f2330df00, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -157
+      objectReference: {fileID: 0}
     - target: {fileID: 1163370129467538880, guid: d6420f80599610d4f99edd4f2330df00, type: 3}
       propertyPath: m_Name
       value: WinScreen
@@ -28378,6 +28382,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2680412580568605492, guid: d6420f80599610d4f99edd4f2330df00, type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2680412580568605492, guid: d6420f80599610d4f99edd4f2330df00, type: 3}
       propertyPath: m_ReferenceResolution.x
       value: 1920
       objectReference: {fileID: 0}
@@ -28387,7 +28395,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3429737148470374495, guid: d6420f80599610d4f99edd4f2330df00, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.1276025
+      value: 1.2808436
       objectReference: {fileID: 0}
     - target: {fileID: 3691743701836603062, guid: d6420f80599610d4f99edd4f2330df00, type: 3}
       propertyPath: m_Pivot.x
@@ -29371,7 +29379,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5060867232138014758, guid: ec70c8baae7176b4c84e94ba322fcd58, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.1163
+      value: 1.3095315
       objectReference: {fileID: 0}
     - target: {fileID: 8120076597444964889, guid: ec70c8baae7176b4c84e94ba322fcd58, type: 3}
       propertyPath: m_Name
@@ -29380,6 +29388,10 @@ PrefabInstance:
     - target: {fileID: 8850842706382877393, guid: ec70c8baae7176b4c84e94ba322fcd58, type: 3}
       propertyPath: m_UiScaleMode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8850842706382877393, guid: ec70c8baae7176b4c84e94ba322fcd58, type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8850842706382877393, guid: ec70c8baae7176b4c84e94ba322fcd58, type: 3}
       propertyPath: m_ReferenceResolution.x
@@ -29878,13 +29890,17 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.7075472
       objectReference: {fileID: 0}
+    - target: {fileID: 2925182568214015258, guid: 92461e698b6c15e46b81708b909d124c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -129
+      objectReference: {fileID: 0}
     - target: {fileID: 3886453019691964823, guid: 92461e698b6c15e46b81708b909d124c, type: 3}
       propertyPath: m_Name
       value: GameOverScreen
       objectReference: {fileID: 0}
     - target: {fileID: 3886453019691964823, guid: 92461e698b6c15e46b81708b909d124c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6215716063854830527, guid: 92461e698b6c15e46b81708b909d124c, type: 3}
       propertyPath: m_Name
@@ -29892,7 +29908,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7915058917512281241, guid: 92461e698b6c15e46b81708b909d124c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.1127
+      value: 1.3211087
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
