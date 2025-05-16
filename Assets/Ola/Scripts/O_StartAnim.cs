@@ -4,8 +4,9 @@ using UnityEngine;
 public class O_StartAnim : MonoBehaviour
 
 {
-    [Tooltip("Animator of the chest")]
-    public Animator anim;
+    [HideInInspector] public Animator anim;
+
+    public AudioClip openSound;
 
    
     void Start()
@@ -18,6 +19,7 @@ public class O_StartAnim : MonoBehaviour
     /// </summary>
     public void Started()
     {
+        H_SoundFXManager.instance.PlaySoundFXClip(openSound, transform, 1f);
         anim.SetBool("Open", true);
     }
 }

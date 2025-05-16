@@ -1544,6 +1544,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5801795382139993719, guid: 10e68af2eb45c9c4bb7e79e6e3825763, type: 3}
+      propertyPath: openSound
+      value: 
+      objectReference: {fileID: 8300000, guid: ee117b8287d2ec3499c34fcaf1fe943e, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5929,6 +5933,10 @@ PrefabInstance:
       propertyPath: keyPad
       value: 
       objectReference: {fileID: 1152786907}
+    - target: {fileID: 4286339509926600530, guid: 9de2b06e60b68f94ba11554e39c79d7d, type: 3}
+      propertyPath: tpLjud
+      value: 
+      objectReference: {fileID: 8300000, guid: 8f6d988b663c1f548a4c456a15eaf8d2, type: 3}
     - target: {fileID: 4286339509926600530, guid: 9de2b06e60b68f94ba11554e39c79d7d, type: 3}
       propertyPath: correct
       value: 
@@ -14297,6 +14305,10 @@ PrefabInstance:
       propertyPath: keyPad
       value: 
       objectReference: {fileID: 4680383462615271202}
+    - target: {fileID: 4286339509926600530, guid: 9de2b06e60b68f94ba11554e39c79d7d, type: 3}
+      propertyPath: tpLjud
+      value: 
+      objectReference: {fileID: 8300000, guid: 8f6d988b663c1f548a4c456a15eaf8d2, type: 3}
     - target: {fileID: 4286339509926600530, guid: 9de2b06e60b68f94ba11554e39c79d7d, type: 3}
       propertyPath: correct
       value: 

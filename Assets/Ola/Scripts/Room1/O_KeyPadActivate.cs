@@ -50,6 +50,8 @@ public class O_KeyPadActivate : MonoBehaviour
     [Tooltip("TextMeshPro named 'Input 3' in keypad UI")]
     public TextMeshProUGUI input3;
 
+    [Tooltip("Ljudet som ska spelas när teleportern startas")]
+    public AudioClip tpLjud;
 
     void Start()
     {
@@ -124,7 +126,6 @@ public class O_KeyPadActivate : MonoBehaviour
                 if (code3 == p3)
                 {
                     keyPadComplete = true;
-                    // Spela teleport ljud
                     tpStart.SetActive(true);
                     tpEnd.SetActive(true);
                 }
@@ -145,6 +146,10 @@ public class O_KeyPadActivate : MonoBehaviour
     IEnumerator Closing()
     {
         teleporterActive = true;
+        if (tpLjud != null)
+        {
+            H_SoundFXManager.instance.PlaySoundFXClip(tpLjud, tpStart.transform, 1f);
+        }
         yield return new WaitForSeconds(0.5f);
         correct.SetActive(true);
         input1.text = "";
