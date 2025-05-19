@@ -1,13 +1,20 @@
 using UnityEngine;
 
+/// <summary>
+/// This class is a 
+/// </summary>
 public class T_ToggleControl : MonoBehaviour
 {
+    // The GameObject that contains trigger source for example timer, keypad, etc.
     public GameObject triggerSource;
 
+    // The toggle bool which detimnines if it's active
     public bool isToggled;
+
+    // The GameObject to be enabled or disabled.
     public GameObject objectToControl;
 
-
+    // Possible trigger source components
     protected T_HourglassTimer hourglass;
     protected O_KeyPadActivate keypad;
     protected T_PressurePlate pressurePlate;

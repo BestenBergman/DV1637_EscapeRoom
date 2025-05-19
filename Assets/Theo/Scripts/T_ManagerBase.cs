@@ -18,6 +18,7 @@ public abstract class T_ManagerBase<T> : MonoBehaviour where T : Component
 
     void Update()
     {
+        // Check if all conditions are met if it's not already true.
         if (!AllConditionsMet && IsAllConditionsMet())
         {
             AllConditionsMet = true;
@@ -53,15 +54,20 @@ public abstract class T_ManagerBase<T> : MonoBehaviour where T : Component
     /// </summary>
     private bool IsAllConditionsMet()
     {
+        // Loop through all child objects of this GameObject.
         for (int i = 0; i < transform.childCount; i++)
         {
             Transform child = transform.GetChild(i);
             T component = child.GetComponent<T>();
+
+            // If the component of type T exists and does not meet the condition
             if (component != null && !IsConditionMet(component))
             {
                 return false;
             }
         }
+
+        // All components met the condition.
         return true;
     }
 }

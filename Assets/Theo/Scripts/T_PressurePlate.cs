@@ -1,7 +1,7 @@
 using UnityEngine;
 
 /// <summary>
-/// This class represents a pressure plate trigger in Unity.
+/// This class represents a pressure plate trigger.
 /// It sets a bool value when a specific object (Player or R3_Box) enters or exits its trigger collider.
 /// </summary>
 public class T_PressurePlate : MonoBehaviour
