@@ -8520,6 +8520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttons: []
+  buttonSound: {fileID: 8300000, guid: dbcbd2997511cbc478e6c204496070d7, type: 3}
 --- !u!1001 &667624451
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9446,6 +9447,7 @@ MonoBehaviour:
   triggerSource: {fileID: 1309700636}
   isToggled: 0
   objectToControl: {fileID: 1446217106}
+  audioClip: {fileID: 0}
 --- !u!1 &782483749
 GameObject:
   m_ObjectHideFlags: 0
@@ -12575,6 +12577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttons: []
+  buttonSound: {fileID: 8300000, guid: dbcbd2997511cbc478e6c204496070d7, type: 3}
 --- !u!4 &1110028734 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2805743756536321530, guid: df4545b214220874cb2935baf3b5a115, type: 3}
@@ -22007,6 +22010,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttons: []
+  buttonSound: {fileID: 8300000, guid: dbcbd2997511cbc478e6c204496070d7, type: 3}
 --- !u!1001 &1765493914
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27029,6 +27033,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttons: []
+  buttonSound: {fileID: 8300000, guid: dbcbd2997511cbc478e6c204496070d7, type: 3}
 --- !u!1 &2127543106
 GameObject:
   m_ObjectHideFlags: 0
@@ -34529,6 +34534,7 @@ MonoBehaviour:
   triggerSource: {fileID: 1504478763}
   isToggled: 0
   objectToControl: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: ee117b8287d2ec3499c34fcaf1fe943e, type: 3}
 --- !u!1 &6922670566543426455
 GameObject:
   m_ObjectHideFlags: 0
@@ -35484,6 +35490,7 @@ MonoBehaviour:
   triggerSource: {fileID: 516120334}
   isToggled: 0
   objectToControl: {fileID: 0}
+  audioClip: {fileID: 0}
 --- !u!1 &7575675413196272440
 GameObject:
   m_ObjectHideFlags: 0
@@ -35916,6 +35923,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttons: []
+  buttonSound: {fileID: 8300000, guid: dbcbd2997511cbc478e6c204496070d7, type: 3}
 --- !u!4 &8189764917750847286
 Transform:
   m_ObjectHideFlags: 0
@@ -36008,6 +36016,7 @@ MonoBehaviour:
   triggerSource: {fileID: 670918618}
   isToggled: 0
   objectToControl: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: ee117b8287d2ec3499c34fcaf1fe943e, type: 3}
 --- !u!114 &8193969862684363731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36640,6 +36649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttons: []
+  buttonSound: {fileID: 8300000, guid: dbcbd2997511cbc478e6c204496070d7, type: 3}
 --- !u!33 &8959713332689626285
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -36765,6 +36775,7 @@ MonoBehaviour:
   triggerSource: {fileID: 1189439232}
   isToggled: 0
   objectToControl: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: ee117b8287d2ec3499c34fcaf1fe943e, type: 3}
 --- !u!224 &9099035443379528593
 RectTransform:
   m_ObjectHideFlags: 0
