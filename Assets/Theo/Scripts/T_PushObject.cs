@@ -24,7 +24,6 @@ public class T_PushObject : MonoBehaviour
 
             rB.AddForceAtPosition(forceDirection * pushForce, collisionPoint, ForceMode.Impulse);
 
-
         }
     }
 

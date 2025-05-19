@@ -6,10 +6,10 @@ using UnityEngine;
 /// </summary>
 public class T_PressurePlate : MonoBehaviour
 {
-    // Indicates whether the pressure plate is currently being pressed
+    // If the pressure plate is currently being pressed.
     public bool isPressed = false;
 
-    // Count of objects currently on the plate
+    // Number of objects currently on the plate.
     private int pressCount = 0;
 
     [Tooltip("Det ljud som ska spelas när pressure platen trycks ner")]
@@ -27,19 +27,8 @@ public class T_PressurePlate : MonoBehaviour
                 H_SoundFXManager.instance.PlaySoundFXClip(downSound, transform, 1f);
             }
             pressCount++;
-
-            // Set the isPressed to true when either of the tag objects steps on the plate
             isPressed = true;
         }
-
-        //if (other.tag == "R3_Box")
-        //{
-        //    Debug.Log("Box");
-        //}
-        //if (other.tag == "Player")
-        //{
-        //    Debug.Log("Player");
-        //}
     }
     private void OnTriggerExit(Collider other)
     {
