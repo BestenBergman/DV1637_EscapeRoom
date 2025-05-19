@@ -16,6 +16,8 @@ public class O_R2P1_Check : MonoBehaviour
     [Tooltip("The door that opens when the puzzle is complete")]
     public GameObject gateDoor;
 
+    [SerializeField] private AudioClip doorSound;
+
 
     void Update()
     {
@@ -39,6 +41,7 @@ public class O_R2P1_Check : MonoBehaviour
         if (lever1Check && !lever2Check && !lever3Check && lever4Check)
         {
             r2p1Completed = true;
+            H_SoundFXManager.instance.PlaySoundFXClip(doorSound, gateDoor.transform, 1f);
             gateDoor.SetActive(false);
         }
     }
