@@ -5,10 +5,7 @@ public class O_R2P1 : MonoBehaviour
     [HideInInspector] public bool on = false;
     
     [Tooltip("The light which is paired with the lever")]
-    public GameObject tl;
-
-    [Tooltip("Ljudet som spelas när man drar i en spak")]
-    [SerializeField] private AudioClip leverSound;
+    public GameObject tl; 
     
     /// <summary>
     /// Switch the lever on/off and turn the
@@ -21,14 +18,12 @@ public class O_R2P1 : MonoBehaviour
         {
             transform.parent.eulerAngles = new Vector3(0, 0, -16);
             on = true;
-            H_SoundFXManager.instance.PlaySoundFXClip(leverSound, transform, 1f);
             tl.GetComponent<O_TorchLever>().SwitchLights();
         }
         else
         {
             transform.parent.eulerAngles = new Vector3(0, 0, 16);
             on = false;
-            H_SoundFXManager.instance.PlaySoundFXClip(leverSound, transform, 1f);
             tl.GetComponent<O_TorchLever>().SwitchLights();
         }
     }

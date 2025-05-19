@@ -6197,7 +6197,7 @@ MonoBehaviour:
   timerTxt: {fileID: 647955581}
   imgTimerUp: {fileID: 1312488763}
   imgTimerDown: {fileID: 533964626}
-  maxGameTime: 600
+  maxGameTime: 100
   timer: 0
   startTimer: 0
   globalVolume: {fileID: 345743301}
@@ -14137,7 +14137,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   on: 0
   tl: {fileID: 0}
-  leverSound: {fileID: 0}
 --- !u!4 &1175860136 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4492758354724279838, guid: 4ce15bc3103ac78448851283f9d0d475, type: 3}
@@ -17521,18 +17520,10 @@ PrefabInstance:
       propertyPath: tl
       value: 
       objectReference: {fileID: 1413316923}
-    - target: {fileID: 459817262613010947, guid: 32c23e6f6e738504a935d1561c7d34c8, type: 3}
-      propertyPath: leverSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 3c911e930ea0b144095774c41c8e0370, type: 3}
     - target: {fileID: 2037465609110765320, guid: 32c23e6f6e738504a935d1561c7d34c8, type: 3}
       propertyPath: tl
       value: 
       objectReference: {fileID: 1192404207}
-    - target: {fileID: 2037465609110765320, guid: 32c23e6f6e738504a935d1561c7d34c8, type: 3}
-      propertyPath: leverSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 3c911e930ea0b144095774c41c8e0370, type: 3}
     - target: {fileID: 2408407402715657950, guid: 32c23e6f6e738504a935d1561c7d34c8, type: 3}
       propertyPath: m_TagString
       value: R2_PuzzleLever
@@ -17541,10 +17532,6 @@ PrefabInstance:
       propertyPath: gateDoor
       value: 
       objectReference: {fileID: 6301294871194243797}
-    - target: {fileID: 3191960707009291983, guid: 32c23e6f6e738504a935d1561c7d34c8, type: 3}
-      propertyPath: doorSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 9cdc1a14fb05fe444b96aaa09ecb895d, type: 3}
     - target: {fileID: 3449363565724632860, guid: 32c23e6f6e738504a935d1561c7d34c8, type: 3}
       propertyPath: m_TagString
       value: R2_PuzzleLever
@@ -17553,10 +17540,6 @@ PrefabInstance:
       propertyPath: tl
       value: 
       objectReference: {fileID: 1381003443}
-    - target: {fileID: 3548484992625008703, guid: 32c23e6f6e738504a935d1561c7d34c8, type: 3}
-      propertyPath: leverSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 3c911e930ea0b144095774c41c8e0370, type: 3}
     - target: {fileID: 4750181246816439399, guid: 32c23e6f6e738504a935d1561c7d34c8, type: 3}
       propertyPath: m_TagString
       value: R2_PuzzleLever
@@ -17565,10 +17548,6 @@ PrefabInstance:
       propertyPath: tl
       value: 
       objectReference: {fileID: 1449573150}
-    - target: {fileID: 6259047060486131974, guid: 32c23e6f6e738504a935d1561c7d34c8, type: 3}
-      propertyPath: leverSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 3c911e930ea0b144095774c41c8e0370, type: 3}
     - target: {fileID: 6438541865867553650, guid: 32c23e6f6e738504a935d1561c7d34c8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18
@@ -36071,7 +36050,6 @@ MonoBehaviour:
     m2: {fileID: 2100000, guid: ca885958d5cb7854e8751b1fe6a18134, type: 2}
   ljus: {fileID: 562603752734536405}
   active: 0
-  leverSound: {fileID: 8300000, guid: 3c911e930ea0b144095774c41c8e0370, type: 3}
 --- !u!4 &6649671847776242443
 Transform:
   m_ObjectHideFlags: 0

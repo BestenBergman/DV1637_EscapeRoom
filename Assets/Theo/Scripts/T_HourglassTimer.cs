@@ -4,18 +4,29 @@ using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
+/// <summary>
+/// 
+/// </summary>
 public class T_HourglassTimer : MonoBehaviour
 {
     public TextMeshProUGUI timerTxt;
+    
+    // Hourglass images
     public Image imgTimerUp;              
     public Image imgTimerDown;
 
-    public float maxGameTime = 600f;    // Max game time (600 seconds = 10 minutes)
+    // Max game time (600 seconds = 10 minutes)
+    public float maxGameTime = 600f;
     public float timer;                
-    private float lerpSpeed = 3f;
+    
+    // Speed for transitions in img sliders
+    private float lerpSpeed = 3f; 
 
-
+    // Controls if start or stop timmer.
     public bool startTimer = false;
+
+    //Hugo
+    [Tooltip("Global Volume")]
     public Volume globalVolume;
     private Vignette vid;
 
@@ -32,9 +43,9 @@ public class T_HourglassTimer : MonoBehaviour
     {
         timer = maxGameTime;
 
+        // Initialize fill states.
         imgTimerUp.fillAmount = timer / maxGameTime;
         imgTimerDown.fillAmount = 1f - (timer / maxGameTime);
-
     }
 
     private void Update()
@@ -43,6 +54,7 @@ public class T_HourglassTimer : MonoBehaviour
         {
             if (timer > 0f)
             {
+                // Timer counts down.
                 timer -= Time.deltaTime;
 
                 if (timer < 0f)
@@ -51,27 +63,34 @@ public class T_HourglassTimer : MonoBehaviour
                 }
             }
 
-            // Calculate seconds and milliseconds
+            // Calculate seconds and milliseconds.
             int min = Mathf.FloorToInt(timer / 60);
             int sec = Mathf.FloorToInt(timer % 60);
 
 
 
-            // Format the countdown timer text
+            // Format the countdown timer text.
             string txtTime = string.Format("{0:00}:{1:00}", min, sec);
             timerTxt.text = txtTime;
 
+            // Hämtar och applicerar en fade effect när det bara är en tiondels av tiden kvar
             globalVolume.profile.TryGet(out vid);
             vid.intensity.value = Mathf.Clamp(1f - timer / (maxGameTime / 10), 0f, 1f);
+
+
 
             Fill(imgTimerDown, true);
             Fill(imgTimerUp, false);
 
-            ColorChanger();
+            UpdateTimerColor();
         }
     }
 
-
+    /// <summary>
+    /// Updates the fill amount of a Image based on the current timer value.
+    /// </summary>
+    /// <param name="img"></param>
+    /// <param name="isFilling"></param>
     private void Fill(Image img, bool isFilling)
     {
         float targetFill;
@@ -88,7 +107,10 @@ public class T_HourglassTimer : MonoBehaviour
         img.fillAmount = Mathf.Lerp(img.fillAmount, targetFill, lerpSpeed * Time.deltaTime);
     }
 
-    void ColorChanger()
+    /// <summary>
+    /// Changes color and plays sounds based on the time.
+    /// </summary>
+    void UpdateTimerColor()
     {
         if (timer > maxGameTime/2f)
         {
