@@ -71,32 +71,37 @@ public class T_ToggleControl : MonoBehaviour
 
         if (pressurePlateManager != null && pressurePlateManager.AllConditionsMet)
         {
-            isToggled = true; // Conditions met(all pressure plates) to open chest
+            isToggled = true; // Conditions met(all pressure plates have been pressed) to open chest.
         }
 
         if (torchManager != null && torchManager.AllConditionsMet)
         {
-            isToggled = false; //Activate Teleport
+            isToggled = false; // Activate teleport when all torches are lit
         }
 
+        // Handle playing sound once when toggle state changes
         if (CompareTag("R1_Door") || CompareTag("TP_3-4"))
         {
             if (audioClip != null && !isToggled && !playedSound)
             {
-                PlaySound();
+                PlaySound(); // Play sound when door closes or teleport deactivates
             }
         }
         else
         {
             if (audioClip != null && isToggled && !playedSound)
             {
-                PlaySound();
+                PlaySound(); // Play sound when object activates
             }
         }
 
         SetObjectState();
     }
 
+    /// <summary>
+    /// Sets the active state of the controlled object based on isToggled.
+    /// If objectToControl is null, tries to assign the first child.
+    /// </summary>
     protected virtual void SetObjectState()
     {
         if (objectToControl == null)
@@ -113,6 +118,9 @@ public class T_ToggleControl : MonoBehaviour
         objectToControl.SetActive(!isToggled);
     }
 
+    /// <summary>
+    /// Plays the audio clip using a sound manager and prevents replay.
+    /// </summary>
     private void PlaySound()
     {
         playedSound = true;
