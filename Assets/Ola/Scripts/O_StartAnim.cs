@@ -6,7 +6,8 @@ public class O_StartAnim : MonoBehaviour
 {
     [HideInInspector] public Animator anim;
 
-    public AudioClip openSound;
+    [Tooltip("Det ljud spelas när spelaren öppnar kistan")]
+    [SerializeField] private AudioClip openSound;
 
    
     void Start()

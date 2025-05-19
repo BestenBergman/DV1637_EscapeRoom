@@ -6,6 +6,8 @@ public class ButtonKontroler : MonoBehaviour
 {
     [HideInInspector]public List<GameObject> buttons;
 
+    [SerializeField] private AudioClip buttonSound;
+
     private void Start()
     {
         // Tar in alla dess children i en lista
@@ -29,6 +31,7 @@ public class ButtonKontroler : MonoBehaviour
                 buttons[i].GetComponent<ButtonSwitchState>().SwitchState();
             }
         }
+        H_SoundFXManager.instance.PlaySoundFXClip(buttonSound, pressed.transform, 1f);
         pressed.GetComponent<ButtonSwitchState>().SwitchState();
     }
 

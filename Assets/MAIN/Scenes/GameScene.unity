@@ -8520,6 +8520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttons: []
+  buttonSound: {fileID: 8300000, guid: dbcbd2997511cbc478e6c204496070d7, type: 3}
 --- !u!1001 &667624451
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12575,6 +12576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttons: []
+  buttonSound: {fileID: 8300000, guid: dbcbd2997511cbc478e6c204496070d7, type: 3}
 --- !u!4 &1110028734 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2805743756536321530, guid: df4545b214220874cb2935baf3b5a115, type: 3}
@@ -22007,6 +22009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttons: []
+  buttonSound: {fileID: 8300000, guid: dbcbd2997511cbc478e6c204496070d7, type: 3}
 --- !u!1001 &1765493914
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27029,6 +27032,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttons: []
+  buttonSound: {fileID: 8300000, guid: dbcbd2997511cbc478e6c204496070d7, type: 3}
 --- !u!1 &2127543106
 GameObject:
   m_ObjectHideFlags: 0
@@ -35916,6 +35920,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttons: []
+  buttonSound: {fileID: 8300000, guid: dbcbd2997511cbc478e6c204496070d7, type: 3}
 --- !u!4 &8189764917750847286
 Transform:
   m_ObjectHideFlags: 0
@@ -36640,6 +36645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttons: []
+  buttonSound: {fileID: 8300000, guid: dbcbd2997511cbc478e6c204496070d7, type: 3}
 --- !u!33 &8959713332689626285
 MeshFilter:
   m_ObjectHideFlags: 0
