@@ -9447,6 +9447,7 @@ MonoBehaviour:
   triggerSource: {fileID: 1309700636}
   isToggled: 0
   objectToControl: {fileID: 1446217106}
+  audioClip: {fileID: 0}
 --- !u!1 &782483749
 GameObject:
   m_ObjectHideFlags: 0
@@ -34533,6 +34534,7 @@ MonoBehaviour:
   triggerSource: {fileID: 1504478763}
   isToggled: 0
   objectToControl: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: ee117b8287d2ec3499c34fcaf1fe943e, type: 3}
 --- !u!1 &6922670566543426455
 GameObject:
   m_ObjectHideFlags: 0
@@ -35488,6 +35490,7 @@ MonoBehaviour:
   triggerSource: {fileID: 516120334}
   isToggled: 0
   objectToControl: {fileID: 0}
+  audioClip: {fileID: 0}
 --- !u!1 &7575675413196272440
 GameObject:
   m_ObjectHideFlags: 0
@@ -36013,6 +36016,7 @@ MonoBehaviour:
   triggerSource: {fileID: 670918618}
   isToggled: 0
   objectToControl: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: ee117b8287d2ec3499c34fcaf1fe943e, type: 3}
 --- !u!114 &8193969862684363731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36771,6 +36775,7 @@ MonoBehaviour:
   triggerSource: {fileID: 1189439232}
   isToggled: 0
   objectToControl: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: ee117b8287d2ec3499c34fcaf1fe943e, type: 3}
 --- !u!224 &9099035443379528593
 RectTransform:
   m_ObjectHideFlags: 0
