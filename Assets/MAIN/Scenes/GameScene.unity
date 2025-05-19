@@ -9410,6 +9410,7 @@ MonoBehaviour:
   triggerSource: {fileID: 1309700636}
   isToggled: 0
   objectToControl: {fileID: 1446217106}
+  audioClip: {fileID: 0}
 --- !u!95 &780906947
 Animator:
   serializedVersion: 7
@@ -26709,6 +26710,7 @@ MonoBehaviour:
   triggerSource: {fileID: 2018752164}
   isToggled: 0
   objectToControl: {fileID: 2073529347}
+  audioClip: {fileID: 8300000, guid: 8f6d988b663c1f548a4c456a15eaf8d2, type: 3}
 --- !u!1 &2087494852
 GameObject:
   m_ObjectHideFlags: 0
@@ -29764,6 +29766,7 @@ MonoBehaviour:
   triggerSource: {fileID: 516120334}
   isToggled: 0
   objectToControl: {fileID: 0}
+  audioClip: {fileID: 0}
 --- !u!224 &2239808061890573248
 RectTransform:
   m_ObjectHideFlags: 0
@@ -34497,6 +34500,7 @@ MonoBehaviour:
   triggerSource: {fileID: 1504478763}
   isToggled: 0
   objectToControl: {fileID: 3620830098237366304}
+  audioClip: {fileID: 0}
 --- !u!95 &6865706189808722177
 Animator:
   serializedVersion: 7
@@ -34680,6 +34684,7 @@ MonoBehaviour:
   triggerSource: {fileID: 1189439232}
   isToggled: 0
   objectToControl: {fileID: 5515519222273586151}
+  audioClip: {fileID: 0}
 --- !u!114 &7018143888380829533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35894,6 +35899,7 @@ MonoBehaviour:
   triggerSource: {fileID: 670918618}
   isToggled: 0
   objectToControl: {fileID: 0}
+  audioClip: {fileID: 0}
 --- !u!1 &8078922821211259173
 GameObject:
   m_ObjectHideFlags: 0
