@@ -1,11 +1,11 @@
 using UnityEngine;
 
 /// <summary>
-/// This class is a 
+/// This class controls toggling of a object based on different trigger sources.
 /// </summary>
 public class T_ToggleControl : MonoBehaviour
 {
-    // The GameObject that contains trigger source for example timer, keypad, etc.
+    // Trigger source for example timer, keypad, etc.
     public GameObject triggerSource;
 
     // The toggle bool which detimnines if it's active
@@ -21,7 +21,9 @@ public class T_ToggleControl : MonoBehaviour
     protected T_PressurePlateManager pressurePlateManager;
     protected T_TorchManager torchManager;
 
+    // Audio clip to play on toggle
     [SerializeField] protected AudioClip audioClip;
+    // Ensure sound only plays once
     protected bool playedSound = false;
 
 
@@ -50,24 +52,26 @@ public class T_ToggleControl : MonoBehaviour
 
     protected virtual void Update()
     {
+        // Update isToggled depending on the active trigger
+
         if (hourglass != null && hourglass.startTimer)
         {
-            isToggled = false; //Door closes
+            isToggled = false; // Door closes when hourglass timer starts.
         }
 
         if (keypad != null && keypad.keyPadComplete)
         {
-            isToggled = true; //Door opens
+            isToggled = true; // Door opens when keypad is completed.
         }
 
         if (pressurePlate != null)
         {
-            isToggled = pressurePlate.isPressed;
+            isToggled = pressurePlate.isPressed; // Active while plate is pressed
         }
 
         if (pressurePlateManager != null && pressurePlateManager.AllConditionsMet)
         {
-            isToggled = true; //Open chest
+            isToggled = true; // Conditions met(all pressure plates) to open chest
         }
 
         if (torchManager != null && torchManager.AllConditionsMet)
