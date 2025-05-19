@@ -21,7 +21,10 @@ public class T_ToggleControl : MonoBehaviour
     protected T_PressurePlateManager pressurePlateManager;
     protected T_TorchManager torchManager;
 
-    
+    [SerializeField] protected AudioClip audioClip;
+    protected bool playedSound = false;
+
+
     protected virtual void Start()
     {
         if (CompareTag("R1_Door") || CompareTag("TP_3-4"))
@@ -72,6 +75,21 @@ public class T_ToggleControl : MonoBehaviour
             isToggled = false; //Activate Teleport
         }
 
+        if (CompareTag("R1_Door") || CompareTag("TP_3-4"))
+        {
+            if (audioClip != null && !isToggled && !playedSound)
+            {
+                PlaySound();
+            }
+        }
+        else
+        {
+            if (audioClip != null && isToggled && !playedSound)
+            {
+                PlaySound();
+            }
+        }
+
         SetObjectState();
     }
 
@@ -89,6 +107,12 @@ public class T_ToggleControl : MonoBehaviour
             }
         }
         objectToControl.SetActive(!isToggled);
+    }
+
+    private void PlaySound()
+    {
+        playedSound = true;
+        H_SoundFXManager.instance.PlaySoundFXClip(audioClip, transform.GetChild(0), 1f);
     }
 
 }

@@ -19,6 +19,14 @@ public class T_HourglassTimer : MonoBehaviour
     public Volume globalVolume;
     private Vignette vid;
 
+    [Tooltip("Ljudet som ska spelas när halva tiden har gått")]
+    [SerializeField] private AudioClip halfTimeSound;
+
+    [Tooltip("Ljudet som ska spelas när det är en minut kvar")]
+    [SerializeField] private AudioClip lastMinSound;
+    private bool playedHalfTimeSound = false;
+    private bool playedLastMinSound = false;
+
 
     private void Start()
     {
@@ -89,15 +97,23 @@ public class T_HourglassTimer : MonoBehaviour
         }
         else if (timer > maxGameTime/10f)
         {
+            if (halfTimeSound != null && !playedHalfTimeSound)
+            {
+                playedHalfTimeSound = true;
+                H_SoundFXManager.instance.PlaySoundFXClip(halfTimeSound, transform, 2f);
+            }
             imgTimerUp.color = Color.yellow;
             imgTimerDown.color = Color.yellow;
         }
         else
         {
+            if (lastMinSound != null && !playedLastMinSound)
+            {
+                playedLastMinSound = true;
+                H_SoundFXManager.instance.PlaySoundFXClip(lastMinSound, transform, 3f);
+            }
             imgTimerUp.color = Color.red;
             imgTimerDown.color = Color.red;
         }
-        //imgTimerUp.color = Color.Lerp(Color.red, Color.green, timer / maxGameTime);
-        //imgTimerDown.color = Color.Lerp(Color.red, Color.green, timer / maxGameTime);
     }
 }
