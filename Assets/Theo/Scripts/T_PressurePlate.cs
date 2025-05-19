@@ -12,10 +12,20 @@ public class T_PressurePlate : MonoBehaviour
     // Count of objects currently on the plate
     private int pressCount = 0;
 
+    [Tooltip("Det ljud som ska spelas när pressure platen trycks ner")]
+    [SerializeField] private AudioClip downSound;
+
+    [Tooltip("Det ljud som ska spelas när pressure platen trycks upp")]
+    [SerializeField] private AudioClip upSound;
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "R3_Box" || other.tag == "Player")
         {
+            if (pressCount == 0)
+            {
+                H_SoundFXManager.instance.PlaySoundFXClip(downSound, transform, 1f);
+            }
             pressCount++;
 
             // Set the isPressed to true when either of the tag objects steps on the plate
@@ -47,6 +57,7 @@ public class T_PressurePlate : MonoBehaviour
             }
             else
             {
+                H_SoundFXManager.instance.PlaySoundFXClip(upSound, transform, 1f);
                 isPressed = false;
             }
         }

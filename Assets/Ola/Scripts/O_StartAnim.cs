@@ -20,7 +20,10 @@ public class O_StartAnim : MonoBehaviour
     /// </summary>
     public void Started()
     {
-        H_SoundFXManager.instance.PlaySoundFXClip(openSound, transform, 1f);
+        if (openSound != null)
+        {
+            H_SoundFXManager.instance.PlaySoundFXClip(openSound, transform, 1f);
+        }
         anim.SetBool("Open", true);
     }
 }

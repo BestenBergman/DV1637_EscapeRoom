@@ -75,9 +75,19 @@ public class T_ToggleControl : MonoBehaviour
             isToggled = false; //Activate Teleport
         }
 
-        if (audioClip != null && isToggled && !playedSound)
+        if (CompareTag("R1_Door") || CompareTag("TP_3-4"))
         {
-            PlaySound();
+            if (audioClip != null && !isToggled && !playedSound)
+            {
+                PlaySound();
+            }
+        }
+        else
+        {
+            if (audioClip != null && isToggled && !playedSound)
+            {
+                PlaySound();
+            }
         }
 
         SetObjectState();
