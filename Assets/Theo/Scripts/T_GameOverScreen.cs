@@ -42,6 +42,7 @@ public class T_GameOverScreen : MonoBehaviour
             //Shows Win screen.
             winScreen.SetActive(true);
 
+            // Display remaining time in a formatted string
             TimeTxt.text = "Time Left: " + 
                 string.Format("{0:00} min {1:00}.{2:000} sec", 
                 Mathf.FloorToInt(hourglassTimer.timer / 60), 
