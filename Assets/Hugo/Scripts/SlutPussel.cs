@@ -41,6 +41,9 @@ public class SlutPussel : MonoBehaviour
     [Tooltip("Visar om ljuset är på eller av")]
     [SerializeField] private bool active;
 
+    [Tooltip("Det ljud som ska spelas när spaken dras i")]
+    [SerializeField] private AudioClip leverSound;
+
     private void Start()
     {
         active = false;
@@ -63,6 +66,7 @@ public class SlutPussel : MonoBehaviour
         if (active)
         {
             active = false;
+            H_SoundFXManager.instance.PlaySoundFXClip(leverSound, transform, 1f);
             ljus.SetActive(false);
             transform.localEulerAngles = Vector3.zero;
             hWV.hW.GetComponent<MeshRenderer>().material = hWV.m1;
@@ -70,6 +74,7 @@ public class SlutPussel : MonoBehaviour
         else
         {
             ljus.SetActive(true);
+            H_SoundFXManager.instance.PlaySoundFXClip(leverSound, transform, 1f);
             transform.localEulerAngles = new Vector3 (-90f, 0f, 0f);
             active = true;
         }

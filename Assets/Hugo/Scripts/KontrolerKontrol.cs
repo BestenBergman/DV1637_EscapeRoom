@@ -8,6 +8,10 @@ public class KontrolerKontrol : MonoBehaviour
     [Tooltip("Vill ha in de trappor som ska aktiveras när pusslet löses")]
     public GameObject stairs;
 
+    [Tooltip("Ljudet som ska spelas när trappan dyker upp")]
+    [SerializeField] private AudioClip stairSound;
+    private bool stairsActive;
+
     private void Start()
     {
         stairs.SetActive(false);
@@ -37,6 +41,10 @@ public class KontrolerKontrol : MonoBehaviour
     /// </summary>
     public void ActivateStairs()
     {
+        if (stairsActive)
+        {
+            H_SoundFXManager.instance.PlaySoundFXClip(stairSound, stairs.transform, 1f);
+        }
         stairs.SetActive(true);
     }
 }
