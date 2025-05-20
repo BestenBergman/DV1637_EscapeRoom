@@ -38925,7 +38925,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kontrolers: []
   stairs: {fileID: 6652223555876706952}
-  stairSound: {fileID: 0}
+  stairSound: {fileID: 8300000, guid: 9cdc1a14fb05fe444b96aaa09ecb895d, type: 3}
 --- !u!222 &8826546215597487658
 CanvasRenderer:
   m_ObjectHideFlags: 0

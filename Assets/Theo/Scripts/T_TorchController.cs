@@ -20,6 +20,10 @@ public class T_TorchController : MonoBehaviour
     // Distance within which the player can interact with the torch.
     //public float interactionDistance = 3f;
 
+    [Tooltip("Ljudet som spelas när facklan släcks och täds")]
+    [SerializeField] private AudioClip tortchSound;
+    private bool skipSound = true;
+
 
     private void Start()
     {
@@ -48,6 +52,14 @@ public class T_TorchController : MonoBehaviour
     {
         if (torchFire != null)
         {
+            if (!skipSound)
+            {
+                H_SoundFXManager.instance.PlaySoundFXClip(tortchSound, transform, 1f);
+            }
+            else
+            {
+                skipSound = false;
+            }
             torchFire.SetActive(active);
         }
     }

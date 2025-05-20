@@ -10,7 +10,7 @@ public class KontrolerKontrol : MonoBehaviour
 
     [Tooltip("Ljudet som ska spelas när trappan dyker upp")]
     [SerializeField] private AudioClip stairSound;
-    private bool stairsActive;
+    private bool stairsActive = false;
 
     private void Start()
     {
@@ -41,8 +41,9 @@ public class KontrolerKontrol : MonoBehaviour
     /// </summary>
     public void ActivateStairs()
     {
-        if (stairsActive)
+        if (!stairsActive)
         {
+            stairsActive = true;
             H_SoundFXManager.instance.PlaySoundFXClip(stairSound, stairs.transform, 1f);
         }
         stairs.SetActive(true);
