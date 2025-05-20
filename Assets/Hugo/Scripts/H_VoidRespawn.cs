@@ -17,7 +17,7 @@ public class H_VoidRespawn : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         
-        if (ps.ItemTags.Contains(other.transform.tag))
+        if (ps.ItemTags.Contains(other.transform.tag) || other.transform.tag == "R3_Box")
         {
             //Koll om spelaren håller i "other"
             bool heldByPlayer = false;
