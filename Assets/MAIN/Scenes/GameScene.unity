@@ -9468,7 +9468,7 @@ MonoBehaviour:
   triggerSource: {fileID: 1309700636}
   isToggled: 0
   objectToControl: {fileID: 1446217106}
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: fe593c6fe0037524bb17c60384d35e30, type: 3}
 --- !u!1 &782483749
 GameObject:
   m_ObjectHideFlags: 0
