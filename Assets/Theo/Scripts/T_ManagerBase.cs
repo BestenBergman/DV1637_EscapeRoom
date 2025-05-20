@@ -54,7 +54,7 @@ public abstract class T_ManagerBase<T> : MonoBehaviour where T : Component
     /// </summary>
     private bool IsAllConditionsMet()
     {
-        // Loop through all child objects of this GameObject.
+        // Loop through all child objects.
         for (int i = 0; i < transform.childCount; i++)
         {
             Transform child = transform.GetChild(i);

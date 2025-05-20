@@ -2,6 +2,7 @@ using UnityEngine;
 
 /// <summary>
 /// This script manages a group of torches and checks if all of them have been lit.
+/// Inherits from T_ManagerBase, base functionality for managing a collection of items.
 /// </summary>
 public class T_TorchManager : T_ManagerBase<T_TorchController>
 {
@@ -9,9 +10,6 @@ public class T_TorchManager : T_ManagerBase<T_TorchController>
     {
         return torch.torchIsEnabled;
     }
-
-    
-
     //protected override void PrintOutResult(bool allLit)
     //{
     //    if (allLit)

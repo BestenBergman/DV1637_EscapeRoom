@@ -5,7 +5,7 @@ using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
 /// <summary>
-/// 
+/// Hourglass timer with color changes and time-based sound effects.
 /// </summary>
 public class T_HourglassTimer : MonoBehaviour
 {
@@ -25,7 +25,6 @@ public class T_HourglassTimer : MonoBehaviour
     // Controls if start or stop timmer.
     public bool startTimer = false;
 
-    //Hugo
     [Tooltip("Global Volume")]
     public Volume globalVolume;
     private Vignette vid;

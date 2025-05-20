@@ -1,6 +1,5 @@
 using UnityEngine;
 
-
 /// <summary>
 /// This class handles when the player enters a collider and ends the game.
 /// </summary>
@@ -9,7 +8,7 @@ public class T_TriggerEnd : MonoBehaviour
     // Bool variable that indicates if the game is won.
     public bool Win = false;
 
-    // Reference to the UI GameObject that contains the T_HourglassTimer component.
+    // UI GameObject that contains the T_HourglassTimer component.
     public GameObject UI;
 
     private T_HourglassTimer hourglassTimer;
