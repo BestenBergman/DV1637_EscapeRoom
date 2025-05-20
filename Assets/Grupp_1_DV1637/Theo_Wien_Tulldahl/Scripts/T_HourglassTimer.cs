@@ -24,8 +24,9 @@ public class T_HourglassTimer : MonoBehaviour
 
     // Controls if start or stop timmer.
     public bool startTimer = false;
-    
+
     //Hugo
+    [Tooltip("Global Volume")]
     public Volume globalVolume;
     private Vignette vid;
 
@@ -72,6 +73,7 @@ public class T_HourglassTimer : MonoBehaviour
             string txtTime = string.Format("{0:00}:{1:00}", min, sec);
             timerTxt.text = txtTime;
 
+            // Hämtar och applicerar en fade effect när det bara är en tiondels av tiden kvar
             globalVolume.profile.TryGet(out vid);
             vid.intensity.value = Mathf.Clamp(1f - timer / (maxGameTime / 10), 0f, 1f);
 
