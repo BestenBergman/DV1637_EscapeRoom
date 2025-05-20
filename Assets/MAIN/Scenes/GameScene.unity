@@ -9401,7 +9401,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 780906945}
-  - component: {fileID: 780906946}
   - component: {fileID: 780906947}
   - component: {fileID: 780906948}
   m_Layer: 0
@@ -9427,22 +9426,6 @@ Transform:
   - {fileID: 1517272187}
   m_Father: {fileID: 474436698}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &780906946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 780906944}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f279ec060f248847a55ae2e16ea8ad6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerSource: {fileID: 1309700636}
-  isToggled: 0
-  objectToControl: {fileID: 1446217106}
-  audioClip: {fileID: 0}
 --- !u!95 &780906947
 Animator:
   serializedVersion: 7
@@ -22007,8 +21990,8 @@ Transform:
   - {fileID: 1504478768}
   - {fileID: 2018752165}
   - {fileID: 1112204518}
-  - {fileID: 2960191911027227702}
   - {fileID: 543450651741902686}
+  - {fileID: 2960191911027227702}
   m_Father: {fileID: 551621182}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1763470034
@@ -27442,7 +27425,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7561051535703816186}
-  - component: {fileID: 2214950727144499916}
   - component: {fileID: 7561051535703816187}
   - component: {fileID: 7561051535703816188}
   m_Layer: 0
@@ -30351,22 +30333,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &2214950727144499916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 67296023017109735}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f279ec060f248847a55ae2e16ea8ad6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerSource: {fileID: 516120334}
-  isToggled: 0
-  objectToControl: {fileID: 0}
-  audioClip: {fileID: 0}
 --- !u!224 &2239808061890573248
 RectTransform:
   m_ObjectHideFlags: 0
@@ -33124,7 +33090,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2960191911027227702}
-  - component: {fileID: 6865706189808722176}
   - component: {fileID: 6865706189808722177}
   - component: {fileID: 6865706189808722178}
   m_Layer: 0
@@ -35873,7 +35838,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 931676221469135604, guid: 0d94ae2c013a4f24c996ce28ce081b4c, type: 3}
       propertyPath: m_Name
-      value: CanvasHourglass
+      value: CanvasUI
       objectReference: {fileID: 0}
     - target: {fileID: 931676221469135604, guid: 0d94ae2c013a4f24c996ce28ce081b4c, type: 3}
       propertyPath: m_IsActive
@@ -36444,22 +36409,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &6865706189808722176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4689905225756324651}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f279ec060f248847a55ae2e16ea8ad6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerSource: {fileID: 1504478763}
-  isToggled: 0
-  objectToControl: {fileID: 3620830098237366304}
-  audioClip: {fileID: 0}
 --- !u!95 &6865706189808722177
 Animator:
   serializedVersion: 7
@@ -36628,22 +36577,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &6936098797361636561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9084879236972082938}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f279ec060f248847a55ae2e16ea8ad6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerSource: {fileID: 1189439232}
-  isToggled: 0
-  objectToControl: {fileID: 5515519222273586151}
-  audioClip: {fileID: 0}
 --- !u!114 &7002846448548920325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38283,22 +38216,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &8069635794875091035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8191796565393103472}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f279ec060f248847a55ae2e16ea8ad6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerSource: {fileID: 670918618}
-  isToggled: 0
-  objectToControl: {fileID: 0}
-  audioClip: {fileID: 0}
 --- !u!1 &8078922821211259173
 GameObject:
   m_ObjectHideFlags: 0
@@ -38374,7 +38291,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1850503068810106221}
-  - component: {fileID: 8069635794875091035}
   - component: {fileID: 8191796565393103473}
   - component: {fileID: 8191796565393103474}
   m_Layer: 0
@@ -39313,7 +39229,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1590523455361382887}
-  - component: {fileID: 6936098797361636561}
   - component: {fileID: 9084879236972082939}
   - component: {fileID: 9084879236972082940}
   m_Layer: 0

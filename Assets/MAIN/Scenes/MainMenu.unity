@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 254717711}
   - component: {fileID: 254717710}
   m_Layer: 5
-  m_Name: Title (1)
+  m_Name: Title2Txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -541,7 +541,7 @@ GameObject:
   - component: {fileID: 632975569}
   - component: {fileID: 632975568}
   m_Layer: 5
-  m_Name: Title
+  m_Name: TitleTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
